@@ -1,6 +1,7 @@
 ### (1) What is new in the work? (이 연구의 새로운 점은 무엇인가?)
 
 이 연구는 IT-UNet(Involution Transformer based U-Net)이라는 새로운 랜드마크 탐지 네트워크를 제안합니다. 이 모델의 핵심적인 새로운 점은 다음과 같습니다.
+* 랜드마크 탐지: [https://github.com/hanwo-ol/funfunpaperreview/blob/main/UNET/Secondary_references/Landmark_detection(IT-UNet).md]
 
 *   **Involution Transformer Module (ITM):** Transformer 아키텍처에 'Involution'이라는 새로운 연산을 통합한 ITM을 개발했습니다. ITM은 두 가지 주요 블록으로 구성됩니다.
     1.  **Involution Attention Block:** 표준 Transformer의 Q(Query), K(Key), V(Value) 벡터를 생성할 때, 공간적으로 불변하는(spatial-agnostic) 선형 투영 대신 공간적으로 특화된(spatial-specific) Involution 연산을 사용합니다. 이를 통해 어텐션 메커니즘 자체에 위치 정보를 주입합니다.
