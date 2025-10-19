@@ -5,6 +5,7 @@
 *   **Swin Transformer의 전면적 사용:** U-Net 구조의 **인코더와 디코더 양쪽 모두에** 계층적 구조를 가진 Swin Transformer를 적용한 최초의 시도일 수 있다고 주장합니다.
 *   **이중 스케일 인코더 (Dual-Scale Encoder):** 인코더 부분에서 두 개의 독립적인 Swin Transformer 브랜치를 사용합니다. 하나는 작은 크기의 패치(small-scale)를 입력받아 세밀한(fine-grained) 특징을 추출하고, 다른 하나는 큰 크기의 패치(large-scale)를 입력받아 거친(coarse-grained) 특징을 추출합니다.
 *   **Transformer Interactive Fusion (TIF) 모듈:** 이중 스케일 인코더에서 추출된 서로 다른 스케일의 특징들을 효과적으로 융합하기 위해, 표준 Transformer의 자기 주의(self-attention) 메커니즘을 활용하는 TIF 모듈을 새롭게 제안했습니다.
+    * TIF모듈 정리: [https://github.com/hanwo-ol/funfunpaperreview/blob/main/UNET/Secondary_references/TIF_module(DS-U-Net).md]
 
 ### (2) Why is the work important? (이 연구가 왜 중요한가?)
 
