@@ -17,7 +17,9 @@
 **기본 철학**: "데이터로 구한 최선의 추정치($\hat{\pi}$)가 가설($\pi_0$)과 얼마나 다른가?"를 $\hat{\pi}$ 자체의 불확실성(표준오차)을 기준으로 측정한다.
 
 **수식 (1.10) 전개:**
+
 $$ z_W = \frac{\hat{\pi} - \pi_0}{\text{SE}(\hat{\pi})} $$
+
 1.  **분자**: $(\hat{\pi} - \pi_0)$는 추정치와 가설 값의 단순한 차이입니다.
 2.  **분모**: $\text{SE}(\hat{\pi})$는 추정량 $\hat{\pi}$의 표준오차입니다.
     *   이론적으로 $\text{var}(\hat{\pi}) = \frac{\pi(1-\pi)}{n}$ 이므로, $\text{SE}(\hat{\pi}) = \sqrt{\frac{\pi(1-\pi)}{n}}$ 입니다.
@@ -25,7 +27,7 @@ $$ z_W = \frac{\hat{\pi} - \pi_0}{\text{SE}(\hat{\pi})} $$
     *   따라서, 추정된 표준오차는 $\widehat{\text{SE}}(\hat{\pi}) = \sqrt{\frac{\hat{\pi}(1-\hat{\pi})}{n}}$ 가 됩니다.
 
 3.  **최종 형태**: 위 요소들을 결합하면 수식 (1.10)이 완성됩니다.
-    $$ z_W = \frac{\hat{\pi} - \pi_0}{\sqrt{\hat{\pi}(1-\hat{\pi})/n}} $$
+$$ z_W = \frac{\hat{\pi} - \pi_0}{\sqrt{\hat{\pi}(1-\hat{\pi})/n}} $$
 
 **문제점**: 만약 $y=0$ 또는 $y=n$ 이라면, $\hat{\pi}=0$ 또는 $\hat{\pi}=1$이 되어 분모가 0이 됩니다. 이는 통계량이 무한대로 발산하는 심각한 문제를 야기합니다.
 
@@ -36,7 +38,9 @@ $$ z_W = \frac{\hat{\pi} - \pi_0}{\text{SE}(\hat{\pi})} $$
 **기본 철학**: "만약 가설($\pi_0$)이 사실이라면, 그 지점에서 로그우도 함수의 기울기는 0에 가까워야 한다. 실제 기울기가 0에서 얼마나 벗어났는가?"
 
 **수식 (1.11) 전개:**
+
 $$ z_S = \frac{u(\pi_0)}{\sqrt{ι(\pi_0)}} $$
+
 1.  **분자**: $u(\pi_0)$는 로그우도 함수의 기울기(스코어)를 $\pi_0$에서 계산한 값입니다.
     *   로그우도 함수: $L(\pi) = y \log(\pi) + (n-y)\log(1-\pi)$
     *   스코어 함수 (1차 미분): $u(\pi) = \frac{\partial L}{\partial \pi} = \frac{y}{\pi} - \frac{n-y}{1-\pi}$
@@ -50,10 +54,14 @@ $$ z_S = \frac{u(\pi_0)}{\sqrt{ι(\pi_0)}} $$
     *   여기에 제곱근을 취하면: $\sqrt{ι(\pi_0)} = \frac{\sqrt{n}}{\sqrt{\pi_0(1-\pi_0)}}$
 
 3.  **최종 형태**: 이제 분자와 분모를 합칩니다.
-    $$ z_S = \frac{u(\pi_0)}{\sqrt{ι(\pi_0)}} = \frac{(y - n\pi_0) / [\pi_0(1-\pi_0)]}{\sqrt{n} / \sqrt{\pi_0(1-\pi_0)}} $$
-    $$ = \frac{y - n\pi_0}{\pi_0(1-\pi_0)} \cdot \frac{\sqrt{\pi_0(1-\pi_0)}}{\sqrt{n}} = \frac{y - n\pi_0}{\sqrt{n}\sqrt{\pi_0(1-\pi_0)}} = \frac{y - n\pi_0}{\sqrt{n\pi_0(1-\pi_0)}} $$
+
+$$ z_S = \frac{u(\pi_0)}{\sqrt{ι(\pi_0)}} = \frac{(y - n\pi_0) / [\pi_0(1-\pi_0)]}{\sqrt{n} / \sqrt{\pi_0(1-\pi_0)}} $$
+
+$$ = \frac{y - n\pi_0}{\pi_0(1-\pi_0)} \cdot \frac{\sqrt{\pi_0(1-\pi_0)}}{\sqrt{n}} = \frac{y - n\pi_0}{\sqrt{n}\sqrt{\pi_0(1-\pi_0)}} = \frac{y - n\pi_0}{\sqrt{n\pi_0(1-\pi_0)}} $$
+
     분자와 분모를 $n$으로 나누면 텍스트의 마지막 형태가 됩니다.
-    $$ = \frac{(y/n) - (n\pi_0/n)}{\sqrt{n\pi_0(1-\pi_0)}/n} = \frac{\hat{\pi} - \pi_0}{\sqrt{\pi_0(1-\pi_0)/n}} $$
+
+$$ = \frac{(y/n) - (n\pi_0/n)}{\sqrt{n\pi_0(1-\pi_0)}/n} = \frac{\hat{\pi} - \pi_0}{\sqrt{\pi_0(1-\pi_0)/n}} $$
 
 **장점**: 스코어 검정은 표준오차를 계산할 때 **귀무가설 값 $\pi_0$를 사용**합니다. 이는 "귀무가설이 참이라면"이라는 가정 하에 검정을 수행하는 논리와 일치하며, $\hat{\pi}$가 0이나 1일 때도 분모가 0이 되는 문제를 피할 수 있어 왈드 검정보다 훨씬 안정적입니다.
 
@@ -64,7 +72,9 @@ $$ z_S = \frac{u(\pi_0)}{\sqrt{ι(\pi_0)}} $$
 **기본 철학**: "귀무가설이라는 제약을 걸었을 때, 데이터에 대한 설명력(우도)이 얼마나 나빠지는가?"
 
 **수식 (1.12) 전개:**
+
 $$ \text{LR Statistic} = -2(L_0 - L_1) $$
+
 1.  **$L_1$ (제약 없는 모델의 최대 로그우도)**:
     *   모수 $\pi$에 아무 제약이 없을 때, 로그우도 $L(\pi)$를 최대로 만드는 값은 $\hat{\pi}=y/n$ 입니다.
     *   따라서 $L_1 = L(\hat{\pi}) = y \log(\hat{\pi}) + (n-y)\log(1-\hat{\pi})$ 입니다.
@@ -74,17 +84,26 @@ $$ \text{LR Statistic} = -2(L_0 - L_1) $$
     *   따라서 $L_0 = L(\pi_0) = y \log(\pi_0) + (n-y)\log(1-\pi_0)$ 입니다.
 
 3.  **결합**: 이제 두 값을 뺍니다.
-    $$ L_0 - L_1 = [y \log(\pi_0) + (n-y)\log(1-\pi_0)] - [y \log(\hat{\pi}) + (n-y)\log(1-\hat{\pi})] $$
-    로그의 성질($\log a - \log b = \log(a/b)$)을 이용하여 항을 묶습니다.
-    $$ = y[\log(\pi_0) - \log(\hat{\pi})] + (n-y)[\log(1-\pi_0) - \log(1-\hat{\pi})] $$
-    $$ = y \log\left(\frac{\pi_0}{\hat{\pi}}\right) + (n-y)\log\left(\frac{1-\pi_0}{1-\hat{\pi}}\right) $$
+
+$$ L_0 - L_1 = [y \log(\pi_0) + (n-y)\log(1-\pi_0)] - [y \log(\hat{\pi}) + (n-y)\log(1-\hat{\pi})] $$
+
+로그의 성질($\log a - \log b = \log(a/b)$)을 이용하여 항을 묶습니다.
+
+$$ = y[\log(\pi_0) - \log(\hat{\pi})] + (n-y)[\log(1-\pi_0) - \log(1-\hat{\pi})] $$
+
+$$ = y \log\left(\frac{\pi_0}{\hat{\pi}}\right) + (n-y)\log\left(\frac{1-\pi_0}{1-\hat{\pi}}\right) $$
 
 4.  **최종 형태**: 여기에 $-2$를 곱합니다. 로그의 성질($-\log(a/b) = \log(b/a)$)을 이용하면,
-    $$ -2(L_0 - L_1) = -2 \left[ y \log\left(\frac{\pi_0}{\hat{\pi}}\right) + (n-y)\log\left(\frac{1-\pi_0}{1-\hat{\pi}}\right) \right] $$
-    $$ = 2 \left[ y \log\left(\frac{\hat{\pi}}{\pi_0}\right) + (n-y)\log\left(\frac{1-\hat{\pi}}{1-\pi_0}\right) \right] $$
-    이것이 텍스트에 나온 첫 번째 형태입니다. 이제 $\hat{\pi}=y/n$ 과 $1-\hat{\pi}=(n-y)/n$ 을 대입합니다.
-    $$ = 2 \left[ y \log\left(\frac{y/n}{\pi_0}\right) + (n-y)\log\left(\frac{(n-y)/n}{1-\pi_0}\right) \right] $$
-    $$ = 2 \left[ y \log\left(\frac{y}{n\pi_0}\right) + (n-y)\log\left(\frac{n-y}{n(1-\pi_0)}\right) \right] $$
+
+$$ -2(L_0 - L_1) = -2 \left[ y \log\left(\frac{\pi_0}{\hat{\pi}}\right) + (n-y)\log\left(\frac{1-\pi_0}{1-\hat{\pi}}\right) \right] $$
+
+$$ = 2 \left[ y \log\left(\frac{\hat{\pi}}{\pi_0}\right) + (n-y)\log\left(\frac{1-\hat{\pi}}{1-\pi_0}\right) \right] $$
+
+이것이 텍스트에 나온 첫 번째 형태입니다. 이제 $\hat{\pi}=y/n$ 과 $1-\hat{\pi}=(n-y)/n$ 을 대입합니다.
+
+$$ = 2 \left[ y \log\left(\frac{y/n}{\pi_0}\right) + (n-y)\log\left(\frac{(n-y)/n}{1-\pi_0}\right) \right] $$
+
+$$ = 2 \left[ y \log\left(\frac{y}{n\pi_0}\right) + (n-y)\log\left(\frac{n-y}{n(1-\pi_0)}\right) \right] $$
 
 **수식 (1.12)의 의미**:
 이 식을 자세히 보면,
@@ -93,5 +112,7 @@ $$ \text{LR Statistic} = -2(L_0 - L_1) $$
 *   **$n-y$**: '실패' 카테고리의 **관측 빈도**
 *   **$n(1-\pi_0)$**: $H_0$가 사실일 때 기대되는 '실패' 카테고리의 **기대 빈도(적합값)**
 이므로, 이 통계량은 각 카테고리(성공, 실패)에 대해 "관측값 * log(관측값/기대값)"을 계산한 후 모두 더하고 2를 곱한 형태입니다.
+
 $$ 2 \left[ (\text{관측 성공수}) \log\left(\frac{\text{관측 성공수}}{\text{기대 성공수}}\right) + (\text{관측 실패수}) \log\left(\frac{\text{관측 실패수}}{\text{기대 실패수}}\right) \right] $$
+
 이는 "관측 분포"와 "기대 분포" 사이의 정보 이론적 거리(Kullback-Leibler 발산과 관련됨)를 측정하는 것으로, 나중에 나올 **G-검정(G-test)**의 기본 형태가 됩니다.
