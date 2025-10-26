@@ -4,7 +4,11 @@
 
 EDF의 일반 형태 (식 4.17):
 
-$$ f(y _i; \theta _i, \phi) = \exp\left\{ \frac{y _i\theta _i - b(\theta _i)}{a(\phi)} + c(y _i, \phi) \right\} $$
+$$
+f(y_i; \theta_i, \phi)
+= \exp\!\left( \frac{y_i\theta_i - b(\theta_i)}{a(\phi)} + c(y_i, \phi) \right)
+$$
+
 
 이항 분포의 확률 질량 함수를 조작하여 위와 같은 형태로 만드는 것이 목표입니다.
 
@@ -70,10 +74,11 @@ $- n _i y _i \log(1+e^{\theta _i})$와 $+ n _i y _i \log(1+e^{\theta _i})$ 항�
 
 $$ = \exp\left[ n _i y _i \theta _i - n _i \log(1+e^{\theta _i}) + \log\binom{n _i}{n _i y _i} \right] $$
 
-5.  EDF 형태로 맞추기: 최종 목표인 $\exp\left\{ \frac{y _i\theta _i - b(\theta _i)}{a(\phi)} + c(y _i, \phi) \right\}$ 형태와 비교합니다.
+5.  EDF 형태로 맞추기: 최종 목표인 $\exp\left( \frac{y_i\theta_i - b(\theta_i)}{a(\phi)} + c(y_i, \phi) \right)
+$ 형태와 비교합니다.
     위 식의 $\exp[\dots]$ 안의 모든 항을 $n _i$로 나누고 다시 $n _i$를 곱해줍니다. (형태를 맞추기 위한 트릭)
 
-$$ = \exp\left[ n _i \left( y _i \theta _i - \log(1+e^{\theta _i}) \right) + \log\binom{n _i}{n _i y _i} \right] $$
+$$ = \exp\[ n _i \left( y _i \theta _i - \log(1+e^{\theta _i}) \right) + \log\binom{n _i}{n _i y _i} \] $$
 
 $$ = \exp\left[ \frac{y _i \theta _i - \log(1+e^{\theta _i})}{1/n _i} + \log\binom{n _i}{n _i y _i} \right] $$
 
