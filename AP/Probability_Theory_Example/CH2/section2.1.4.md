@@ -1,46 +1,46 @@
 ### **2.1.4 독립 확률 변수의 구성 (Constructing Independent Random Variables)**
 
-우리가 독립 확률 변수들을 연구하기 전에 다루어야 할 마지막 질문은: 그들이 존재하는가? 입니다. (만약 존재하지 않는다면, 그것들을 연구할 이유가 없습니다!) 만약 우리에게 $1 \le i \le n$에 대해 분포 함수 $F_i$가 유한 개 주어져 있다면, $P(X_i \le x) = F_i(x)$를 만족하는 독립 확률 변수 $X_1, \dots, X_n$을 구성하는 것은 쉽습니다. $\Omega = \mathbb{R}^n$, $\mathcal{F} = \mathcal{R}^n$으로 두고, $X_i(\omega_1, \dots, \omega_n) = \omega_i$ (즉, $\omega \in \mathbb{R}^n$의 $i$번째 좌표)로 정의하고, $\mathbb{R}^n$ 위에 다음과 같은 성질을 갖는 측도 $P$를 둡시다.
+우리가 독립 확률 변수들을 연구하기 전에 다루어야 할 마지막 질문은: 그들이 존재하는가? 입니다. (만약 존재하지 않는다면, 그것들을 연구할 이유가 없습니다!) 만약 우리에게 $1 \le i \le n$에 대해 분포 함수 $F _i$가 유한 개 주어져 있다면, $P(X _i \le x) = F _i(x)$를 만족하는 독립 확률 변수 $X _1, \dots, X _n$을 구성하는 것은 쉽습니다. $\Omega = \mathbb{R}^n$, $\mathcal{F} = \mathcal{R}^n$으로 두고, $X _i(\omega _1, \dots, \omega _n) = \omega _i$ (즉, $\omega \in \mathbb{R}^n$의 $i$번째 좌표)로 정의하고, $\mathbb{R}^n$ 위에 다음과 같은 성질을 갖는 측도 $P$를 둡시다.
 
-$$ P((a_1, b_1] \times \dots \times (a_n, b_n]) = (F_1(b_1) - F_1(a_1)) \cdots (F_n(b_n) - F_n(a_n)) $$
+$$ P((a _1, b _1] \times \dots \times (a _n, b _n]) = (F _1(b _1) - F _1(a _1)) \cdots (F _n(b _n) - F _n(a _n)) $$
 
-만약 $\mu_i$가 분포 함수 $F_i$를 갖는 측도라면, $P = \mu_1 \times \dots \times \mu_n$ 입니다.
+만약 $\mu _i$가 분포 함수 $F _i$를 갖는 측도라면, $P = \mu _1 \times \dots \times \mu _n$ 입니다.
 
 **[해설 및 추가 설명]**
 
-*   **존재의 문제**: 확률론의 많은 결과는 "i.i.d.(독립적이고 동일한 분포를 따르는) 확률 변수열 $X_1, X_2, \dots$가 주어졌다고 가정하자"로 시작합니다. 이 섹션은 이러한 가정이 수학적으로 타당한지, 즉 그러한 확률 변수들이 실제로 존재하는 확률 공간 $(\Omega, \mathcal{F}, P)$를 만들 수 있는지를 묻고 있습니다.
+*   **존재의 문제**: 확률론의 많은 결과는 "i.i.d.(독립적이고 동일한 분포를 따르는) 확률 변수열 $X _1, X _2, \dots$가 주어졌다고 가정하자"로 시작합니다. 이 섹션은 이러한 가정이 수학적으로 타당한지, 즉 그러한 확률 변수들이 실제로 존재하는 확률 공간 $(\Omega, \mathcal{F}, P)$를 만들 수 있는지를 묻고 있습니다.
 *   **유한 개의 경우**: $n$개의 독립 확률 변수를 만드는 것은 간단합니다.
-    1.  **표본 공간 $\Omega$**: 각 확률 변수가 가질 수 있는 값들의 공간($\mathbb{R}$)을 $n$번 곱한 $\mathbb{R}^n$으로 잡습니다. 즉, 하나의 결과(outcome) $\omega$는 $n$개의 실수로 이루어진 벡터 $(\omega_1, \dots, \omega_n)$가 됩니다.
-    2.  **확률 변수 $X_i$**: $i$번째 확률 변수 $X_i$는 결과 벡터 $\omega$에서 $i$번째 성분 $\omega_i$를 꺼내는 함수(좌표 사영, coordinate projection)로 정의합니다.
-    3.  **확률 측도 $P$**: 각 확률 변수가 독립이 되도록 하려면, $n$차원 공간에서의 확률이 각 차원에서의 확률의 곱으로 주어져야 합니다. 이것이 바로 **곱측도(product measure)**의 정의입니다. 이렇게 구성하면 $X_1, \dots, X_n$은 정의에 의해 독립이 됩니다.
+    1.  **표본 공간 $\Omega$**: 각 확률 변수가 가질 수 있는 값들의 공간($\mathbb{R}$)을 $n$번 곱한 $\mathbb{R}^n$으로 잡습니다. 즉, 하나의 결과(outcome) $\omega$는 $n$개의 실수로 이루어진 벡터 $(\omega _1, \dots, \omega _n)$가 됩니다.
+    2.  **확률 변수 $X _i$**: $i$번째 확률 변수 $X _i$는 결과 벡터 $\omega$에서 $i$번째 성분 $\omega _i$를 꺼내는 함수(좌표 사영, coordinate projection)로 정의합니다.
+    3.  **확률 측도 $P$**: 각 확률 변수가 독립이 되도록 하려면, $n$차원 공간에서의 확률이 각 차원에서의 확률의 곱으로 주어져야 합니다. 이것이 바로 **곱측도(product measure)**의 정의입니다. 이렇게 구성하면 $X _1, \dots, X _n$은 정의에 의해 독립이 됩니다.
 
 ---
 
-주어진 분포 함수를 갖는 독립 확률 변수들의 **무한** 수열 $X_1, X_2, \dots$를 구성하기 위해, 우리는 무한 곱 공간(infinite product space) 위에서 마지막 구성을 수행하기를 원합니다.
+주어진 분포 함수를 갖는 독립 확률 변수들의 **무한** 수열 $X _1, X _2, \dots$를 구성하기 위해, 우리는 무한 곱 공간(infinite product space) 위에서 마지막 구성을 수행하기를 원합니다.
 
-$$ \mathbb{R}^{\mathbb{N}} = \{(\omega_1, \omega_2, \dots) : \omega_i \in \mathbb{R}\} = \{\text{함수 } \omega: \mathbb{N} \to \mathbb{R}\} $$
+$$ \mathbb{R}^{\mathbb{N}} = \{(\omega _1, \omega _2, \dots) : \omega _i \in \mathbb{R}\} = \{\text{함수 } \omega: \mathbb{N} \to \mathbb{R}\} $$
 
-여기서 $\mathbb{N}=\{1,2,\dots\}$이고 $\mathbb{N}$은 자연수를 의미합니다. 우리는 $X_i(\omega) = \omega_i$로 정의하고, $\mathbb{R}^{\mathbb{N}}$에 **곱 $\sigma$-필드(product $\sigma$-field)** $\mathcal{R}^{\mathbb{N}}$을 부여합니다. 이것은 **유한 차원 집합(finite dimensional sets)**, 즉 $B_i \in \mathcal{R}$일 때 $\{\omega : \omega_i \in B_i, 1 \le i \le n\}$ 형태의 집합들에 의해 생성됩니다. 유한 차원 집합에 대해 $P$를 어떻게 정의하고 싶은지는 명확합니다. $\mathbb{R}^{\mathbb{N}}$으로의 유일한 확장이 존재함을 주장하기 위해 우리는 정리 A.3.1을 사용합니다:
+여기서 $\mathbb{N}=\{1,2,\dots\}$이고 $\mathbb{N}$은 자연수를 의미합니다. 우리는 $X _i(\omega) = \omega _i$로 정의하고, $\mathbb{R}^{\mathbb{N}}$에 **곱 $\sigma$-필드(product $\sigma$-field)** $\mathcal{R}^{\mathbb{N}}$을 부여합니다. 이것은 **유한 차원 집합(finite dimensional sets)**, 즉 $B _i \in \mathcal{R}$일 때 $\{\omega : \omega _i \in B _i, 1 \le i \le n\}$ 형태의 집합들에 의해 생성됩니다. 유한 차원 집합에 대해 $P$를 어떻게 정의하고 싶은지는 명확합니다. $\mathbb{R}^{\mathbb{N}}$으로의 유일한 확장이 존재함을 주장하기 위해 우리는 정리 A.3.1을 사용합니다:
 
-**정리 2.1.21. 콜모고로프 확장 정리 (Kolmogorov's extension theorem).** $(\mathbb{R}^n, \mathcal{R}^n)$ 위의 확률 측도 $\mu_n$들이 주어지고, 이들이 **일관성(consistent)**을 갖는다고 가정하자. 즉,
+**정리 2.1.21. 콜모고로프 확장 정리 (Kolmogorov's extension theorem).** $(\mathbb{R}^n, \mathcal{R}^n)$ 위의 확률 측도 $\mu _n$들이 주어지고, 이들이 **일관성(consistent)**을 갖는다고 가정하자. 즉,
 
-$$ \mu_{n+1}((a_1, b_1] \times \dots \times (a_n, b_n] \times \mathbb{R}) = \mu_n((a_1, b_1] \times \dots \times (a_n, b_n]) $$
+$$ \mu _{n+1}((a _1, b _1] \times \dots \times (a _n, b _n] \times \mathbb{R}) = \mu _n((a _1, b _1] \times \dots \times (a _n, b _n]) $$
 
 이라면, $(\mathbb{R}^{\mathbb{N}}, \mathcal{R}^{\mathbb{N}})$ 위에 유일한 확률 측도 $P$가 존재하여 다음을 만족한다.
 
-$$ P(\omega: \omega_i \in (a_i, b_i], 1 \le i \le n) = \mu_n((a_1, b_1] \times \dots \times (a_n, b_n]) $$
+$$ P(\omega: \omega _i \in (a _i, b _i], 1 \le i \le n) = \mu _n((a _1, b _1] \times \dots \times (a _n, b _n]) $$
 
 **[해설 및 추가 설명]**
 
-*   **무한 개의 경우**: 여기서 '결과' $\omega$는 실수의 무한 수열 $(\omega_1, \omega_2, \dots)$이 됩니다. 확률 변수 $X_i$는 여전히 $i$번째 성분을 꺼내는 함수입니다.
+*   **무한 개의 경우**: 여기서 '결과' $\omega$는 실수의 무한 수열 $(\omega _1, \omega _2, \dots)$이 됩니다. 확률 변수 $X _i$는 여전히 $i$번째 성분을 꺼내는 함수입니다.
 *   **콜모고로프 확장 정리**: 이 정리는 현대 확률론의 근간입니다. 이 정리가 말하는 바는 다음과 같습니다:
-    *   만약 우리가 $(X_1)$, $(X_1, X_2)$, $(X_1, X_2, X_3)$, ... 와 같이 유한 개의 확률 변수들의 결합 분포(joint distribution) $\mu_n$을 **일관되게** 정의할 수만 있다면,
-    *   그러면 전체 무한 수열 $(X_1, X_2, \dots)$을 지배하는 유일한 확률 측도 $P$가 존재한다는 것을 보장합니다.
-*   **일관성 조건(Consistency Condition)**: 이 조건은 매우 직관적입니다. 예를 들어, $(X_1, X_2, X_3)$의 분포를 알고 있을 때, $X_3$에 대해서는 아무런 제약을 가하지 않고(즉, $X_3 \in \mathbb{R}$) $(X_1, X_2)$에 대해서만 확률을 계산하면, 이는 원래 알고 있던 $(X_1, X_2)$의 분포와 같아야 한다는 의미입니다. 더 높은 차원의 분포가 낮은 차원의 분포들을 모순 없이 포함해야 한다는 뜻입니다. i.i.d. 확률 변수열의 경우, $\mu_n = \mu_1 \times \dots \times \mu_1$ (n번 곱)으로 정의하면 이 일관성 조건은 자동으로 만족됩니다.
+    *   만약 우리가 $(X _1)$, $(X _1, X _2)$, $(X _1, X _2, X _3)$, ... 와 같이 유한 개의 확률 변수들의 결합 분포(joint distribution) $\mu _n$을 **일관되게** 정의할 수만 있다면,
+    *   그러면 전체 무한 수열 $(X _1, X _2, \dots)$을 지배하는 유일한 확률 측도 $P$가 존재한다는 것을 보장합니다.
+*   **일관성 조건(Consistency Condition)**: 이 조건은 매우 직관적입니다. 예를 들어, $(X _1, X _2, X _3)$의 분포를 알고 있을 때, $X _3$에 대해서는 아무런 제약을 가하지 않고(즉, $X _3 \in \mathbb{R}$) $(X _1, X _2)$에 대해서만 확률을 계산하면, 이는 원래 알고 있던 $(X _1, X _2)$의 분포와 같아야 한다는 의미입니다. 더 높은 차원의 분포가 낮은 차원의 분포들을 모순 없이 포함해야 한다는 뜻입니다. i.i.d. 확률 변수열의 경우, $\mu _n = \mu _1 \times \dots \times \mu _1$ (n번 곱)으로 정의하면 이 일관성 조건은 자동으로 만족됩니다.
 
 ---
 
-앞으로 우리는 다른 가측 공간 $(S, \mathcal{S})$에서 값을 갖는 확률 변수들의 수열을 구성해야 할 필요가 있을 것입니다. 불행히도, 정리 2.1.21은 임의의 가측 공간에 대해서는 유효하지 않습니다. 첫 번째 예시(서로 다른 공간들의 무한 곱 $\Omega_1 \times \Omega_2 \times \dots$에 대한)는 Andersen과 Jessen(1948)에 의해 구성되었습니다. (Halmos (1950) p. 214 또는 Neveu (1965) p. 84 참조.) 모든 공간 $\Omega_i$가 동일한 경우의 예시에 대해서는 Wegner (1973)을 참조하십시오. 다행히도, 우리의 모든 결과에 적합하고 콜모고로프 정리의 일반화가 자명한 공간들의 클래스가 있습니다.
+앞으로 우리는 다른 가측 공간 $(S, \mathcal{S})$에서 값을 갖는 확률 변수들의 수열을 구성해야 할 필요가 있을 것입니다. 불행히도, 정리 2.1.21은 임의의 가측 공간에 대해서는 유효하지 않습니다. 첫 번째 예시(서로 다른 공간들의 무한 곱 $\Omega _1 \times \Omega _2 \times \dots$에 대한)는 Andersen과 Jessen(1948)에 의해 구성되었습니다. (Halmos (1950) p. 214 또는 Neveu (1965) p. 84 참조.) 모든 공간 $\Omega _i$가 동일한 경우의 예시에 대해서는 Wegner (1973)을 참조하십시오. 다행히도, 우리의 모든 결과에 적합하고 콜모고로프 정리의 일반화가 자명한 공간들의 클래스가 있습니다.
 
 $(S, \mathcal{S})$가 **좋은(nice)** 공간이라고 하는 것은, $\phi$와 $\phi^{-1}$이 모두 가측인 일대일 함수 $\phi: S \to \mathbb{R}$가 존재하는 경우입니다.
 
@@ -48,17 +48,17 @@ $(S, \mathcal{S})$가 **좋은(nice)** 공간이라고 하는 것은, $\phi$와 
 
 **정리 2.1.22.** 만약 $S$가 완비 분해 가능 거리 공간(complete separable metric space) $M$의 보렐 부분집합이고, $\mathcal{S}$가 $S$의 보렐 부분집합들의 모임이라면, $(S, \mathcal{S})$는 좋은(nice) 공간이다.
 
-**증명.** 우리는 메트릭(metric) $\rho(x,y) = \sum_{n=1}^\infty |x_n - y_n|/2^n$을 갖는 특별한 경우 $S = [0,1)^{\mathbb{N}}$부터 시작한다.
-만약 $x = (x^1, x^2, x^3, \dots)$이면, 각 성분을 이진 전개(binary expansion) $x^j = .x^j_1 x^j_2 x^j_3 \dots$로 표현하자(0이 무한히 많이 나오는 전개를 취함).
+**증명.** 우리는 메트릭(metric) $\rho(x,y) = \sum _{n=1}^\infty |x _n - y _n|/2^n$을 갖는 특별한 경우 $S = [0,1)^{\mathbb{N}}$부터 시작한다.
+만약 $x = (x^1, x^2, x^3, \dots)$이면, 각 성분을 이진 전개(binary expansion) $x^j = .x^j _1 x^j _2 x^j _3 \dots$로 표현하자(0이 무한히 많이 나오는 전개를 취함).
 
-$$ \phi_o(x) = .x^1_1 x^1_2 x^2_1 x^1_3 x^2_2 x^3_1 x^1_4 x^2_3 x^3_2 x^4_1 \dots $$
+$$ \phi _o(x) = .x^1 _1 x^1 _2 x^2 _1 x^1 _3 x^2 _2 x^3 _1 x^1 _4 x^2 _3 x^3 _2 x^4 _1 \dots $$
 
 라고 하자.
-일반적인 경우를 다루기 위해, $d(x,y) = \rho(x,y) / (1+\rho(x,y))$로 둠으로써 (자세한 내용은 연습문제 2.1.3 참조), 메트릭이 모든 $x,y$에 대해 $d(x,y) < 1$을 갖는다고 가정할 수 있음을 관찰한다. $q_1, q_2, \dots$를 $S$ 안의 가산 조밀 집합(countable dense set)이라고 하자.
+일반적인 경우를 다루기 위해, $d(x,y) = \rho(x,y) / (1+\rho(x,y))$로 둠으로써 (자세한 내용은 연습문제 2.1.3 참조), 메트릭이 모든 $x,y$에 대해 $d(x,y) < 1$을 갖는다고 가정할 수 있음을 관찰한다. $q _1, q _2, \dots$를 $S$ 안의 가산 조밀 집합(countable dense set)이라고 하자.
 
-$$ \psi(x) = (d(x, q_1), d(x, q_2), \dots) $$
+$$ \psi(x) = (d(x, q _1), d(x, q _2), \dots) $$
 
-라고 하자. $\psi: S \to [0,1)^{\mathbb{N}}$는 연속이고 일대일 함수이다. $\phi_o \circ \psi$가 원하는 사상(mapping)을 제공한다. ◻
+라고 하자. $\psi: S \to [0,1)^{\mathbb{N}}$는 연속이고 일대일 함수이다. $\phi _o \circ \psi$가 원하는 사상(mapping)을 제공한다. ◻
 
 **주의 사항(Caveat emptor).** 위의 증명은 세부 사항에 있어서는 다소 가볍다. 더 포괄적인 논의를 위해서는 Dudley (1989)의 13.1절을 참조하라. 그곳의 분석의 흥미로운 결과 중 하나는 완비 분해 가능 거리 공간의 보렐 부분집합에 대해서는 연속체 가설(continuum hypothesis)이 참이라는 것이다: 즉, 모든 집합은 유한이거나, 가산 무한이거나, 또는 실수의 기수(cardinality)를 갖는다.
 
@@ -72,12 +72,12 @@ $$ \psi(x) = (d(x, q_1), d(x, q_2), \dots) $$
 
 ### **연습문제 (Exercises)**
 
-**2.1.1.** $(X_1, \dots, X_n)$이 밀도 함수 $f(x_1, x_2, \dots, x_n)$을 갖는다고 가정하자. 즉,
+**2.1.1.** $(X _1, \dots, X _n)$이 밀도 함수 $f(x _1, x _2, \dots, x _n)$을 갖는다고 가정하자. 즉,
 
-$$ P((X_1, X_2, \dots, X_n) \in A) = \int_A f(x) dx \quad \text{for } A \in \mathcal{R}^n $$
+$$ P((X _1, X _2, \dots, X _n) \in A) = \int _A f(x) dx \quad \text{for } A \in \mathcal{R}^n $$
 
-만약 $f(x)$가 $g_1(x_1) \cdots g_n(x_n)$으로 쓰일 수 있고, 여기서 $g_m \ge 0$이 가측 함수라면, $X_1, X_2, \dots, X_n$은 독립이다. $g_m$들이 확률 밀도 함수라고 가정되지는 않았음에 주목하라.
+만약 $f(x)$가 $g _1(x _1) \cdots g _n(x _n)$으로 쓰일 수 있고, 여기서 $g _m \ge 0$이 가측 함수라면, $X _1, X _2, \dots, X _n$은 독립이다. $g _m$들이 확률 밀도 함수라고 가정되지는 않았음에 주목하라.
 
-**2.1.2.** $X_1, \dots, X_n$이 가산 집합 $S_1, \dots, S_n$에서 값을 갖는 확률 변수라고 가정하자. $X_1, \dots, X_n$이 독립이기 위해서는, $x_i \in S_i$일 때마다 다음이 성립하는 것이 충분하다.
+**2.1.2.** $X _1, \dots, X _n$이 가산 집합 $S _1, \dots, S _n$에서 값을 갖는 확률 변수라고 가정하자. $X _1, \dots, X _n$이 독립이기 위해서는, $x _i \in S _i$일 때마다 다음이 성립하는 것이 충분하다.
 
-$$ P(X_1=x_1, \dots, X_n=x_n) = \prod_{i=1}^n P(X_i=x_i) $$
+$$ P(X _1=x _1, \dots, X _n=x _n) = \prod _{i=1}^n P(X _i=x _i) $$
