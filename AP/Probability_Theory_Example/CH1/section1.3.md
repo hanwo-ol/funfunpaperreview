@@ -14,7 +14,7 @@ $$ X^{-1}(B) \equiv \{\omega : X(\omega) \in B\} \in \mathcal{F} $$
 
 **증명.** $\{\omega : X(\omega) \in B\}$를 줄여서 $\{X \in B\}$라고 쓰면, 우리는 다음을 갖는다.
 
-$$ \{X \in \cup_i B_i\} = \cup_i \{X \in B_i\} $$
+$$ \{X \in \cup _i B _i\} = \cup _i \{X \in B _i\} $$
 
 $$ \{X \in B^c\} = \{X \in B\}^c $$
 
@@ -35,7 +35,7 @@ $$ \sigma(X) = \{\{X \in B\} : B \in \mathcal{S}\} \quad (1.3.1) $$
 
 **예제 1.3.3.** 만약 $(S, \mathcal{S}) = (\mathbb{R}^d, \mathcal{R}^d)$이면, $\mathcal{A}$의 유용한 선택은 다음과 같습니다.
 
-$$ \{(a_1, b_1) \times \dots \times (a_d, b_d) : -\infty < a_i < b_i < \infty\} $$
+$$ \{(a _1, b _1) \times \dots \times (a _d, b _d) : -\infty < a _i < b _i < \infty\} $$
 
 또는 때때로 더 큰 모임인 열린 집합들입니다.
 
@@ -52,45 +52,45 @@ $$ \{(a_1, b_1) \times \dots \times (a_d, b_d) : -\infty < a_i < b_i < \infty\} 
 
 정리 1.3.4로부터, 만약 $X$가 확률 변수이면 모든 $c \in \mathbb{R}$에 대해 $cX$, $X^2$, $\sin(X)$ 등도 그렇다는 것이 즉시 따라나옵니다. 다음 결과는 왜 우리가 가측 사상에 대한 정리 1.3.4를 증명하고 싶었는지를 보여줍니다.
 
-**정리 1.3.5.** 만약 $X_1, \dots, X_n$이 확률 변수들이고 $f: (\mathbb{R}^n, \mathcal{R}^n) \to (\mathbb{R}, \mathcal{R})$이 가측이면, $f(X_1, \dots, X_n)$은 확률 변수이다.
+**정리 1.3.5.** 만약 $X _1, \dots, X _n$이 확률 변수들이고 $f: (\mathbb{R}^n, \mathcal{R}^n) \to (\mathbb{R}, \mathcal{R})$이 가측이면, $f(X _1, \dots, X _n)$은 확률 변수이다.
 
-**증명.** 정리 1.3.4에 비추어 볼 때, $(X_1, \dots, X_n)$이 확률 벡터임을 보이는 것으로 충분하다. 이를 위해, 만약 $A_1, \dots, A_n$이 보렐 집합들이면 다음을 관찰한다.
+**증명.** 정리 1.3.4에 비추어 볼 때, $(X _1, \dots, X _n)$이 확률 벡터임을 보이는 것으로 충분하다. 이를 위해, 만약 $A _1, \dots, A _n$이 보렐 집합들이면 다음을 관찰한다.
 
-$$ \{(X_1, \dots, X_n) \in A_1 \times \dots \times A_n\} = \cap_i \{X_i \in A_i\} \in \mathcal{F} $$
+$$ \{(X _1, \dots, X _n) \in A _1 \times \dots \times A _n\} = \cap _i \{X _i \in A _i\} \in \mathcal{F} $$
 
-$A_1 \times \dots \times A_n$ 형태의 집합들이 $\mathcal{R}^n$을 생성하므로, 원하는 결과는 정리 1.3.1로부터 따라나온다. ◻
+$A _1 \times \dots \times A _n$ 형태의 집합들이 $\mathcal{R}^n$을 생성하므로, 원하는 결과는 정리 1.3.1로부터 따라나온다. ◻
 
-**정리 1.3.6.** 만약 $X_1, \dots, X_n$이 확률 변수들이면, $X_1 + \dots + X_n$은 확률 변수이다.
+**정리 1.3.6.** 만약 $X _1, \dots, X _n$이 확률 변수들이면, $X _1 + \dots + X _n$은 확률 변수이다.
 
-**증명.** 정리 1.3.5에 비추어 볼 때, $f(x_1, \dots, x_n) = x_1 + \dots + x_n$이 가측임을 보이는 것으로 충분하다. 이를 위해, 예제 1.3.2를 사용하고 $\{x : x_1 + \dots + x_n < a\}$가 열린 집합이므로 $\mathcal{R}^n$에 속한다는 점에 주목한다. ◻
+**증명.** 정리 1.3.5에 비추어 볼 때, $f(x _1, \dots, x _n) = x _1 + \dots + x _n$이 가측임을 보이는 것으로 충분하다. 이를 위해, 예제 1.3.2를 사용하고 $\{x : x _1 + \dots + x _n < a\}$가 열린 집합이므로 $\mathcal{R}^n$에 속한다는 점에 주목한다. ◻
 
-**정리 1.3.7.** 만약 $X_1, X_2, \dots$가 확률 변수들이면, 다음도 그렇다.
+**정리 1.3.7.** 만약 $X _1, X _2, \dots$가 확률 변수들이면, 다음도 그렇다.
 
-$$ \inf_n X_n \quad \sup_n X_n \quad \limsup_n X_n \quad \liminf_n X_n $$
+$$ \inf _n X _n \quad \sup _n X _n \quad \limsup _n X _n \quad \liminf _n X _n $$
 
 **증명.** 수열의 하한(infimum)이 $a$보다 작은 것은 어떤 항이 $a$보다 작은 것과 필요충분조건이므로 (만약 모든 항이 $\ge a$이면 하한도 그렇다), 우리는 다음을 갖는다.
 
-$$ \{\inf_n X_n < a\} = \cup_n \{X_n < a\} \in \mathcal{F} $$
+$$ \{\inf _n X _n < a\} = \cup _n \{X _n < a\} \in \mathcal{F} $$
 
-유사한 논증은 $\{\sup_n X_n > a\} = \cup_n \{X_n > a\} \in \mathcal{F}$임을 보여준다. 마지막 두 개에 대해서는 다음을 관찰한다.
+유사한 논증은 $\{\sup _n X _n > a\} = \cup _n \{X _n > a\} \in \mathcal{F}$임을 보여준다. 마지막 두 개에 대해서는 다음을 관찰한다.
 
-$$ \liminf_{n \to \infty} X_n = \sup_n (\inf_{m \ge n} X_m) $$
+$$ \liminf _{n \to \infty} X _n = \sup _n (\inf _{m \ge n} X _m) $$
 
-$$ \limsup_{n \to \infty} X_n = \inf_n (\sup_{m \ge n} X_m) $$
+$$ \limsup _{n \to \infty} X _n = \inf _n (\sup _{m \ge n} X _m) $$
 
-첫 번째 경우의 증명을 완성하기 위해, $Y_n = \inf_{m \ge n} X_m$이 각 $n$에 대해 확률 변수이므로 $\sup_n Y_n$도 그렇다는 점에 주목한다. ◻
+첫 번째 경우의 증명을 완성하기 위해, $Y _n = \inf _{m \ge n} X _m$이 각 $n$에 대해 확률 변수이므로 $\sup _n Y _n$도 그렇다는 점에 주목한다. ◻
 
 정리 1.3.7로부터, 우리는 다음이 가측 집합임을 알 수 있다.
 
-$$ \Omega_o \equiv \{\omega : \lim_{n \to \infty} X_n \text{ exists}\} = \{\omega : \limsup_{n \to \infty} X_n - \liminf_{n \to \infty} X_n = 0\} $$
+$$ \Omega _o \equiv \{\omega : \lim _{n \to \infty} X _n \text{ exists}\} = \{\omega : \limsup _{n \to \infty} X _n - \liminf _{n \to \infty} X _n = 0\} $$
 
-(여기서 $\equiv$는 첫 번째 등식이 정의임을 나타낸다.) 만약 $P(\Omega_o)=1$이면, 우리는 $X_n$이 **거의 확실하게(almost surely)**, 또는 줄여서 **a.s.** 수렴한다고 말한다. 이 유형의 수렴은 측도론에서 **거의 어디서나(almost everywhere)** 수렴이라고 불린다. 극한이 전체 공간에서 정의되도록 하기 위해, 다음과 같이 두는 것이 편리하다.
+(여기서 $\equiv$는 첫 번째 등식이 정의임을 나타낸다.) 만약 $P(\Omega _o)=1$이면, 우리는 $X _n$이 **거의 확실하게(almost surely)**, 또는 줄여서 **a.s.** 수렴한다고 말한다. 이 유형의 수렴은 측도론에서 **거의 어디서나(almost everywhere)** 수렴이라고 불린다. 극한이 전체 공간에서 정의되도록 하기 위해, 다음과 같이 두는 것이 편리하다.
 
-$$ X_\infty = \limsup_{n \to \infty} X_n $$
+$$ X _\infty = \limsup _{n \to \infty} X _n $$
 
 하지만 이 확률 변수는 $+\infty$ 또는 $-\infty$ 값을 가질 수 있다. 이것과 몇몇 다른 골칫거리들을 수용하기 위해, 우리는 확률 변수의 정의를 일반화할 것이다.
 
-정의역이 $D \in \mathcal{F}$이고 공역이 $\mathbb{R}^* \equiv [-\infty, \infty]$인 함수가 **확률 변수**라고 하는 것은, 모든 $B \in \mathcal{R}^*$에 대해 $X^{-1}(B) = \{\omega : X(\omega) \in B\} \in \mathcal{F}$인 경우이다. 여기서 $\mathcal{R}^*$는 $\mathbb{R}^*$의 보렐 부분집합들이고, $\mathbb{R}^*$에는 통상적인 위상, 즉 $a, b \in \mathbb{R}$일 때 $[-\infty, a), (a,b), (b, \infty]$ 형태의 구간들에 의해 생성되는 위상이 주어진다. 독자는 **확장된 실수 직선(extended real line)** $(\mathbb{R}^*, \mathcal{R}^*)$이 가측 공간이므로, 위의 모든 결과들이 즉시 일반화된다는 점에 주목해야 한다.
+정의역이 $D \in \mathcal{F}$이고 공역이 $\mathbb{R}^{\ast} \equiv [-\infty, \infty]$인 함수가 **확률 변수**라고 하는 것은, 모든 $B \in \mathcal{R}^{\ast}$에 대해 $X^{-1}(B) = \{\omega : X(\omega) \in B\} \in \mathcal{F}$인 경우이다. 여기서 $\mathcal{R}^{\ast}$는 $\mathbb{R}^{\ast}$의 보렐 부분집합들이고, $\mathbb{R}^{\ast}$에는 통상적인 위상, 즉 $a, b \in \mathbb{R}$일 때 $[-\infty, a), (a,b), (b, \infty]$ 형태의 구간들에 의해 생성되는 위상이 주어진다. 독자는 **확장된 실수 직선(extended real line)** $(\mathbb{R}^{\ast}, \mathcal{R}^{\ast})$이 가측 공간이므로, 위의 모든 결과들이 즉시 일반화된다는 점에 주목해야 한다.
 
 ---
 
@@ -98,18 +98,18 @@ $$ X_\infty = \limsup_{n \to \infty} X_n $$
 
 **1.3.1.** 만약 $\mathcal{A}$가 $\mathcal{S}$를 생성하면, $X^{-1}(\mathcal{A}) \equiv \{\{X \in A\} : A \in \mathcal{A}\}$는 $\sigma(X) = \{\{X \in B\} : B \in \mathcal{S}\}$를 생성함을 보여라.
 
-**1.3.2.** $n=2$일 때 $\{X_1+X_2 < x\} \in \mathcal{F}$임을 확인함으로써 정리 1.3.6을 증명하라.
+**1.3.2.** $n=2$일 때 $\{X _1+X _2 < x\} \in \mathcal{F}$임을 확인함으로써 정리 1.3.6을 증명하라.
 
-**1.3.3.** 만약 $f$가 연속이고 $X_n \to X$ almost surely이면, $f(X_n) \to f(X)$ almost surely임을 보여라.
+**1.3.3.** 만약 $f$가 연속이고 $X _n \to X$ almost surely이면, $f(X _n) \to f(X)$ almost surely임을 보여라.
 
 **1.3.4.** (i) $\mathbb{R}^d \to \mathbb{R}$인 연속 함수는 $(\mathbb{R}^d, \mathcal{R}^d)$에서 $(\mathbb{R}, \mathcal{R})$로 가는 가측 사상임을 보여라. (ii) $\mathcal{R}^d$가 모든 연속 함수를 가측으로 만드는 가장 작은 $\sigma$-필드임을 보여라.
 
-**1.3.5.** 함수 $f$가 **하반연속(lower semicontinuous)** 또는 l.s.c.라고 하는 것은 $\liminf_{y \to x} f(y) \ge f(x)$인 경우이다. **상반연속(upper semicontinuous)** (u.s.c.)는 $-f$가 l.s.c.인 경우이다. $f$가 l.s.c.인 것은 각 $a \in \mathbb{R}$에 대해 $\{x : f(x) \le a\}$가 닫힌 집합인 것과 필요충분조건임을 보이고, 반연속 함수들이 가측임을 결론지어라.
+**1.3.5.** 함수 $f$가 **하반연속(lower semicontinuous)** 또는 l.s.c.라고 하는 것은 $\liminf _{y \to x} f(y) \ge f(x)$인 경우이다. **상반연속(upper semicontinuous)** (u.s.c.)는 $-f$가 l.s.c.인 경우이다. $f$가 l.s.c.인 것은 각 $a \in \mathbb{R}$에 대해 $\{x : f(x) \le a\}$가 닫힌 집합인 것과 필요충분조건임을 보이고, 반연속 함수들이 가측임을 결론지어라.
 
-**1.3.6.** 임의의 함수 $f: \mathbb{R}^d \to \mathbb{R}$에 대해 $f^\delta(x) = \sup\{f(y) : |y-x| < \delta\}$와 $f_\delta(x) = \inf\{f(y) : |y-x| < \delta\}$ (여기서 $|z| = (z_1^2 + \dots + z_d^2)^{1/2}$)라 하자. $f^\delta$는 l.s.c.이고 $f_\delta$는 u.s.c.임을 보여라. $f^0 = \lim_{\delta \downarrow 0} f^\delta$, $f_0 = \lim_{\delta \downarrow 0} f_\delta$라 하고, $f$가 불연속인 점들의 집합 = $\{f^0 \neq f_0\}$이 가측임을 결론지어라.
+**1.3.6.** 임의의 함수 $f: \mathbb{R}^d \to \mathbb{R}$에 대해 $f^\delta(x) = \sup\{f(y) : |y-x| < \delta\}$와 $f _\delta(x) = \inf\{f(y) : |y-x| < \delta\}$ (여기서 $|z| = (z _1^2 + \dots + z _d^2)^{1/2}$)라 하자. $f^\delta$는 l.s.c.이고 $f _\delta$는 u.s.c.임을 보여라. $f^0 = \lim _{\delta \downarrow 0} f^\delta$, $f _0 = \lim _{\delta \downarrow 0} f _\delta$라 하고, $f$가 불연속인 점들의 집합 = $\{f^0 \neq f _0\}$이 가측임을 결론지어라.
 
-**1.3.7.** 함수 $\phi: \Omega \to \mathbb{R}$이 **단순(simple)**하다고 하는 것은 $\phi(\omega) = \sum_{m=1}^n c_m 1_{A_m}(\omega)$인 경우이다. 여기서 $c_m$은 실수이고 $A_m \in \mathcal{F}$이다. $\mathcal{F}$-가측 함수들의 클래스는 단순 함수들을 포함하고 점별 극한(pointwise limits)에 대해 닫혀 있는 가장 작은 클래스임을 보여라.
+**1.3.7.** 함수 $\phi: \Omega \to \mathbb{R}$이 **단순(simple)**하다고 하는 것은 $\phi(\omega) = \sum _{m=1}^n c _m 1 _{A _m}(\omega)$인 경우이다. 여기서 $c _m$은 실수이고 $A _m \in \mathcal{F}$이다. $\mathcal{F}$-가측 함수들의 클래스는 단순 함수들을 포함하고 점별 극한(pointwise limits)에 대해 닫혀 있는 가장 작은 클래스임을 보여라.
 
 **1.3.8.** 이전 연습문제를 사용하여, $Y$가 $\sigma(X)$에 대해 가측인 것은 $Y = f(X)$ (여기서 $f: \mathbb{R} \to \mathbb{R}$는 가측)인 것과 필요충분조건임을 결론지어라.
 
-**1.3.9.** 마지막 결과의 구성적 증명을 얻기 위해, $\{\omega : m2^{-n} \le Y < (m+1)2^{-n}\} = \{X \in B_{m,n}\}$ (어떤 $B_{m,n} \in \mathcal{R}$에 대해)임을 주목하고, $x \in B_{m,n}$에 대해 $f_n(x) = m2^{-n}$으로 설정한 다음, $n \to \infty$일 때 $f_n(x) \to f(x)$이고 $Y=f(X)$임을 보여라.
+**1.3.9.** 마지막 결과의 구성적 증명을 얻기 위해, $\{\omega : m2^{-n} \le Y < (m+1)2^{-n}\} = \{X \in B _{m,n}\}$ (어떤 $B _{m,n} \in \mathcal{R}$에 대해)임을 주목하고, $x \in B _{m,n}$에 대해 $f _n(x) = m2^{-n}$으로 설정한 다음, $n \to \infty$일 때 $f _n(x) \to f(x)$이고 $Y=f(X)$임을 보여라.
