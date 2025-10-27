@@ -14,17 +14,17 @@
 
 (i) 만약 $A \in \mathcal{F}$이면 $A^c \in \mathcal{F}$이다. (여집합에 대해 닫혀 있다)
 
-(ii) 만약 $A_i \in \mathcal{F}$가 가산 개의(countable) 집합들의 열(sequence)이면, $\cup_i A_i \in \mathcal{F}$이다. (가산 합집합에 대해 닫혀 있다)
+(ii) 만약 $A _i \in \mathcal{F}$가 가산 개의(countable) 집합들의 열(sequence)이면, $\cup _i A _i \in \mathcal{F}$이다. (가산 합집합에 대해 닫혀 있다)
 
-여기서 그리고 앞으로, **가산(countable)** 이라는 것은 유한(finite)이거나 가산 무한(countably infinite)임을 의미합니다. $\cap_i A_i = (\cup_i A_i^c)^c$ 이므로, $\sigma$-필드는 가산 교집합에 대해서도 닫혀 있다는 것을 알 수 있습니다. 우리는 정의를 확인하기 더 쉽게 만들기 위해 마지막 속성(가산 교집합)은 정의에서 생략합니다.
+여기서 그리고 앞으로, **가산(countable)** 이라는 것은 유한(finite)이거나 가산 무한(countably infinite)임을 의미합니다. $\cap _i A _i = (\cup _i A _i^c)^c$ 이므로, $\sigma$-필드는 가산 교집합에 대해서도 닫혀 있다는 것을 알 수 있습니다. 우리는 정의를 확인하기 더 쉽게 만들기 위해 마지막 속성(가산 교집합)은 정의에서 생략합니다.
 
 $P$가 없는 $(\Omega, \mathcal{F})$는 **가측 공간(measurable space)** 이라고 불립니다. 즉, 우리가 측도를 부여할 수 있는 공간입니다. **측도(measure)** 는 비음의 가산가법적인 집합 함수(nonnegative countably additive set function)입니다. 즉, 함수 $\mu: \mathcal{F} \rightarrow \mathbb{R}$이 다음을 만족합니다:
 
 (i) 모든 $A \in \mathcal{F}$에 대해 $\mu(A) \ge \mu(\emptyset) = 0$이다.
 
-(ii) 만약 $A_i \in \mathcal{F}$가 가산 개의 서로소인(disjoint) 집합들의 열이라면,
+(ii) 만약 $A _i \in \mathcal{F}$가 가산 개의 서로소인(disjoint) 집합들의 열이라면,
 
-$$ \mu(\cup_i A_i) = \sum_i \mu(A_i) $$
+$$ \mu(\cup _i A _i) = \sum _i \mu(A _i) $$
 
 **[해설 및 추가 설명]**
 
@@ -48,26 +48,26 @@ $$ \mu(\cup_i A_i) = \sum_i \mu(A_i) $$
 
 (i) **단조성(monotonicity).** 만약 $A \subset B$이면 $\mu(A) \le \mu(B)$이다.
 
-(ii) **준가법성(subadditivity).** 만약 $A \subset \cup_{m=1}^{\infty} A_m$이면 $\mu(A) \le \sum_{m=1}^{\infty} \mu(A_m)$이다.
+(ii) **준가법성(subadditivity).** 만약 $A \subset \cup _{m=1}^{\infty} A _m$이면 $\mu(A) \le \sum _{m=1}^{\infty} \mu(A _m)$이다.
 
-(iii) **아래로부터의 연속성(continuity from below).** 만약 $A_i \uparrow A$ (즉, $A_1 \subset A_2 \subset \dots$이고 $\cup_i A_i = A$)이면 $\mu(A_i) \uparrow \mu(A)$이다.
+(iii) **아래로부터의 연속성(continuity from below).** 만약 $A _i \uparrow A$ (즉, $A _1 \subset A _2 \subset \dots$이고 $\cup _i A _i = A$)이면 $\mu(A _i) \uparrow \mu(A)$이다.
 
-(iv) **위로부터의 연속성(continuity from above).** 만약 $A_i \downarrow A$ (즉, $A_1 \supset A_2 \supset \dots$이고 $\cap_i A_i = A$)이고, $\mu(A_1) < \infty$이면 $\mu(A_i) \downarrow \mu(A)$이다.
+(iv) **위로부터의 연속성(continuity from above).** 만약 $A _i \downarrow A$ (즉, $A _1 \supset A _2 \supset \dots$이고 $\cap _i A _i = A$)이고, $\mu(A _1) < \infty$이면 $\mu(A _i) \downarrow \mu(A)$이다.
 
 **증명.**
 (i) $B-A = B \cap A^c$를 두 집합의 차집합으로 두자. $+$를 서로소 합집합(disjoint union)을 나타내는 데 사용하면, $B = A + (B-A)$이므로
 
 $$ \mu(B) = \mu(A) + \mu(B-A) \ge \mu(A) $$
 
-(ii) $A'_n = A_n \cap A$라고 하자. $B_1 = A'_1$ 그리고 $n > 1$에 대해 $B_n = A'_n - \cup_{m=1}^{n-1} A'_m$이라고 하자. $B_n$들은 서로소이고 합집합이 $A$이므로, 측도의 정의 (ii), $B_m \subset A_m$, 그리고 이 정리의 (i)을 사용하여 다음을 얻는다.
+(ii) $A' _n = A _n \cap A$라고 하자. $B _1 = A' _1$ 그리고 $n > 1$에 대해 $B _n = A' _n - \cup _{m=1}^{n-1} A' _m$이라고 하자. $B _n$들은 서로소이고 합집합이 $A$이므로, 측도의 정의 (ii), $B _m \subset A _m$, 그리고 이 정리의 (i)을 사용하여 다음을 얻는다.
 
-$$ \mu(A) = \sum_{m=1}^{\infty} \mu(B_m) \le \sum_{m=1}^{\infty} \mu(A_m) $$
+$$ \mu(A) = \sum _{m=1}^{\infty} \mu(B _m) \le \sum _{m=1}^{\infty} \mu(A _m) $$
 
-(iii) $B_n = A_n - A_{n-1}$이라고 하자. 그러면 $B_n$들은 서로소이고 $\cup_{m=1}^{\infty} B_m = A$, $\cup_{m=1}^{n} B_m = A_n$이므로
+(iii) $B _n = A _n - A _{n-1}$이라고 하자. 그러면 $B _n$들은 서로소이고 $\cup _{m=1}^{\infty} B _m = A$, $\cup _{m=1}^{n} B _m = A _n$이므로
 
-$$ \mu(A) = \sum_{m=1}^{\infty} \mu(B_m) = \lim_{n \to \infty} \sum_{m=1}^{n} \mu(B_m) = \lim_{n \to \infty} \mu(A_n) $$
+$$ \mu(A) = \sum _{m=1}^{\infty} \mu(B _m) = \lim _{n \to \infty} \sum _{m=1}^{n} \mu(B _m) = \lim _{n \to \infty} \mu(A _n) $$
 
-(iv) $A_1 - A_n \uparrow A_1 - A$이므로, (iii)은 $\mu(A_1 - A_n) \uparrow \mu(A_1 - A)$임을 암시한다. $A_1 \supset A$이므로 $\mu(A_1 - A) = \mu(A_1) - \mu(A)$이고, 따라서 $\mu(A_n) \downarrow \mu(A)$가 성립한다. ◻
+(iv) $A _1 - A _n \uparrow A _1 - A$이므로, (iii)은 $\mu(A _1 - A _n) \uparrow \mu(A _1 - A)$임을 암시한다. $A _1 \supset A$이므로 $\mu(A _1 - A) = \mu(A _1) - \mu(A)$이고, 따라서 $\mu(A _n) \downarrow \mu(A)$가 성립한다. ◻
 
 **[해설 및 추가 설명]**
 
@@ -75,8 +75,8 @@ $$ \mu(A) = \sum_{m=1}^{\infty} \mu(B_m) = \lim_{n \to \infty} \sum_{m=1}^{n} \m
     *   (i) **단조성**: 더 큰 집합은 더 큰 (혹은 같은) 크기를 가집니다. 당연해 보이지만, 측도의 기본 공리로부터 유도되는 중요한 성질입니다.
     *   (ii) **준가법성**: 여러 집합의 합집합의 크기는 각 집합의 크기의 합보다 작거나 같습니다. 등호는 집합들이 서로소일 때만 성립합니다. 겹치는 부분이 있으면 크기의 합이 더 커지기 때문입니다.
     *   (iii) & (iv) **연속성**: 이 두 성질은 측도론이 극한을 다룰 수 있게 해주는 핵심입니다.
-        *   '점점 커지는' 사건들의 열($A_i \uparrow A$)의 확률은 그 극한 사건($A$)의 확률로 수렴합니다.
-        *   '점점 작아지는' 사건들의 열($A_i \downarrow A$)의 확률도 그 극한 사건($A$)의 확률로 수렴합니다. 단, 여기에는 **$\mu(A_1) < \infty$** 라는 중요한 조건이 붙습니다. 이 조건이 없으면 성립하지 않을 수 있습니다. (예: 실수 전체에서 르벡 측도를 생각하고 $A_n = (n, \infty)$라 하면, $\mu(A_n)=\infty$이지만 $\cap_n A_n = \emptyset$이므로 $\mu(\cap_n A_n)=0$입니다. $\infty$가 0으로 수렴하지 않죠.)
+        *   '점점 커지는' 사건들의 열($A _i \uparrow A$)의 확률은 그 극한 사건($A$)의 확률로 수렴합니다.
+        *   '점점 작아지는' 사건들의 열($A _i \downarrow A$)의 확률도 그 극한 사건($A$)의 확률로 수렴합니다. 단, 여기에는 **$\mu(A _1) < \infty$** 라는 중요한 조건이 붙습니다. 이 조건이 없으면 성립하지 않을 수 있습니다. (예: 실수 전체에서 르벡 측도를 생각하고 $A _n = (n, \infty)$라 하면, $\mu(A _n)=\infty$이지만 $\cap _n A _n = \emptyset$이므로 $\mu(\cap _n A _n)=0$입니다. $\infty$가 0으로 수렴하지 않죠.)
 
 ---
 
@@ -84,7 +84,7 @@ $$ \mu(A) = \sum_{m=1}^{\infty} \mu(B_m) = \lim_{n \to \infty} \sum_{m=1}^{n} \m
 
 **예제 1.1.2. 이산 확률 공간 (Discrete probability spaces).** $\Omega$가 가산 집합(즉, 유한이거나 가산 무한)이라고 하자. $\mathcal{F}$를 $\Omega$의 모든 부분집합들의 집합으로 하자.
 
-$$ P(A) = \sum_{\omega \in A} p(\omega) \quad \text{여기서 } p(\omega) \ge 0 \text{ 이고 } \sum_{\omega \in \Omega} p(\omega) = 1 $$
+$$ P(A) = \sum _{\omega \in A} p(\omega) \quad \text{여기서 } p(\omega) \ge 0 \text{ 이고 } \sum _{\omega \in \Omega} p(\omega) = 1 $$
 
 이라고 하자.
 조금만 생각해보면 이것이 이 공간 위에서 가장 일반적인 확률 측도임을 알 수 있다. 많은 경우에 $\Omega$가 유한 집합일 때, 우리는 $p(\omega) = 1/|\Omega|$를 갖는다. 여기서 $|\Omega|$는 $\Omega$에 있는 점의 개수이다.
@@ -96,15 +96,15 @@ $$ P(A) = \sum_{\omega \in A} p(\omega) \quad \text{여기서 } p(\omega) \ge 0 
 
 ---
 
-다음 정의를 준비하기 위해, 정의로부터 쉽게 따라나오는 사실을 주목할 필요가 있다. 만약 $\mathcal{F}_i, i \in I$가 $\sigma$-필드라면 $\cap_{i \in I} \mathcal{F}_i$도 그렇다. 여기서 $I \neq \emptyset$는 임의의 인덱스 집합(즉, 비가산일 수도 있다)이다. 이로부터 만약 우리가 집합 $\Omega$와 $\Omega$의 부분집합들의 모임 $\mathcal{A}$를 가지고 있다면, $\mathcal{A}$를 포함하는 가장 작은 $\sigma$-필드가 존재한다는 것을 알 수 있다. 우리는 이것을 $\mathcal{A}$에 의해 **생성된 $\sigma$-필드($\sigma$-field generated by $\mathcal{A}$)**라고 부르고 $\sigma(\mathcal{A})$로 표기할 것이다.
+다음 정의를 준비하기 위해, 정의로부터 쉽게 따라나오는 사실을 주목할 필요가 있다. 만약 $\mathcal{F} _i, i \in I$가 $\sigma$-필드라면 $\cap _{i \in I} \mathcal{F} _i$도 그렇다. 여기서 $I \neq \emptyset$는 임의의 인덱스 집합(즉, 비가산일 수도 있다)이다. 이로부터 만약 우리가 집합 $\Omega$와 $\Omega$의 부분집합들의 모임 $\mathcal{A}$를 가지고 있다면, $\mathcal{A}$를 포함하는 가장 작은 $\sigma$-필드가 존재한다는 것을 알 수 있다. 우리는 이것을 $\mathcal{A}$에 의해 **생성된 $\sigma$-필드($\sigma$-field generated by $\mathcal{A}$)**라고 부르고 $\sigma(\mathcal{A})$로 표기할 것이다.
 
-$\mathbb{R}^d$를 실수 벡터 $(x_1, \dots, x_d)$의 집합으로 하고, $\mathcal{R}^d$를 **보렐 집합(Borel sets)**, 즉 열린 집합(open sets)들을 포함하는 가장 작은 $\sigma$-필드로 하자. $d=1$일 때는 위첨자를 생략한다.
+$\mathbb{R}^d$를 실수 벡터 $(x _1, \dots, x _d)$의 집합으로 하고, $\mathcal{R}^d$를 **보렐 집합(Borel sets)**, 즉 열린 집합(open sets)들을 포함하는 가장 작은 $\sigma$-필드로 하자. $d=1$일 때는 위첨자를 생략한다.
 
 **예제 1.1.3. 실수 직선 상의 측도 (Measures on the real line).** $(\mathbb{R}, \mathcal{R})$ 상의 측도들은 다음과 같은 속성을 가진 **스틸체스 측도 함수(Stieltjes measure function)** $F$를 제공함으로써 정의된다:
 
 (i) $F$는 비감소(nondecreasing) 함수이다.
 
-(ii) $F$는 우연속(right continuous) 함수이다. 즉, $\lim_{y \downarrow x} F(y) = F(x)$.
+(ii) $F$는 우연속(right continuous) 함수이다. 즉, $\lim _{y \downarrow x} F(y) = F(x)$.
 
 **정리 1.1.4.** 각각의 스틸체스 측도 함수 $F$에 대해, $(\mathbb{R}, \mathcal{R})$ 상에 유일한 측도 $\mu$가 존재하며 다음을 만족한다.
 
@@ -112,13 +112,13 @@ $$ \mu((a, b]) = F(b) - F(a) \quad (1.1.1) $$
 
 $F(x)=x$일 때, 결과로 나오는 측도는 **르벡 측도(Lebesgue measure)**라고 불린다.
 
-정리 1.1.4의 증명은 길고 복잡한 길이므로, 이 절에서는 관련된 주요 아이디어들을 설명하고 나머지 세부 사항은 부록 A.1절에 숨기는 것으로 만족할 것이다. $(a, b]$에서 "오른쪽은 닫힌" 구간을 선택하는 것은 만약 $b_n \downarrow b$이면 $\cap_n(a, b_n] = (a, b]$라는 사실에 의해 결정된다. 다음 정의는 "왼쪽은 열린" 구간을 선택한 이유를 설명할 것이다.
+정리 1.1.4의 증명은 길고 복잡한 길이므로, 이 절에서는 관련된 주요 아이디어들을 설명하고 나머지 세부 사항은 부록 A.1절에 숨기는 것으로 만족할 것이다. $(a, b]$에서 "오른쪽은 닫힌" 구간을 선택하는 것은 만약 $b _n \downarrow b$이면 $\cap _n(a, b _n] = (a, b]$라는 사실에 의해 결정된다. 다음 정의는 "왼쪽은 열린" 구간을 선택한 이유를 설명할 것이다.
 
 집합들의 모임 $\mathcal{S}$가 **반대수(semialgebra)**라고 불리는 것은 (i) 교집합에 대해 닫혀 있고, 즉 $S, T \in \mathcal{S}$이면 $S \cap T \in \mathcal{S}$이고, (ii) 만약 $S \in \mathcal{S}$이면 $S^c$는 $\mathcal{S}$에 속한 집합들의 유한한 서로소 합집합(finite disjoint union)인 경우이다. 반대수의 중요한 예는 다음과 같다.
 
-**예제 1.1.5.** $\mathcal{S}_d = $ 공집합과 다음 형태의 모든 집합들
+**예제 1.1.5.** $\mathcal{S} _d = $ 공집합과 다음 형태의 모든 집합들
 
-$$ (a_1, b_1] \times \dots \times (a_d, b_d] \subset \mathbb{R}^d \quad \text{여기서 } -\infty \le a_i < b_i \le \infty $$
+$$ (a _1, b _1] \times \dots \times (a _d, b _d] \subset \mathbb{R}^d \quad \text{여기서 } -\infty \le a _i < b _i \le \infty $$
 
 **[해설 및 추가 설명]**
 
@@ -132,11 +132,11 @@ $$ (a_1, b_1] \times \dots \times (a_d, b_d] \subset \mathbb{R}^d \quad \text{�
 *   **반대수(Semialgebra)**: $\sigma$-필드를 구성하기 위한 가장 기본적인 집합들의 모임입니다. 반대수로부터 유한 합집합을 통해 대수(algebra)를 만들고, 다시 대수로부터 가산 합집합/교집합을 통해 $\sigma$-필드를 만드는 과정(카라테오도리 확장 정리)이 측도론의 표준적인 구성 방법입니다. 예제 1.1.5의 반열린 직사각형들이 바로 그 출발점입니다.
 
 
-**예제 1.1.5.** $\mathcal{S}_d = $ 공집합과 다음 형태의 모든 집합들
+**예제 1.1.5.** $\mathcal{S} _d = $ 공집합과 다음 형태의 모든 집합들
 
-$$ (a_1, b_1] \times \dots \times (a_d, b_d] \subset \mathbb{R}^d \quad \text{여기서 } -\infty \le a_i < b_i \le \infty $$
+$$ (a _1, b _1] \times \dots \times (a _d, b _d] \subset \mathbb{R}^d \quad \text{여기서 } -\infty \le a _i < b _i \le \infty $$
 
-**(1.1.1)의 정의는 반대수(semialgebra) $\mathcal{S}_1$ 위에서 $\mu$의 값을 제공합니다.** 반대수에서 $\sigma$-대수로 나아가기 위해 우리는 중간 단계를 사용합니다. $\Omega$의 부분집합들의 모임 $\mathcal{A}$가 **대수(algebra)**(또는 **필드(field)**)라고 불리는 것은, $A, B \in \mathcal{A}$일 때 $A^c$와 $A \cup B$가 $\mathcal{A}$에 속하는 경우입니다. $A \cap B = (A^c \cup B^c)^c$이므로, $A \cap B \in \mathcal{A}$임이 따라나옵니다. 명백하게 $\sigma$-대수는 대수입니다. 역이 성립하지 않는 예는 다음과 같습니다:
+**(1.1.1)의 정의는 반대수(semialgebra) $\mathcal{S} _1$ 위에서 $\mu$의 값을 제공합니다.** 반대수에서 $\sigma$-대수로 나아가기 위해 우리는 중간 단계를 사용합니다. $\Omega$의 부분집합들의 모임 $\mathcal{A}$가 **대수(algebra)**(또는 **필드(field)**)라고 불리는 것은, $A, B \in \mathcal{A}$일 때 $A^c$와 $A \cup B$가 $\mathcal{A}$에 속하는 경우입니다. $A \cap B = (A^c \cup B^c)^c$이므로, $A \cap B \in \mathcal{A}$임이 따라나옵니다. 명백하게 $\sigma$-대수는 대수입니다. 역이 성립하지 않는 예는 다음과 같습니다:
 
 **예제 1.1.6.** $\Omega = \mathbb{Z} = $ 정수들의 집합. $A \subset \mathbb{Z}$이면서 $A$ 또는 $A^c$가 유한 집합인 모임 $\mathcal{A}$는 대수입니다.
 
@@ -155,24 +155,24 @@ $$ (a_1, b_1] \times \dots \times (a_d, b_d] \subset \mathbb{R}^d \quad \text{�
 
 **보조정리 1.1.7.** 만약 $\mathcal{S}$가 반대수이면 $\bar{\mathcal{S}} = \{\mathcal{S} \text{에 있는 집합들의 유한 서로소 합집합}\}$은 대수이며, 이를 $\mathcal{S}$에 의해 **생성된 대수(algebra generated by $\mathcal{S}$)**라고 부른다.
 
-**증명.** $A = +_i S_i$이고 $B = +_j T_j$라고 가정하자. 여기서 $+$는 서로소 합집합을 나타내고 인덱스 집합은 유한하다고 가정한다. 그러면 $A \cap B = +_{i,j} S_i \cap T_j \in \bar{\mathcal{S}}$이다. 여집합의 경우, $A = +_i S_i$이면 $A^c = \cap_i S_i^c$이다. 반대수 $\mathcal{S}$의 정의는 $S_i^c \in \bar{\mathcal{S}}$임을 암시한다. 우리는 $\bar{\mathcal{S}}$가 교집합에 닫혀 있음을 보였으므로, 귀납법에 의해 $A^c \in \bar{\mathcal{S}}$가 성립한다. ◻
+**증명.** $A = + _i S _i$이고 $B = + _j T _j$라고 가정하자. 여기서 $+$는 서로소 합집합을 나타내고 인덱스 집합은 유한하다고 가정한다. 그러면 $A \cap B = + _{i,j} S _i \cap T _j \in \bar{\mathcal{S}}$이다. 여집합의 경우, $A = + _i S _i$이면 $A^c = \cap _i S _i^c$이다. 반대수 $\mathcal{S}$의 정의는 $S _i^c \in \bar{\mathcal{S}}$임을 암시한다. 우리는 $\bar{\mathcal{S}}$가 교집합에 닫혀 있음을 보였으므로, 귀납법에 의해 $A^c \in \bar{\mathcal{S}}$가 성립한다. ◻
 
-**예제 1.1.8.** $\Omega = \mathbb{R}$이고 $\mathcal{S} = \mathcal{S}_1$이면, $\bar{\mathcal{S}}_1 = $ 공집합과 다음 형태의 모든 집합들이다.
+**예제 1.1.8.** $\Omega = \mathbb{R}$이고 $\mathcal{S} = \mathcal{S} _1$이면, $\bar{\mathcal{S}} _1 = $ 공집합과 다음 형태의 모든 집합들이다.
 
-$$ \cup_{i=1}^k (a_i, b_i] \quad \text{여기서 } -\infty \le a_i < b_i \le \infty $$
+$$ \cup _{i=1}^k (a _i, b _i] \quad \text{여기서 } -\infty \le a _i < b _i \le \infty $$
 
 집합 함수 $\mu$가 $\mathcal{S}$ 위에서 주어졌을 때, 우리는 그것을 다음과 같이 $\bar{\mathcal{S}}$로 확장할 수 있다.
 
-$$ \mu(\text{+}_{i=1}^n A_i) = \sum_{i=1}^n \mu(A_i) $$
+$$ \mu(\text{+} _{i=1}^n A _i) = \sum _{i=1}^n \mu(A _i) $$
 
 **대수 $\mathcal{A}$ 위의 측도(measure on an algebra)**란, 다음을 만족하는 집합 함수 $\mu$를 의미한다.
 
 (i) 모든 $A \in \mathcal{A}$에 대해 $\mu(A) \ge \mu(\emptyset) = 0$이다.
-(ii) 만약 $A_i \in \mathcal{A}$가 서로소이고 그들의 합집합이 $\mathcal{A}$에 속하면,
+(ii) 만약 $A _i \in \mathcal{A}$가 서로소이고 그들의 합집합이 $\mathcal{A}$에 속하면,
 
-$$ \mu(\cup_{i=1}^\infty A_i) = \sum_{i=1}^\infty \mu(A_i) $$
+$$ \mu(\cup _{i=1}^\infty A _i) = \sum _{i=1}^\infty \mu(A _i) $$
 
-$\mu$가 **$\sigma$-유한($\sigma$-finite)**이라고 하는 것은, $\mu(A_n) < \infty$이고 $\cup_n A_n = \Omega$인 집합들의 열 $A_n \in \mathcal{A}$가 존재하는 경우이다. $A'_1 = A_1$이라 하고 $n \ge 2$에 대해 $A'_n = \cup_{m=1}^n A_m$ 또는 $A'_n = A_n \cap (\cap_{m=1}^{n-1} A_m^c) \in \mathcal{A}$로 두면, 우리는 일반성을 잃지 않고 $A_n \uparrow \Omega$이거나 $A_n$들이 서로소라고 가정할 수 있다.
+$\mu$가 **$\sigma$-유한($\sigma$-finite)**이라고 하는 것은, $\mu(A _n) < \infty$이고 $\cup _n A _n = \Omega$인 집합들의 열 $A _n \in \mathcal{A}$가 존재하는 경우이다. $A' _1 = A _1$이라 하고 $n \ge 2$에 대해 $A' _n = \cup _{m=1}^n A _m$ 또는 $A' _n = A _n \cap (\cap _{m=1}^{n-1} A _m^c) \in \mathcal{A}$로 두면, 우리는 일반성을 잃지 않고 $A _n \uparrow \Omega$이거나 $A _n$들이 서로소라고 가정할 수 있다.
 
 다음 결과는 반대수 $\mathcal{S}$ 위에 정의된 측도를 그것이 생성하는 $\sigma$-대수 $\sigma(\mathcal{S})$로 확장하는 데 도움을 준다.
 
@@ -180,67 +180,67 @@ $\mu$가 **$\sigma$-유한($\sigma$-finite)**이라고 하는 것은, $\mu(A_n) 
 
 **정리 1.1.9.** $\mathcal{S}$를 반대수라 하고, $\mathcal{S}$ 위에 정의된 $\mu$가 $\mu(\emptyset)=0$을 만족한다고 하자. 다음을 가정하자.
 
-(i) 만약 $S \in \mathcal{S}$가 $S_i \in \mathcal{S}$인 집합들의 유한 서로소 합집합이면, $\mu(S) = \sum_i \mu(S_i)$이다.
+(i) 만약 $S \in \mathcal{S}$가 $S _i \in \mathcal{S}$인 집합들의 유한 서로소 합집합이면, $\mu(S) = \sum _i \mu(S _i)$이다.
 
-(ii) 만약 $S_i, S \in \mathcal{S}$이고 $S = \text{+}_{i \ge 1} S_i$이면, $\mu(S) \le \sum_{i \ge 1} \mu(S_i)$이다.
+(ii) 만약 $S _i, S \in \mathcal{S}$이고 $S = \text{+} _{i \ge 1} S _i$이면, $\mu(S) \le \sum _{i \ge 1} \mu(S _i)$이다.
 
 그러면 $\mu$는 $\mathcal{S}$에 의해 생성된 대수 $\bar{\mathcal{S}}$ 위의 측도인 유일한 확장 $\bar{\mu}$를 갖는다. 만약 $\bar{\mu}$가 시그마-유한이면, $\sigma(\mathcal{S})$ 위의 측도인 유일한 확장 $\nu$가 존재한다.
 
 위의 (ii)에서, 그리고 앞으로 $i \ge 1$은 가산 합집합을 나타내고, 평범한 첨자 $i$ 또는 $j$는 유한 합집합을 나타낸다. 정리 1.1.9의 증명은 상당히 복잡하므로 부록 A.1절에서 다룬다. 정리의 조건 (ii)를 확인하기 위해 다음이 유용하다.
 
 **보조정리 1.1.10.** (i)만 성립한다고 가정하자.
-(a) 만약 $A, B_i \in \bar{\mathcal{S}}$이고 $A = \text{+}_{i=1}^n B_i$이면, $\bar{\mu}(A) = \sum_i \bar{\mu}(B_i)$이다.
+(a) 만약 $A, B _i \in \bar{\mathcal{S}}$이고 $A = \text{+} _{i=1}^n B _i$이면, $\bar{\mu}(A) = \sum _i \bar{\mu}(B _i)$이다.
 
-(b) 만약 $A, B_i \in \bar{\mathcal{S}}$이고 $A \subset \cup_{i=1}^n B_i$이면, $\bar{\mu}(A) \le \sum_i \bar{\mu}(B_i)$이다.
+(b) 만약 $A, B _i \in \bar{\mathcal{S}}$이고 $A \subset \cup _{i=1}^n B _i$이면, $\bar{\mu}(A) \le \sum _i \bar{\mu}(B _i)$이다.
 
-**증명.** 정의에 따라, 만약 $A = \text{+}_i B_i$가 $\bar{\mathcal{S}}$에 속한 집합들의 유한 서로소 합집합이고 $B_i = \text{+}_j S_{i,j}$이면, 다음이 성립함이 따라나온다.
+**증명.** 정의에 따라, 만약 $A = \text{+} _i B _i$가 $\bar{\mathcal{S}}$에 속한 집합들의 유한 서로소 합집합이고 $B _i = \text{+} _j S _{i,j}$이면, 다음이 성립함이 따라나온다.
 
-$$ \bar{\mu}(A) = \sum_{i,j} \mu(S_{i,j}) = \sum_i \bar{\mu}(B_i) $$
+$$ \bar{\mu}(A) = \sum _{i,j} \mu(S _{i,j}) = \sum _i \bar{\mu}(B _i) $$
 
-(b)를 증명하기 위해, $n=1, B_1=B$인 경우부터 시작하자. $B=A+(B \cap A^c)$이고 $B \cap A^c \in \bar{\mathcal{S}}$이므로,
+(b)를 증명하기 위해, $n=1, B _1=B$인 경우부터 시작하자. $B=A+(B \cap A^c)$이고 $B \cap A^c \in \bar{\mathcal{S}}$이므로,
 
 $$ \bar{\mu}(A) \le \bar{\mu}(A) + \bar{\mu}(B \cap A^c) = \bar{\mu}(B) $$
 
-이제 $n > 1$을 다루기 위해, $F_k = B_1^c \cap \dots \cap B_{k-1}^c \cap B_k$라 하고 다음을 주목하자.
+이제 $n > 1$을 다루기 위해, $F _k = B _1^c \cap \dots \cap B _{k-1}^c \cap B _k$라 하고 다음을 주목하자.
 
-$$ \cup_i B_i = F_1 + \dots + F_n $$
+$$ \cup _i B _i = F _1 + \dots + F _n $$
 
-$$ A = A \cap (\cup_i B_i) = (A \cap F_1) + \dots + (A \cap F_n) $$
+$$ A = A \cap (\cup _i B _i) = (A \cap F _1) + \dots + (A \cap F _n) $$
 
 따라서 (a), $n=1$일 때의 (b), 그리고 다시 (a)를 사용하여,
 
-$$ \bar{\mu}(A) = \sum_{k=1}^n \bar{\mu}(A \cap F_k) \le \sum_{k=1}^n \bar{\mu}(F_k) = \bar{\mu}(\cup_i B_i) $$
+$$ \bar{\mu}(A) = \sum _{k=1}^n \bar{\mu}(A \cap F _k) \le \sum _{k=1}^n \bar{\mu}(F _k) = \bar{\mu}(\cup _i B _i) $$
 
 ◻
 
 **[해설 및 추가 설명]**
 
 *   **정리 1.1.9 (카라테오도리 확장 정리)**: 이 정리는 측도론의 건설에서 가장 중요한 정리입니다. 매우 단순한 집합들(반대수) 위에서 잘 정의된 (즉, 유한 가법성과 가산 준가법성을 만족하는) 함수 $\mu$만 있으면, 이것을 우리가 원하는 복잡한 집합들($\sigma$-대수) 위에서의 완전한 측도로 유일하게 확장할 수 있다는 것을 보장합니다. "$\sigma$-유한" 조건은 대수에서 $\sigma$-대수로의 마지막 확장 단계에서 필요합니다.
-*   **보조정리 1.1.10**: 확장 정리의 까다로운 조건인 '가산 준가법성'을 직접 보이는 대신, 이 보조정리는 '유한 준가법성'을 보이는 것으로 충분할 수 있는 길을 열어줍니다. 증명에 사용된 $F_k$를 구성하는 방법은, 겹치는 집합들의 합집합을 다룰 때 서로소인 집합들의 합집합으로 바꾸는 표준적인 기술입니다.
+*   **보조정리 1.1.10**: 확장 정리의 까다로운 조건인 '가산 준가법성'을 직접 보이는 대신, 이 보조정리는 '유한 준가법성'을 보이는 것으로 충분할 수 있는 길을 열어줍니다. 증명에 사용된 $F _k$를 구성하는 방법은, 겹치는 집합들의 합집합을 다룰 때 서로소인 집합들의 합집합으로 바꾸는 표준적인 기술입니다.
 
 ---
 
 **정리 1.1.4의 증명.** $\mathcal{S}$를 $-\infty \le a < b \le \infty$인 반열린 구간 $(a,b]$들의 반대수로 하자. $\mathcal{S}$ 위에 $\mu$를 정의하기 위해, 먼저 다음을 관찰하는 것으로 시작한다.
 
-$$ F(\infty) = \lim_{x \uparrow \infty} F(x) \quad \text{그리고} \quad F(-\infty) = \lim_{x \downarrow -\infty} F(x) \quad \text{가 존재한다.} $$
+$$ F(\infty) = \lim _{x \uparrow \infty} F(x) \quad \text{그리고} \quad F(-\infty) = \lim _{x \downarrow -\infty} F(x) \quad \text{가 존재한다.} $$
 
 그리고 $\mu((a,b]) = F(b)-F(a)$는 $F(\infty) > -\infty$이고 $F(-\infty) < \infty$이므로 모든 $-\infty \le a < b \le \infty$에 대해 의미가 있다.
 
-만약 $(a, b] = \text{+}_{i=1}^n (a_i, b_i]$이면, 구간들을 재배열한 후에 우리는 $a_1=a, b_n=b$ 그리고 $2 \le i \le n$에 대해 $a_i=b_{i-1}$을 가져야만 하므로, 정리 1.1.9의 조건 (i)이 성립한다.
+만약 $(a, b] = \text{+} _{i=1}^n (a _i, b _i]$이면, 구간들을 재배열한 후에 우리는 $a _1=a, b _n=b$ 그리고 $2 \le i \le n$에 대해 $a _i=b _{i-1}$을 가져야만 하므로, 정리 1.1.9의 조건 (i)이 성립한다.
 
-조건 (ii)를 확인하기 위해, 먼저 $-\infty < a < b < \infty$이고, $(a, b] \subset \cup_{i \ge 1} (a_i, b_i]$ (일반성을 잃지 않고) $-\infty < a_i < b_i < \infty$라고 가정하자. $F(a+\delta) < F(a)+\epsilon$이 되도록 $\delta>0$을 선택하고, $F(b_i+\eta_i) < F(b_i) + \epsilon 2^{-i}$가 되도록 $\eta_i$를 선택하자.
+조건 (ii)를 확인하기 위해, 먼저 $-\infty < a < b < \infty$이고, $(a, b] \subset \cup _{i \ge 1} (a _i, b _i]$ (일반성을 잃지 않고) $-\infty < a _i < b _i < \infty$라고 가정하자. $F(a+\delta) < F(a)+\epsilon$이 되도록 $\delta>0$을 선택하고, $F(b _i+\eta _i) < F(b _i) + \epsilon 2^{-i}$가 되도록 $\eta _i$를 선택하자.
 
-열린 구간 $(a_i, b_i+\eta_i)$들은 $[a+\delta, b]$를 덮으므로, 유한 부분 덮개(finite subcover) $( \alpha_j, \beta_j ), 1 \le j \le J$가 존재한다. $(a+\delta, b] \subset \cup_{j=1}^J (\alpha_j, \beta_j]$ 이므로, 보조정리 1.1.10의 (b)는 다음을 암시한다.
+열린 구간 $(a _i, b _i+\eta _i)$들은 $[a+\delta, b]$를 덮으므로, 유한 부분 덮개(finite subcover) $( \alpha _j, \beta _j ), 1 \le j \le J$가 존재한다. $(a+\delta, b] \subset \cup _{j=1}^J (\alpha _j, \beta _j]$ 이므로, 보조정리 1.1.10의 (b)는 다음을 암시한다.
 
-$$ F(b) - F(a+\delta) \le \sum_{j=1}^J F(\beta_j) - F(\alpha_j) \le \sum_{i=1}^\infty (F(b_i+\eta_i)-F(a_i)) $$
+$$ F(b) - F(a+\delta) \le \sum _{j=1}^J F(\beta _j) - F(\alpha _j) \le \sum _{i=1}^\infty (F(b _i+\eta _i)-F(a _i)) $$
 
-따라서, $\delta$와 $\eta_i$의 선택에 의해,
+따라서, $\delta$와 $\eta _i$의 선택에 의해,
 
-$$ F(b) - F(a) \le 2\epsilon + \sum_{i=1}^\infty (F(b_i)-F(a_i)) $$
+$$ F(b) - F(a) \le 2\epsilon + \sum _{i=1}^\infty (F(b _i)-F(a _i)) $$
 
-그리고 $\epsilon$은 임의적이므로, 우리는 $-\infty < a < b < \infty$ 경우에 대해 결과를 증명했다. 마지막 제한을 제거하기 위해, 만약 $(a, b] \subset \cup_i (a_i, b_i]$이고, $(A, B] \subset (a, b]$가 $-\infty < A < B < \infty$를 가지면, 우리는 다음을 얻는다.
+그리고 $\epsilon$은 임의적이므로, 우리는 $-\infty < a < b < \infty$ 경우에 대해 결과를 증명했다. 마지막 제한을 제거하기 위해, 만약 $(a, b] \subset \cup _i (a _i, b _i]$이고, $(A, B] \subset (a, b]$가 $-\infty < A < B < \infty$를 가지면, 우리는 다음을 얻는다.
 
-$$ F(B) - F(A) \le \sum_{i=1}^\infty (F(b_i) - F(a_i)) $$
+$$ F(B) - F(A) \le \sum _{i=1}^\infty (F(b _i) - F(a _i)) $$
 
 마지막 결과가 임의의 유한한 $(A,B] \subset (a,b]$에 대해 성립하므로, 원하는 결과가 따라나온다. ◻
 
@@ -249,29 +249,29 @@ $$ F(B) - F(A) \le \sum_{i=1}^\infty (F(b_i) - F(a_i)) $$
 
 우리의 다음 목표는 정리 1.1.4의 $\mathbb{R}^d$ 버전을 증명하는 것입니다. 첫 번째 단계는 정의 함수 $F$에 대한 가정을 도입하는 것입니다. $d=1$인 경우와의 유추를 통해 다음과 같이 가정하는 것이 자연스럽습니다:
 
-(i) $F$는 **비감소(nondecreasing)** 함수이다. 즉, 만약 $x \le y$ (모든 $i$에 대해 $x_i \le y_i$를 의미)이면 $F(x) \le F(y)$이다.
+(i) $F$는 **비감소(nondecreasing)** 함수이다. 즉, 만약 $x \le y$ (모든 $i$에 대해 $x _i \le y _i$를 의미)이면 $F(x) \le F(y)$이다.
 
-(ii) $F$는 **우연속(right continuous)** 함수이다. 즉, $\lim_{y \downarrow x} F(y) = F(x)$이다 (여기서 $y \downarrow x$는 각 성분 $y_i$가 $x_i$로 감소하며 수렴함을 의미한다).
+(ii) $F$는 **우연속(right continuous)** 함수이다. 즉, $\lim _{y \downarrow x} F(y) = F(x)$이다 (여기서 $y \downarrow x$는 각 성분 $y _i$가 $x _i$로 감소하며 수렴함을 의미한다).
 
-(iii) 만약 $x_n \downarrow -\infty$ (즉, 각 좌표 성분이 $-\infty$로 가면) $F(x_n) \downarrow 0$이다. 만약 $x_n \uparrow \infty$ (즉, 각 좌표 성분이 $\infty$로 가면) $F(x_n) \uparrow 1$이다. (이 부분은 오타 수정 및 내용 보강. 원문은 $x_n \uparrow -\infty$는 오타로 보임. 일반적으로 분포함수는 무한대에서 1, 음의 무한대에서 0으로 수렴. 이 책 5판에서는 이 부분이 빠지고 대신 `(iv) Δ_A F ≥ 0 for all rectangles A` 조건으로 통합됨.)
+(iii) 만약 $x _n \downarrow -\infty$ (즉, 각 좌표 성분이 $-\infty$로 가면) $F(x _n) \downarrow 0$이다. 만약 $x _n \uparrow \infty$ (즉, 각 좌표 성분이 $\infty$로 가면) $F(x _n) \uparrow 1$이다. (이 부분은 오타 수정 및 내용 보강. 원문은 $x _n \uparrow -\infty$는 오타로 보임. 일반적으로 분포함수는 무한대에서 1, 음의 무한대에서 0으로 수렴. 이 책 5판에서는 이 부분이 빠지고 대신 `(iv) Δ _A F ≥ 0 for all rectangles A` 조건으로 통합됨.)
 
 그러나 이번에는 이것만으로는 충분하지 않습니다. 다음 $F$를 고려해 봅시다.
 
-$$ F(x_1, x_2) = \begin{cases} 1 & \text{if } x_1, x_2 \ge 1 \\ 2/3 & \text{if } x_1 \ge 1 \text{ and } 0 \le x_2 < 1 \\ 2/3 & \text{if } x_2 \ge 1 \text{ and } 0 \le x_1 < 1 \\ 0 & \text{otherwise} \end{cases} $$
+$$ F(x _1, x _2) = \begin{cases} 1 & \text{if } x _1, x _2 \ge 1 \\ 2/3 & \text{if } x _1 \ge 1 \text{ and } 0 \le x _2 < 1 \\ 2/3 & \text{if } x _2 \ge 1 \text{ and } 0 \le x _1 < 1 \\ 0 & \text{otherwise} \end{cases} $$
 
 **[해설 및 추가 설명]**
 
-*   **$\mathbb{R}^d$에서의 함수 $F$**: $d=1$일 때, $F(x)$는 점 $x$까지의 누적된 '크기'를 나타냈습니다. $\mathbb{R}^d$에서는 $F(x_1, \dots, x_d)$가 $(-\infty, x_1] \times \dots \times (-\infty, x_d]$ 라는 '무한 직사각형'의 크기를 나타냅니다. (i), (ii), (iii)은 1차원 CDF의 성질을 자연스럽게 확장한 것입니다.
-*   **왜 이 조건들만으로는 부족한가?**: 1차원에서는 구간 $(a, b]$의 측도를 $\mu((a,b]) = F(b)-F(a) \ge 0$ (비감소 성질 때문에)으로 간단히 정의할 수 있었습니다. 하지만 $d \ge 2$에서는 직사각형 $(a_1, b_1] \times (a_2, b_2]$의 측도를 정의하기 위해 포함-배제의 원리가 필요합니다.
+*   **$\mathbb{R}^d$에서의 함수 $F$**: $d=1$일 때, $F(x)$는 점 $x$까지의 누적된 '크기'를 나타냈습니다. $\mathbb{R}^d$에서는 $F(x _1, \dots, x _d)$가 $(-\infty, x _1] \times \dots \times (-\infty, x _d]$ 라는 '무한 직사각형'의 크기를 나타냅니다. (i), (ii), (iii)은 1차원 CDF의 성질을 자연스럽게 확장한 것입니다.
+*   **왜 이 조건들만으로는 부족한가?**: 1차원에서는 구간 $(a, b]$의 측도를 $\mu((a,b]) = F(b)-F(a) \ge 0$ (비감소 성질 때문에)으로 간단히 정의할 수 있었습니다. 하지만 $d \ge 2$에서는 직사각형 $(a _1, b _1] \times (a _2, b _2]$의 측도를 정의하기 위해 포함-배제의 원리가 필요합니다.
 
 ---
 
 그림 1.1은 반례에 대한 그림입니다. 약간의 생각으로 다음을 알 수 있습니다.
 
-$$ \begin{aligned} \mu((a_1, b_1] \times (a_2, b_2]) = & \mu((-\infty, b_1] \times (-\infty, b_2]) - \mu((-\infty, a_1] \times (-\infty, b_2]) \\ & - \mu((-\infty, b_1] \times (-\infty, a_2]) + \mu((-\infty, a_1] \times (-\infty, a_2]) \\ = & F(b_1, b_2) - F(a_1, b_2) - F(b_1, a_2) + F(a_1, a_2) \end{aligned} $$
+$$ \begin{aligned} \mu((a _1, b _1] \times (a _2, b _2]) = & \mu((-\infty, b _1] \times (-\infty, b _2]) - \mu((-\infty, a _1] \times (-\infty, b _2]) \\ & - \mu((-\infty, b _1] \times (-\infty, a _2]) + \mu((-\infty, a _1] \times (-\infty, a _2]) \\ = & F(b _1, b _2) - F(a _1, b _2) - F(b _1, a _2) + F(a _1, a _2) \end{aligned} $$
 
 
-이것을 $a_1 = a_2 = 1 - \epsilon$ 그리고 $b_1 = b_2 = 1$로 사용하고 $\epsilon \rightarrow 0$으로 보내면 다음을 알 수 있습니다.
+이것을 $a _1 = a _2 = 1 - \epsilon$ 그리고 $b _1 = b _2 = 1$로 사용하고 $\epsilon \rightarrow 0$으로 보내면 다음을 알 수 있습니다.
 
 $$ \mu(\{1,1\}) = 1 - 2/3 - 2/3 + 0 = -1/3 $$
 
@@ -285,58 +285,58 @@ $$ \mu(\{1,1\}) = 1 - 2/3 - 2/3 + 0 = -1/3 $$
 
 $F$가 측도를 정의하기 위한 세 번째이자 마지막 조건을 공식화하기 위해, 다음을 정의합시다.
 
-$$ A = (a_1, b_1] \times \dots \times (a_d, b_d] $$
+$$ A = (a _1, b _1] \times \dots \times (a _d, b _d] $$
 
-$$ V = \{a_1, b_1\} \times \dots \times \{a_d, b_d\} $$
+$$ V = \{a _1, b _1\} \times \dots \times \{a _d, b _d\} $$
 
-여기서 $-\infty < a_i < b_i < \infty$ 입니다. $\infty$가 허용되지 않음을 강조하기 위해, 우리는 $A$를 **유한 직사각형(finite rectangle)**이라고 부를 것입니다. 그러면 $V$는 직사각형 $A$의 꼭짓점들의 집합입니다. 만약 $v \in V$이면,
+여기서 $-\infty < a _i < b _i < \infty$ 입니다. $\infty$가 허용되지 않음을 강조하기 위해, 우리는 $A$를 **유한 직사각형(finite rectangle)**이라고 부를 것입니다. 그러면 $V$는 직사각형 $A$의 꼭짓점들의 집합입니다. 만약 $v \in V$이면,
 
-$$ \text{sgn}(v) = (-1)^{\text{# of } a\text{'s in } v} $$
+$$ \text{sgn}(v) = (-1)^{\sharp\text{ of } a\text{'s in } v} $$
 
-$$ \Delta_A F = \sum_{v \in V} \text{sgn}(v)F(v) $$
+$$ \Delta _A F = \sum _{v \in V} \text{sgn}(v)F(v) $$
 
-우리는 $\mu(A) = \Delta_A F$로 둘 것이므로, 다음을 가정해야 합니다.
+우리는 $\mu(A) = \Delta _A F$로 둘 것이므로, 다음을 가정해야 합니다.
 
-(iv) 모든 직사각형 $A$에 대해 $\Delta_A F \ge 0$이다.
+(iv) 모든 직사각형 $A$에 대해 $\Delta _A F \ge 0$이다.
 
-**정리 1.1.11.** 함수 $F: \mathbb{R}^d \rightarrow [0,1]$이 위에서 주어진 (i)-(iv)를 만족한다고 가정하자. 그러면 $(\mathbb{R}^d, \mathcal{R}^d)$ 위에 유일한 확률 측도 $\mu$가 존재하여, 모든 유한 직사각형 $A$에 대해 $\mu(A) = \Delta_A F$를 만족한다.
+**정리 1.1.11.** 함수 $F: \mathbb{R}^d \rightarrow [0,1]$이 위에서 주어진 (i)-(iv)를 만족한다고 가정하자. 그러면 $(\mathbb{R}^d, \mathcal{R}^d)$ 위에 유일한 확률 측도 $\mu$가 존재하여, 모든 유한 직사각형 $A$에 대해 $\mu(A) = \Delta _A F$를 만족한다.
 
 **[해설 및 추가 설명]**
 
-*   **$\Delta_A F$의 의미**: 이 연산자는 직사각형 $A$의 측도를 계산하는 일반화된 방법입니다. $d=2$일 때, $\Delta_A F = F(b_1, b_2) - F(a_1, b_2) - F(b_1, a_2) + F(a_1, a_2)$가 됩니다. 이것은 포함-배제의 원리를 적용하여 큰 직사각형의 넓이에서 작은 직사각형들의 넓이를 빼고 더하는 과정과 같습니다.
+*   **$\Delta _A F$의 의미**: 이 연산자는 직사각형 $A$의 측도를 계산하는 일반화된 방법입니다. $d=2$일 때, $\Delta _A F = F(b _1, b _2) - F(a _1, b _2) - F(b _1, a _2) + F(a _1, a _2)$가 됩니다. 이것은 포함-배제의 원리를 적용하여 큰 직사각형의 넓이에서 작은 직사각형들의 넓이를 빼고 더하는 과정과 같습니다.
 *   **조건 (iv)**: 이 조건은 모든 직사각형의 측도가 음수가 되지 않도록 보장하는 필수적인 조건입니다. 이 조건이 추가됨으로써 $F$는 $\mathbb{R}^d$ 상에서 유일한 확률 측도를 생성할 수 있게 됩니다.
 
 ---
 
-**예제 1.1.12.** $F(x) = \prod_{i=1}^d F_i(x_i)$라고 가정하자. 여기서 $F_i$는 정리 1.1.4의 (i)과 (ii)를 만족한다. 이 경우,
+**예제 1.1.12.** $F(x) = \prod _{i=1}^d F _i(x _i)$라고 가정하자. 여기서 $F _i$는 정리 1.1.4의 (i)과 (ii)를 만족한다. 이 경우,
 
-$$ \Delta_A F = \prod_{i=1}^d (F_i(b_i) - F_i(a_i)) $$
+$$ \Delta _A F = \prod _{i=1}^d (F _i(b _i) - F _i(a _i)) $$
 
-모든 $i$에 대해 $F_i(x) = x$일 때, 결과로 나오는 측도는 $\mathbb{R}^d$ 위의 **르벡 측도(Lebesgue measure)**이다.
+모든 $i$에 대해 $F _i(x) = x$일 때, 결과로 나오는 측도는 $\mathbb{R}^d$ 위의 **르벡 측도(Lebesgue measure)**이다.
 
-**증명.** 우리는 모든 유한 직사각형에 대해 $\mu(A) = \Delta_A F$로 두고, 그 정의를 $\mathcal{S}_d$로 확장하기 위해 단조성을 사용한다. 정리 1.1.9의 (i)을 확인하기 위해, $A = +_k B_k$가 $A$의 **정규 세분(regular subdivision)**이라고 부르는 경우를 생각하자. 이는 각 직사각형 $B_k$가
+**증명.** 우리는 모든 유한 직사각형에 대해 $\mu(A) = \Delta _A F$로 두고, 그 정의를 $\mathcal{S} _d$로 확장하기 위해 단조성을 사용한다. 정리 1.1.9의 (i)을 확인하기 위해, $A = + _k B _k$가 $A$의 **정규 세분(regular subdivision)**이라고 부르는 경우를 생각하자. 이는 각 직사각형 $B _k$가
 
-$$ (\alpha_{1, j_1-1}, \alpha_{1, j_1}] \times \dots \times (\alpha_{d, j_d-1}, \alpha_{d, j_d}] \quad \text{여기서 } 1 \le j_i \le n_i $$
+$$ (\alpha _{1, j _1-1}, \alpha _{1, j _1}] \times \dots \times (\alpha _{d, j _d-1}, \alpha _{d, j _d}] \quad \text{여기서 } 1 \le j _i \le n _i $$
 
-형태를 갖는 수열 $a_i = \alpha_{i,0} < \alpha_{i,1} < \dots < \alpha_{i, n_i} = b_i$가 존재하는 경우이다.
-정규 세분에 대해서는 $\lambda(A) = \sum_k \lambda(B_k)$임을 쉽게 알 수 있다. (먼저 모든 끝점들이 유한한 경우를 고려하고 그 다음 극한을 취하여 일반적인 경우를 얻는다.) 이 결과를 일반적인 유한 세분 $A = +_j A_j$로 확장하려면, 더 세분하여 정규 세분을 얻으면 된다.
+형태를 갖는 수열 $a _i = \alpha _{i,0} < \alpha _{i,1} < \dots < \alpha _{i, n _i} = b _i$가 존재하는 경우이다.
+정규 세분에 대해서는 $\lambda(A) = \sum _k \lambda(B _k)$임을 쉽게 알 수 있다. (먼저 모든 끝점들이 유한한 경우를 고려하고 그 다음 극한을 취하여 일반적인 경우를 얻는다.) 이 결과를 일반적인 유한 세분 $A = + _j A _j$로 확장하려면, 더 세분하여 정규 세분을 얻으면 된다.
 
 (ii)의 증명은 정리 1.1.4의 증명과 거의 동일하다. 쓰기 쉽고 정리 1.1.4와의 유추를 끌어내기 위해, $x, y \in \mathbb{R}^d$에 대해 다음과 같이 표기하자.
 
-$$ (x, y) = (x_1, y_1) \times \dots \times (x_d, y_d) $$
+$$ (x, y) = (x _1, y _1) \times \dots \times (x _d, y _d) $$
 
-$$ (x, y] = (x_1, y_1] \times \dots \times (x_d, y_d] $$
+$$ (x, y] = (x _1, y _1] \times \dots \times (x _d, y _d] $$
 
-$$ [x, y] = [x_1, y_1] \times \dots \times [x_d, y_d] $$
+$$ [x, y] = [x _1, y _1] \times \dots \times [x _d, y _d] $$
 
-먼저 $-\infty < a < b < \infty$라고 가정하자. 부등식은 각 성분이 유한함을 의미한다. 그리고 $(a,b] \subset \cup_{i \ge 1} (a^i, b^i]$라고 가정하자.
+먼저 $-\infty < a < b < \infty$라고 가정하자. 부등식은 각 성분이 유한함을 의미한다. 그리고 $(a,b] \subset \cup _{i \ge 1} (a^i, b^i]$라고 가정하자.
 
 *(이하 증명은 1차원의 경우와 거의 동일하게 진행됩니다. 간략히 요약하면,)*
 
-1.  콤팩트 집합 $[a+\delta\bar{1}, b]$를 열린 직사각형들 $(a^i, b^i+\eta_i\bar{1})$로 덮는다. ($\bar{1}$은 모든 성분이 1인 벡터)
+1.  콤팩트 집합 $[a+\delta\bar{1}, b]$를 열린 직사각형들 $(a^i, b^i+\eta _i\bar{1})$로 덮는다. ($\bar{1}$은 모든 성분이 1인 벡터)
 2.  하이네-보렐 정리에 의해 유한 부분 덮개를 찾는다.
 3.  보조정리 1.1.10(b)를 적용하여 부등식을 유도한다.
-4.  $\delta$와 $\eta_i$를 0으로 보내 원하는 결과를 얻는다.
+4.  $\delta$와 $\eta _i$를 0으로 보내 원하는 결과를 얻는다.
 
 ---
 
@@ -344,10 +344,10 @@ $$ [x, y] = [x_1, y_1] \times \dots \times [x_d, y_d] $$
 
 **1.1.1.** $\Omega = \mathbb{R}$, $\mathcal{F} = \{A \subset \mathbb{R} \mid A \text{ is countable or } A^c \text{ is countable}\}$ 이라 하자. $P(A) = 0$ (첫 번째 경우) 또는 $P(A)=1$ (두 번째 경우)로 정의하자. $(\Omega, \mathcal{F}, P)$가 확률 공간임을 보여라.
 
-**1.1.2.** 예제 1.1.5의 $\mathcal{S}_d$의 정의를 상기하라. $\sigma(\mathcal{S}_d) = \mathcal{R}^d$, 즉 $\mathbb{R}^d$의 보렐 집합들과 같음을 보여라.
+**1.1.2.** 예제 1.1.5의 $\mathcal{S} _d$의 정의를 상기하라. $\sigma(\mathcal{S} _d) = \mathcal{R}^d$, 즉 $\mathbb{R}^d$의 보렐 집합들과 같음을 보여라.
 
 **1.1.3.** $\sigma$-필드 $\mathcal{F}$가 **가산 생성(countably generated)**되었다고 하는 것은, $\sigma(C) = \mathcal{F}$인 가산 모임 $C \subset \mathcal{F}$가 존재하는 경우이다. $\mathcal{R}^d$가 가산 생성됨을 보여라.
 
-**1.1.4.** (i) 만약 $\mathcal{F}_1 \subset \mathcal{F}_2 \subset \dots$가 $\sigma$-대수들이면, $\cup_i \mathcal{F}_i$는 대수임을 보여라. (ii) $\cup_i \mathcal{F}_i$가 $\sigma$-대수일 필요는 없다는 것을 보여주는 예를 들어라.
+**1.1.4.** (i) 만약 $\mathcal{F} _1 \subset \mathcal{F} _2 \subset \dots$가 $\sigma$-대수들이면, $\cup _i \mathcal{F} _i$는 대수임을 보여라. (ii) $\cup _i \mathcal{F} _i$가 $\sigma$-대수일 필요는 없다는 것을 보여주는 예를 들어라.
 
-**1.1.5.** 집합 $A \subset \{1, 2, \dots\}$가 **점근 밀도(asymptotic density)** $\theta$를 갖는다고 하는 것은 $\lim_{n \to \infty} |A \cap \{1, 2, \dots, n\}|/n = \theta$인 경우이다. 점근 밀도가 존재하는 집합들의 모임을 $\mathcal{A}$라 하자. $\mathcal{A}$는 $\sigma$-대수인가? 대수인가?
+**1.1.5.** 집합 $A \subset \{1, 2, \dots\}$가 **점근 밀도(asymptotic density)** $\theta$를 갖는다고 하는 것은 $\lim _{n \to \infty} |A \cap \{1, 2, \dots, n\}|/n = \theta$인 경우이다. 점근 밀도가 존재하는 집합들의 모임을 $\mathcal{A}$라 하자. $\mathcal{A}$는 $\sigma$-대수인가? 대수인가?
