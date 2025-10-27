@@ -132,50 +132,50 @@ $$ \nu _1(A \cap B) = \lim _{n \to \infty} \nu _1(A \cap B _n) = \lim _{n \to \i
 ---
 
 **존재성(Existence).** 우리의 다음 단계는 대수 $\mathcal{A}$ 위에 정의된 ($\sigma$-유한일 필요는 없는) 측도가 그것이 생성하는 $\sigma$-대수로 확장을 가짐을 보이는 것이다.
-만약 $E \subset \Omega$이면, 우리는 $\mu^*(E) = \inf \sum _i \mu(A _i)$로 둔다. 여기서 하한(infimum)은 $E \subset \cup _i A _i$인 $\mathcal{A}$로부터의 모든 수열들에 대해 취해진다. 직관적으로, 만약 $\nu$가 $\mathcal{A}$ 위에서 $\mu$와 일치하는 측도라면, 정리 1.1.1의 (ii)로부터 다음이 따라나온다.
+만약 $E \subset \Omega$이면, 우리는 $\mu^{\ast}(E) = \inf \sum _i \mu(A _i)$로 둔다. 여기서 하한(infimum)은 $E \subset \cup _i A _i$인 $\mathcal{A}$로부터의 모든 수열들에 대해 취해진다. 직관적으로, 만약 $\nu$가 $\mathcal{A}$ 위에서 $\mu$와 일치하는 측도라면, 정리 1.1.1의 (ii)로부터 다음이 따라나온다.
 
 $$ \nu(E) \le \nu(\cup _i A _i) \le \sum _i \nu(A _i) = \sum _i \mu(A _i) $$
 
-따라서 $\mu^*(E)$는 $E$의 측도에 대한 상한(upper bound)이다. 직관적으로, 가측 집합들은 그 상한이 꽉 들어맞는(tight) 집합들이다. 형식적으로, 우리는 집합 $E$가 **가측(measurable)**이라고 말하는 것은, 모든 집합 $F \subset \Omega$에 대해 다음을 만족하는 경우이다.
+따라서 $\mu^{\ast}(E)$는 $E$의 측도에 대한 상한(upper bound)이다. 직관적으로, 가측 집합들은 그 상한이 꽉 들어맞는(tight) 집합들이다. 형식적으로, 우리는 집합 $E$가 **가측(measurable)**이라고 말하는 것은, 모든 집합 $F \subset \Omega$에 대해 다음을 만족하는 경우이다.
 
-$$ \mu^*(F) = \mu^*(F \cap E) + \mu^*(F \cap E^c) \quad \text{(A.1.1)} $$
+$$ \mu^{\ast}(F) = \mu^{\ast}(F \cap E) + \mu^{\ast}(F \cap E^c) \quad \text{(A.1.1)} $$
 
 
 **[해설 및 추가 설명]**
-*   **외측도(Outer Measure) $\mu^*$**: 대수 $\mathcal{A}$ 위의 측도 $\mu$를 $\sigma$-대수 $\sigma(\mathcal{A})$로 확장하기 위한 첫 단계는, $\Omega$의 **모든** 부분집합에 대해 정의되는 **외측도** $\mu^*$를 구성하는 것입니다.
-*   **$\mu^*$의 정의**: 어떤 집합 $E$의 외측도 $\mu^*(E)$는, $E$를 덮을 수 있는 대수 $\mathcal{A}$의 원소들(가산 개)의 측도 합들 중에서 가장 작은 값으로 정의됩니다. 이는 마치 $E$를 더 간단한 도형들($A _i$)로 덮고 그 도형들의 넓이 합으로 $E$의 넓이를 근사하려는 시도와 같습니다.
-*   **카라테오도리의 가측성 조건 (A.1.1)**: 이 조건은 외측도 $\mu^*$를 사용하여 어떤 집합 $E$가 "진정으로 측정 가능한지"를 판별하는 기준입니다. 직관적으로, $E$가 가측이라는 것은 임의의 "테스트 집합" $F$를 $E$를 기준으로 안쪽($F \cap E$)과 바깥쪽($F \cap E^c$)으로 잘랐을 때, 원래 $F$의 크기가 두 조각의 크기의 합과 같다는 것을 의미합니다. 이는 마치 $E$가 $F$를 "깨끗하게" 자를 수 있다는 뜻입니다. 이 조건이 모든 $F$에 대해 성립하면, $E$는 좋은 측정의 대상이 될 자격이 있습니다.
+*   **외측도(Outer Measure) $\mu^{\ast}$**: 대수 $\mathcal{A}$ 위의 측도 $\mu$를 $\sigma$-대수 $\sigma(\mathcal{A})$로 확장하기 위한 첫 단계는, $\Omega$의 **모든** 부분집합에 대해 정의되는 **외측도** $\mu^{\ast}$를 구성하는 것입니다.
+*   **$\mu^{\ast}$의 정의**: 어떤 집합 $E$의 외측도 $\mu^{\ast}(E)$는, $E$를 덮을 수 있는 대수 $\mathcal{A}$의 원소들(가산 개)의 측도 합들 중에서 가장 작은 값으로 정의됩니다. 이는 마치 $E$를 더 간단한 도형들($A _i$)로 덮고 그 도형들의 넓이 합으로 $E$의 넓이를 근사하려는 시도와 같습니다.
+*   **카라테오도리의 가측성 조건 (A.1.1)**: 이 조건은 외측도 $\mu^{\ast}$를 사용하여 어떤 집합 $E$가 "진정으로 측정 가능한지"를 판별하는 기준입니다. 직관적으로, $E$가 가측이라는 것은 임의의 "테스트 집합" $F$를 $E$를 기준으로 안쪽($F \cap E$)과 바깥쪽($F \cap E^c$)으로 잘랐을 때, 원래 $F$의 크기가 두 조각의 크기의 합과 같다는 것을 의미합니다. 이는 마치 $E$가 $F$를 "깨끗하게" 자를 수 있다는 뜻입니다. 이 조건이 모든 $F$에 대해 성립하면, $E$는 좋은 측정의 대상이 될 자격이 있습니다.
 
 ---
 
-마지막 정의는 그다지 직관적이지 않지만, 아래의 증명에서 보듯이 매우 잘 작동한다. 정의로부터 $\mu^*$가 다음 속성들을 가짐이 즉각적으로 따라나온다:
+마지막 정의는 그다지 직관적이지 않지만, 아래의 증명에서 보듯이 매우 잘 작동한다. 정의로부터 $\mu^{\ast}$가 다음 속성들을 가짐이 즉각적으로 따라나온다:
 
-(i) **단조성(monotonicity).** 만약 $E \subset F$이면 $\mu^*(E) \le \mu^*(F)$.
+(i) **단조성(monotonicity).** 만약 $E \subset F$이면 $\mu^{\ast}(E) \le \mu^{\ast}(F)$.
 
-(ii) **준가법성(subadditivity).** 만약 $F \subset \cup _i F _i$ (가산 합집합)이면, $\mu^*(F) \le \sum _i \mu^*(F _i)$.
+(ii) **준가법성(subadditivity).** 만약 $F \subset \cup _i F _i$ (가산 합집합)이면, $\mu^{\ast}(F) \le \sum _i \mu^{\ast}(F _i)$.
 
-$\mu^*(\emptyset)=0$이고 (i), (ii)를 만족하는 임의의 집합 함수는 **외측도(outer measure)**라고 불린다. (ii)를 $F _1 = F \cap E$와 $F _2 = F \cap E^c$ (그리고 그 외에는 $F _i = \emptyset$)에 적용함으로써, 집합이 가측임을 증명하기 위해서는 다음을 보이는 것으로 충분함을 알 수 있다.
+$\mu^{\ast}(\emptyset)=0$이고 (i), (ii)를 만족하는 임의의 집합 함수는 **외측도(outer measure)**라고 불린다. (ii)를 $F _1 = F \cap E$와 $F _2 = F \cap E^c$ (그리고 그 외에는 $F _i = \emptyset$)에 적용함으로써, 집합이 가측임을 증명하기 위해서는 다음을 보이는 것으로 충분함을 알 수 있다.
 
-$$ \mu^*(F) \ge \mu^*(F \cap E) + \mu^*(F \cap E^c) \quad \text{(A.1.2)} $$
+$$ \mu^{\ast}(F) \ge \mu^{\ast}(F \cap E) + \mu^{\ast}(F \cap E^c) \quad \text{(A.1.2)} $$
 
 우리는 우리의 새로운 정의가 옛 정의를 확장함을 보이는 것으로 시작한다.
 
-**보조정리 A.1.6.** 만약 $A \in \mathcal{A}$이면 $\mu^*(A) = \mu(A)$이고 $A$는 가측이다.
+**보조정리 A.1.6.** 만약 $A \in \mathcal{A}$이면 $\mu^{\ast}(A) = \mu(A)$이고 $A$는 가측이다.
 
-**증명.** 정리 1.1.1의 (ii)부는 만약 $A \subset \cup _i A _i$이면 $\mu(A) \le \sum _i \mu(A _i)$임을 암시한다. 따라서 $\mu(A) \le \mu^*(A)$이다. 물론, 우리는 항상 $A _1=A$와 나머지 $A _i=\emptyset$으로 취할 수 있으므로 $\mu^*(A) \le \mu(A)$이다.
+**증명.** 정리 1.1.1의 (ii)부는 만약 $A \subset \cup _i A _i$이면 $\mu(A) \le \sum _i \mu(A _i)$임을 암시한다. 따라서 $\mu(A) \le \mu^{\ast}(A)$이다. 물론, 우리는 항상 $A _1=A$와 나머지 $A _i=\emptyset$으로 취할 수 있으므로 $\mu^{\ast}(A) \le \mu(A)$이다.
 
-임의의 $A \in \mathcal{A}$가 가측임을 증명하기 위해, $\mu^*(F)=\infty$일 때는 부등식 (A.1.2)가 자명하므로, 일반성을 잃지 않고 $\mu^*(F) < \infty$라고 가정하는 것으로 시작한다. (A.1.2)가 $E=A$일 때 성립함을 증명하기 위해, $\mu^*(F)<\infty$이므로 $F \subset \cup _i B _i$이고 $\sum _i \mu(B _i) \le \mu^*(F) + \epsilon$인 수열 $B _i \in \mathcal{A}$가 존재함을 관찰한다.
-$\mu$는 $\mathcal{A}$ 위에서 가법적이고, $\mu = \mu^*$가 $\mathcal{A}$ 위에서 성립하므로, 우리는 다음을 갖는다.
+임의의 $A \in \mathcal{A}$가 가측임을 증명하기 위해, $\mu^{\ast}(F)=\infty$일 때는 부등식 (A.1.2)가 자명하므로, 일반성을 잃지 않고 $\mu^{\ast}(F) < \infty$라고 가정하는 것으로 시작한다. (A.1.2)가 $E=A$일 때 성립함을 증명하기 위해, $\mu^{\ast}(F)<\infty$이므로 $F \subset \cup _i B _i$이고 $\sum _i \mu(B _i) \le \mu^{\ast}(F) + \epsilon$인 수열 $B _i \in \mathcal{A}$가 존재함을 관찰한다.
+$\mu$는 $\mathcal{A}$ 위에서 가법적이고, $\mu = \mu^{\ast}$가 $\mathcal{A}$ 위에서 성립하므로, 우리는 다음을 갖는다.
 
-$$ \mu(B _i) = \mu^*(B _i \cap A) + \mu^*(B _i \cap A^c) $$
+$$ \mu(B _i) = \mu^{\ast}(B _i \cap A) + \mu^{\ast}(B _i \cap A^c) $$
 
-$i$에 대해 합하고 $\mu^*$의 준가법성을 사용하면,
+$i$에 대해 합하고 $\mu^{\ast}$의 준가법성을 사용하면,
 
-$$ \mu^*(F) + \epsilon \ge \sum _i \mu^*(B _i \cap A) + \sum _i \mu^*(B _i \cap A^c) \ge \mu^*(F \cap A) + \mu^*(F \cap A^c) $$
+$$ \mu^{\ast}(F) + \epsilon \ge \sum _i \mu^{\ast}(B _i \cap A) + \sum _i \mu^{\ast}(B _i \cap A^c) \ge \mu^{\ast}(F \cap A) + \mu^{\ast}(F \cap A^c) $$
 
 $\epsilon$은 임의적이므로 원하는 결과가 증명된다. ◻
 
-**보조정리 A.1.7.** 가측 집합들의 모임 $\mathcal{A}^*$는 $\sigma$-필드이고, $\mu^*$를 $\mathcal{A}^*$에 제한한 것은 측도이다.
+**보조정리 A.1.7.** 가측 집합들의 모임 $\mathcal{A}^*$는 $\sigma$-필드이고, $\mu^{\ast}$를 $\mathcal{A}^*$에 제한한 것은 측도이다.
 
 **참고.** 이 결과는 임의의 외측도에 대해 참이다.
 
@@ -189,17 +189,17 @@ $\epsilon$은 임의적이므로 원하는 결과가 증명된다. ◻
 
 **(b)의 증명.** 첫 번째 결론을 증명하기 위해, $G$를 $\Omega$의 임의의 부분집합이라 하자. 준가법성, $E _2$의 가측성( (A.1.1)에서 $F=G \cap E _1^c$로 둠), 그리고 $E _1$의 가측성을 사용하면,
 
-$$ \begin{aligned} \mu^*(G \cap (E _1 \cup E _2)) + \mu^*(G \cap (E _1^c \cap E _2^c)) &\le \mu^*(G \cap E _1) + \mu^*(G \cap E _1^c \cap E _2) + \mu^*(G \cap E _1^c \cap E _2^c) \\ &= \mu^*(G \cap E _1) + \mu^*(G \cap E _1^c) = \mu^*(G) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G \cap (E _1 \cup E _2)) + \mu^{\ast}(G \cap (E _1^c \cap E _2^c)) &\le \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c \cap E _2) + \mu^{\ast}(G \cap E _1^c \cap E _2^c) \\ &= \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c) = \mu^{\ast}(G) \end{aligned} $$
 
 $E _1 \cap E _2$가 가측임을 증명하기 위해, $E _1 \cap E _2 = (E _1^c \cup E _2^c)^c$임을 관찰하고 (a)를 사용한다. ◻
 
 (c) $G \subset \Omega$이고 $E _1, \dots, E _n$이 서로소인 가측 집합들이라 하자. 그러면,
 
-$$ \mu^*(G \cap \cup _{i=1}^n E _i) = \sum _{i=1}^n \mu^*(G \cap E _i) $$
+$$ \mu^{\ast}(G \cap \cup _{i=1}^n E _i) = \sum _{i=1}^n \mu^{\ast}(G \cap E _i) $$
 
 **(c)의 증명.** $F _m = \cup _{i \le m} E _i$라 하자. $E _n$은 가측이고, $F _n \supset E _n$, 그리고 $F _{n-1} \cap E _n = \emptyset$ 이므로,
 
-$$ \begin{aligned} \mu^*(G \cap F _n) &= \mu^*(G \cap F _n \cap E _n) + \mu^*(G \cap F _n \cap E _n^c) \\ &= \mu^*(G \cap E _n) + \mu^*(G \cap F _{n-1}) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G \cap F _n) &= \mu^{\ast}(G \cap F _n \cap E _n) + \mu^{\ast}(G \cap F _n \cap E _n^c) \\ &= \mu^{\ast}(G \cap E _n) + \mu^{\ast}(G \cap F _{n-1}) \end{aligned} $$
 
 이로부터 귀납법에 의해 원하는 결과가 따라나온다. ◻
 
@@ -207,11 +207,11 @@ $$ \begin{aligned} \mu^*(G \cap F _n) &= \mu^*(G \cap F _n \cap E _n) + \mu^*(G 
 
 **(d)의 증명.** $E' _i = E _i \cap (\cap _{j<i} E _j^c)$라 하자. (a)와 (b)는 $E' _i$가 가측임을 암시하므로, 우리는 일반성을 잃지 않고 $E _i$들이 서로소라고 가정할 수 있다. $F _n = E _1 \cup \dots \cup E _n$이라 하자. $F _n$은 (b)에 의해 가측이므로, 단조성과 (c)를 사용하면,
 
-$$ \begin{aligned} \mu^*(G) &= \mu^*(G \cap F _n) + \mu^*(G \cap F _n^c) \ge \mu^*(G \cap F _n) + \mu^*(G \cap E^c) \\ &= \sum _{i=1}^n \mu^*(G \cap E _i) + \mu^*(G \cap E^c) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G) &= \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap F _n^c) \ge \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap E^c) \\ &= \sum _{i=1}^n \mu^{\ast}(G \cap E _i) + \mu^{\ast}(G \cap E^c) \end{aligned} $$
 
 $n \to \infty$로 보내고 준가법성을 사용하면,
 
-$$ \mu^*(G) \ge \sum _{i=1}^\infty \mu^*(G \cap E _i) + \mu^*(G \cap E^c) \ge \mu^*(G \cap E) + \mu^*(G \cap E^c) $$
+$$ \mu^{\ast}(G) \ge \sum _{i=1}^\infty \mu^{\ast}(G \cap E _i) + \mu^{\ast}(G \cap E^c) \ge \mu^{\ast}(G \cap E) + \mu^{\ast}(G \cap E^c) $$
 
 이것이 (A.1.2)이다. ◻
 
@@ -219,10 +219,10 @@ $$ \mu^*(G) \ge \sum _{i=1}^\infty \mu^*(G \cap E _i) + \mu^*(G \cap E^c) \ge \m
 
 (e) 만약 $E = \cup _i E _i$이고, 여기서 $E _1, E _2, \dots$는 서로소이고 가측이면,
 
-$$ \mu^*(E) = \sum _{i=1}^\infty \mu^*(E _i) $$
+$$ \mu^{\ast}(E) = \sum _{i=1}^\infty \mu^{\ast}(E _i) $$
 
 **(e)의 증명.** $F _n = E _1 \cup \dots \cup E _n$이라 하자. 단조성과 (c)에 의해,
 
-$$ \mu^*(E) \ge \mu^*(F _n) = \sum _{i=1}^n \mu^*(E _i) $$
+$$ \mu^{\ast}(E) \ge \mu^{\ast}(F _n) = \sum _{i=1}^n \mu^{\ast}(E _i) $$
 
 이제 $n \to \infty$로 보내고 준가법성을 사용하면 원하는 결론을 얻는다. ◻
