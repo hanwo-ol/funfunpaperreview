@@ -219,12 +219,12 @@ $$ \text{logit}[\pi(x)] = \alpha + \beta _1 x + \beta _2 x^2 $$
     2.  구간의 양 끝점에 지수 변환: $\exp(\hat{\beta} \pm 1.96 \times \text{SE}(\hat{\beta}))$
 
 *   특정 예측 확률($\pi(x _0)$)의 95% 신뢰구간:
-    1.  특정 값 $x _0$에서 로그-오즈($\eta(x _0) = \alpha + \beta x _0$)의 분산 계산:
+1.  특정 값 $x _0$에서 로그-오즈($\eta(x _0) = \alpha + \beta x _0$)의 분산 계산:
 
 $$ \text{Var}(\hat{\eta}(x _0)) = \text{Var}(\hat{\alpha}) + x _0^2 \text{Var}(\hat{\beta}) + 2x _0 \text{Cov}(\hat{\alpha}, \hat{\beta}) $$
 
-    2.  로그-오즈의 신뢰구간 계산: $\hat{\eta}(x _0) \pm 1.96 \times \sqrt{\text{Var}(\hat{\eta}(x _0))}$
-    3.  구간의 양 끝점($L, U$)을 확률로 역변환: $(\frac{e^L}{1+e^L}, \frac{e^U}{1+e^U})$
+2.  로그-오즈의 신뢰구간 계산: $\hat{\eta}(x _0) \pm 1.96 \times \sqrt{\text{Var}(\hat{\eta}(x _0))}$
+3.  구간의 양 끝점($L, U$)을 확률로 역변환: $(\frac{e^L}{1+e^L}, \frac{e^U}{1+e^U})$
 
 *   확률의 순간 변화율 (기울기): 특정 $x$ 값에서 $x$의 미세한 변화에 대한 $\pi(x)$의 변화율.
 
