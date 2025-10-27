@@ -6,7 +6,8 @@ $$ X^{-1}(B) = \{\omega : X(\omega) \in B\} \in \mathcal{F} $$
 
 $\sigma$-필드를 강조해야 할 때, 우리는 $X$가 **$\mathcal{F}$-가측($\mathcal{F}$-measurable)**이라고 말하거나 $X \in \mathcal{F}$라고 씁니다. 만약 $\Omega$가 이산 확률 공간이라면(예제 1.1.2 참조), 모든 함수 $X: \Omega \rightarrow \mathbb{R}$은 확률 변수입니다. 두 번째로 사소하지만 유용한 확률 변수의 예는 집합 $A \in \mathcal{F}$의 **지시 함수(indicator function)**입니다.
 
-$$ 1_A(\omega) = \begin{cases} 1 & \omega \in A \\ 0 & \omega \notin A \end{cases} $$
+$$ 1 _A(\omega) = \begin{cases} 1 & \omega \in A \\ 0 & \omega \notin A \end{cases} $$
+
 이 표기는 이 함수가 $A$ 위에서 1이라는 것을 상기시키기 위한 것입니다. 해석학자들은 이 대상을 $A$의 특성 함수(characteristic function)라고 부릅니다. 확률론에서는 그 용어가 상당히 다른 것을 위해 사용됩니다. (3.3절 참조.)
 
 **[해설 및 추가 설명]**
@@ -25,9 +26,9 @@ $$ 1_A(\omega) = \begin{cases} 1 & \omega \in A \\ 0 & \omega \notin A \end{case
 
 만약 $X$가 확률 변수라면, $X$는 그것의 **분포(distribution)**라고 불리는 확률 측도 $\mu$를 $\mathbb{R}$ 위에 유도합니다. 이는 보렐 집합 $A$에 대해 $\mu(A) = P(X \in A)$로 설정함으로써 이루어집니다. 위에서 소개된 표기법을 사용하면, 우변은 $P(X^{-1}(A))$로 쓸 수 있습니다. 말로 설명하면, 우리는 $A \in \mathcal{R}$을 $X^{-1}(A) \in \mathcal{F}$로 되돌려놓고(pull back) 그 집합의 $P$ 값을 취합니다.
 
-$\mu$가 확률 측도임을 확인하기 위해, 만약 $A_i$들이 서로소이면 $\mu$의 정의, $X$가 합집합에 속하는 것은 $X$가 $A_i$들 중 하나에 속하는 것과 필요충분조건이라는 사실, 집합 $A_i \in \mathcal{R}$들이 서로소이면 사건 $\{X \in A_i\}$들도 서로소라는 사실, 그리고 다시 $\mu$의 정의를 사용하여 다음을 얻습니다:
+$\mu$가 확률 측도임을 확인하기 위해, 만약 $A _i$들이 서로소이면 $\mu$의 정의, $X$가 합집합에 속하는 것은 $X$가 $A _i$들 중 하나에 속하는 것과 필요충분조건이라는 사실, 집합 $A _i \in \mathcal{R}$들이 서로소이면 사건 $\{X \in A _i\}$들도 서로소라는 사실, 그리고 다시 $\mu$의 정의를 사용하여 다음을 얻습니다:
 
-$$ \mu(\cup_i A_i) = P(X \in \cup_i A_i) = P(\cup_i\{X \in A_i\}) = \sum_i P(X \in A_i) = \sum_i \mu(A_i) $$
+$$ \mu(\cup _i A _i) = P(X \in \cup _i A _i) = P(\cup _i\{X \in A _i\}) = \sum _i P(X \in A _i) = \sum _i \mu(A _i) $$
 
 확률 변수 $X$의 분포는 보통 그것의 **분포 함수(distribution function)**, $F(x) = P(X \le x)$를 제공함으로써 기술됩니다.
 
@@ -41,11 +42,11 @@ $$ \mu(\cup_i A_i) = P(X \in \cup_i A_i) = P(\cup_i\{X \in A_i\}) = \sum_i P(X \
 **정리 1.2.1.** 임의의 분포 함수 $F$는 다음과 같은 속성들을 갖는다:
 (i) $F$는 비감소 함수이다.
 
-(ii) $\lim_{x \to \infty} F(x) = 1$, $\lim_{x \to -\infty} F(x) = 0$.
+(ii) $\lim _{x \to \infty} F(x) = 1$, $\lim _{x \to -\infty} F(x) = 0$.
 
-(iii) $F$는 우연속 함수이다. 즉, $\lim_{y \downarrow x} F(y) = F(x)$.
+(iii) $F$는 우연속 함수이다. 즉, $\lim _{y \downarrow x} F(y) = F(x)$.
 
-(iv) 만약 $F(x-) = \lim_{y \uparrow x} F(y)$이면, $F(x-) = P(X < x)$이다.
+(iv) 만약 $F(x-) = \lim _{y \uparrow x} F(y)$이면, $F(x-) = P(X < x)$이다.
 
 (v) $P(X=x) = F(x) - F(x-)$.
 
@@ -95,15 +96,15 @@ $F$가 일대일 함수가 아니고 전사 함수가 아닐지라도 우리는 
 
 분포 함수 $F(x) = P(X \le x)$가 다음과 같은 형태를 가질 때
 
-$$ F(x) = \int_{-\infty}^x f(y) dy \quad (1.2.1) $$
+$$ F(x) = \int _{-\infty}^x f(y) dy \quad (1.2.1) $$
 
 우리는 $X$가 **밀도 함수(density function)** $f$를 갖는다고 말한다. 공식을 기억할 때, $f(x)$를 $P(X=x)$라고 생각하는 것이 종종 유용하지만, 실제로는
 
-$$ P(X=x) = \lim_{\epsilon \to 0} \int_{x-\epsilon}^{x+\epsilon} f(y) dy = 0 $$
+$$ P(X=x) = \lim _{\epsilon \to 0} \int _{x-\epsilon}^{x+\epsilon} f(y) dy = 0 $$
 
 이다.
 
-대중의 요구에 따라, 우리는 밀도 함수에 대해 $P(X=x)$라고 쓰던 이전의 관행을 중단했다. 대신 우리는 아름답고 유익한 $f_X(x)$와 같은 것들을 사용할 것이다.
+대중의 요구에 따라, 우리는 밀도 함수에 대해 $P(X=x)$라고 쓰던 이전의 관행을 중단했다. 대신 우리는 아름답고 유익한 $f _X(x)$와 같은 것들을 사용할 것이다.
 
 우리는 $f$에서 시작하여 (1.2.1)을 사용해 분포 함수 $F$를 정의할 수 있다. 분포 함수로 끝나기 위해서는 $f(x) \ge 0$이고 $\int f(x) dx = 1$임이 필요충분조건이다. 앞으로 중요할 세 가지 예는 다음과 같다:
 
@@ -123,14 +124,21 @@ $$ f(x) = (2\pi)^{-1/2} \exp(-x^2/2) $$
 
 **정리 1.2.6.** $x > 0$에 대해,
 
-$$ (x^{-1} - x^{-3}) \exp(-x^2/2) \le \int_x^\infty \exp(-y^2/2) dy \le x^{-1} \exp(-x^2/2) $$
+$$ (x^{-1} - x^{-3}) \exp(-x^2/2) \le \int _x^\infty \exp(-y^2/2) dy \le x^{-1} \exp(-x^2/2) $$
 
 **증명.**
 
 **(상한 증명)**
 변수를 $y = x + z$로 치환하고($dy=dz$), $z \ge 0$에 대해 $\exp(-z^2/2) \le 1$임을 이용하면 다음을 얻습니다.
 
-$$ \begin{aligned} \int_x^\infty \exp(-y^2/2) dy &= \int_0^\infty \exp(-(x+z)^2/2) dz \\ &= \int_0^\infty \exp(-x^2/2) \exp(-xz) \exp(-z^2/2) dz \\ &= \exp(-x^2/2) \int_0^\infty \exp(-xz) \exp(-z^2/2) dz \\ &\le \exp(-x^2/2) \int_0^\infty \exp(-xz) \cdot 1 dz \\ &= \exp(-x^2/2) \left[ -\frac{1}{x} e^{-xz} \right]_0^\infty \\ &= \exp(-x^2/2) \left( 0 - (-\frac{1}{x}) \right) \\ &= x^{-1} \exp(-x^2/2) \end{aligned} $$
+$$ \begin{aligned} \int _x^\infty \exp(-y^2/2) dy 
+&= \int _0^\infty \exp(-(x+z)^2/2) dz \\ 
+&= \int _0^\infty \exp(-x^2/2) \exp(-xz) \exp(-z^2/2) dz \\ 
+&= \exp(-x^2/2) \int _0^\infty \exp(-xz) \exp(-z^2/2) dz \\ 
+&\le \exp(-x^2/2) \int _0^\infty \exp(-xz) \cdot 1 dz \\ 
+&= \exp(-x^2/2) \left[ -\frac{1}{x} e^{-xz} \right] _0^\infty \\ 
+&= \exp(-x^2/2) \left( 0 - (-\frac{1}{x}) \right) \\ 
+&= x^{-1} \exp(-x^2/2) \end{aligned} $$
 
 이것으로 상한에 대한 증명이 끝났습니다.
 
@@ -138,21 +146,23 @@ $$ \begin{aligned} \int_x^\infty \exp(-y^2/2) dy &= \int_0^\infty \exp(-(x+z)^2/
 
 다른 방향의 부등식(하한)을 위해, 다음을 관찰합니다.
 
-$$ \int_x^\infty (1 - 3y^{-4}) \exp(-y^2/2) dy = (x^{-1} - x^{-3}) \exp(-x^2/2) $$
+$$ \int _x^\infty (1 - 3y^{-4}) \exp(-y^2/2) dy = (x^{-1} - x^{-3}) \exp(-x^2/2) $$
 
 이 등식은 우변을 미분함으로써 확인할 수 있습니다. $g(x) = (x^{-1} - x^{-3}) \exp(-x^2/2)$라고 두면,
 
-$$ \begin{aligned} g'(x) &= (-x^{-2} + 3x^{-4})\exp(-x^2/2) + (x^{-1} - x^{-3})(-x)\exp(-x^2/2) \\ &= (-x^{-2} + 3x^{-4} - 1 + x^{-2})\exp(-x^2/2) \\ &= (3x^{-4} - 1)\exp(-x^2/2) \end{aligned} $$
+$$ \begin{aligned} g'(x) &= (-x^{-2} + 3x^{-4})\exp(-x^2/2) + (x^{-1} - x^{-3})(-x)\exp(-x^2/2) \\ 
+&= (-x^{-2} + 3x^{-4} - 1 + x^{-2})\exp(-x^2/2) \\ 
+&= (3x^{-4} - 1)\exp(-x^2/2) \end{aligned} $$
 
 따라서 $-g'(x) = (1 - 3x^{-4})\exp(-x^2/2)$ 이고, 미적분학의 기본정리에 의해 위 관찰이 성립합니다.
 
 이제, $y > 0$일 때 $1-3y^{-4} < 1$이므로,
 
-$$ \int_x^\infty (1 - 3y^{-4}) \exp(-y^2/2) dy < \int_x^\infty \exp(-y^2/2) dy $$
+$$ \int _x^\infty (1 - 3y^{-4}) \exp(-y^2/2) dy < \int _x^\infty \exp(-y^2/2) dy $$
 
 위에서 계산한 등식과 이 부등식을 결합하면,
 
-$$ (x^{-1} - x^{-3}) \exp(-x^2/2) < \int_x^\infty \exp(-y^2/2) dy $$
+$$ (x^{-1} - x^{-3}) \exp(-x^2/2) < \int _x^\infty \exp(-y^2/2) dy $$
 
 이것으로 하한에 대한 증명이 완료됩니다. ◻
 
@@ -170,11 +180,11 @@ $$ (x^{-1} - x^{-3}) \exp(-x^2/2) < \int_x^\infty \exp(-y^2/2) dy $$
     *   하한: $x^{-1} \exp(-x^2/2) - x^{-3} \exp(-x^2/2)$
     $x$가 매우 커지면 $x^{-3}$ 항은 $x^{-1}$ 항에 비해 무시할 수 있을 정도로 작아집니다. 따라서 상한과 하한 모두 $x^{-1} \exp(-x^2/2)$에 근접하게 됩니다. 이는 다음을 의미합니다.
 
-$$ \int_x^\infty \exp(-y^2/2) dy \sim x^{-1} \exp(-x^2/2) \quad \text{as } x \to \infty $$
+$$ \int _x^\infty \exp(-y^2/2) dy \sim x^{-1} \exp(-x^2/2) \quad \text{as } x \to \infty $$
 
 * 여기서 $\sim$는 두 함수의 비율이 $x \to \infty$일 때 1로 수렴한다는 의미입니다. 즉, 이 정리는 정규분포 꼬리 확률의 정확한 점근적 형태를 알려줍니다. 확률로 표현하면 다음과 같습니다.
 
-$$ P(\chi > x) = \frac{1}{\sqrt{2\pi}} \int_x^\infty e^{-y^2/2} dy \sim \frac{1}{\sqrt{2\pi}x} e^{-x^2/2} $$
+$$ P(\chi > x) = \frac{1}{\sqrt{2\pi}} \int _x^\infty e^{-y^2/2} dy \sim \frac{1}{\sqrt{2\pi}x} e^{-x^2/2} $$
 
 ---
 
@@ -188,11 +198,11 @@ $\mathbb{R}$ 상의 분포 함수가 **절대적으로 연속(absolutely continu
 
 1.6절에서, 우리는 베르누이, 푸아송, 기하 분포를 볼 것이다. 다음 예는 이산 확률 측도와 연관된 분포 함수가 꽤 와일드할 수 있음을 보여준다.
 
-**예제 1.2.9. 조밀한 불연속점 (Dense discontinuities).** $q_1, q_2, \dots$를 유리수의 나열이라고 하자. $\alpha_i > 0$이 $\sum_{i=1}^\infty \alpha_i = 1$을 만족하도록 하고,
+**예제 1.2.9. 조밀한 불연속점 (Dense discontinuities).** $q _1, q _2, \dots$를 유리수의 나열이라고 하자. $\alpha _i > 0$이 $\sum _{i=1}^\infty \alpha _i = 1$을 만족하도록 하고,
 
-$$ F(x) = \sum_{i=1}^\infty \alpha_i 1_{[q_i, \infty)} $$
+$$ F(x) = \sum _{i=1}^\infty \alpha _i 1 _{[q _i, \infty)} $$
 
-라고 하자. 여기서 $1_{[\theta, \infty)}(x) = 1$ (만약 $x \in [\theta, \infty)$) 또는 0 (그 외).
+라고 하자. 여기서 $1 _{[\theta, \infty)}(x) = 1$ (만약 $x \in [\theta, \infty)$) 또는 0 (그 외).
 
 **[해설 및 추가 설명]**
 
