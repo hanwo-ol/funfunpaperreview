@@ -8,11 +8,12 @@
 
 여기서부터 책 전체에 걸쳐, 정의되는 용어는 **굵은 글씨체**로 표시됩니다. 우리는 가장 기본적인 양(quantity)부터 시작하겠습니다.
 
-**확률 공간(probability space)**은 삼중쌍(triple) $(\Omega, \mathcal{F}, P)$입니다. 여기서 $\Omega$는 "결과(outcomes)"의 집합이고, $\mathcal{F}$는 "사건(events)"의 집합이며, $P: \mathcal{F} \rightarrow [0, 1]$은 사건에 확률을 할당하는 함수입니다.
+**확률 공간(probability space)** 은 삼중쌍(triple) $(\Omega, \mathcal{F}, P)$입니다. 여기서 $\Omega$는 "결과(outcomes)"의 집합이고, $\mathcal{F}$는 "사건(events)"의 집합이며, $P: \mathcal{F} \rightarrow [0, 1]$은 사건에 확률을 할당하는 함수입니다.
 
 우리는 $\mathcal{F}$가 **$\sigma$-필드($\sigma$-field)** (또는 **$\sigma$-대수($\sigma$-algebra)**)라고 가정합니다. 즉, $\Omega$의 부분집합들로 이루어진 (공집합이 아닌) 모임(collection)으로서 다음을 만족합니다:
 
 (i) 만약 $A \in \mathcal{F}$이면 $A^c \in \mathcal{F}$이다. (여집합에 대해 닫혀 있다)
+
 (ii) 만약 $A_i \in \mathcal{F}$가 가산 개의(countable) 집합들의 열(sequence)이면, $\cup_i A_i \in \mathcal{F}$이다. (가산 합집합에 대해 닫혀 있다)
 
 여기서 그리고 앞으로, **가산(countable)** 이라는 것은 유한(finite)이거나 가산 무한(countably infinite)임을 의미합니다. $\cap_i A_i = (\cup_i A_i^c)^c$ 이므로, $\sigma$-필드는 가산 교집합에 대해서도 닫혀 있다는 것을 알 수 있습니다. 우리는 정의를 확인하기 더 쉽게 만들기 위해 마지막 속성(가산 교집합)은 정의에서 생략합니다.
@@ -20,6 +21,7 @@
 $P$가 없는 $(\Omega, \mathcal{F})$는 **가측 공간(measurable space)** 이라고 불립니다. 즉, 우리가 측도를 부여할 수 있는 공간입니다. **측도(measure)** 는 비음의 가산가법적인 집합 함수(nonnegative countably additive set function)입니다. 즉, 함수 $\mu: \mathcal{F} \rightarrow \mathbb{R}$이 다음을 만족합니다:
 
 (i) 모든 $A \in \mathcal{F}$에 대해 $\mu(A) \ge \mu(\emptyset) = 0$이다.
+
 (ii) 만약 $A_i \in \mathcal{F}$가 가산 개의 서로소인(disjoint) 집합들의 열이라면,
 
 $$ \mu(\cup_i A_i) = \sum_i \mu(A_i) $$
@@ -45,8 +47,11 @@ $$ \mu(\cup_i A_i) = \sum_i \mu(A_i) $$
 **정리 1.1.1.** $\mu$를 $(\Omega, \mathcal{F})$ 상의 측도라고 하자.
 
 (i) **단조성(monotonicity).** 만약 $A \subset B$이면 $\mu(A) \le \mu(B)$이다.
+
 (ii) **준가법성(subadditivity).** 만약 $A \subset \cup_{m=1}^{\infty} A_m$이면 $\mu(A) \le \sum_{m=1}^{\infty} \mu(A_m)$이다.
+
 (iii) **아래로부터의 연속성(continuity from below).** 만약 $A_i \uparrow A$ (즉, $A_1 \subset A_2 \subset \dots$이고 $\cup_i A_i = A$)이면 $\mu(A_i) \uparrow \mu(A)$이다.
+
 (iv) **위로부터의 연속성(continuity from above).** 만약 $A_i \downarrow A$ (즉, $A_1 \supset A_2 \supset \dots$이고 $\cap_i A_i = A$)이고, $\mu(A_1) < \infty$이면 $\mu(A_i) \downarrow \mu(A)$이다.
 
 **증명.**
@@ -98,6 +103,7 @@ $\mathbb{R}^d$를 실수 벡터 $(x_1, \dots, x_d)$의 집합으로 하고, $\ma
 **예제 1.1.3. 실수 직선 상의 측도 (Measures on the real line).** $(\mathbb{R}, \mathcal{R})$ 상의 측도들은 다음과 같은 속성을 가진 **스틸체스 측도 함수(Stieltjes measure function)** $F$를 제공함으로써 정의된다:
 
 (i) $F$는 비감소(nondecreasing) 함수이다.
+
 (ii) $F$는 우연속(right continuous) 함수이다. 즉, $\lim_{y \downarrow x} F(y) = F(x)$.
 
 **정리 1.1.4.** 각각의 스틸체스 측도 함수 $F$에 대해, $(\mathbb{R}, \mathcal{R})$ 상에 유일한 측도 $\mu$가 존재하며 다음을 만족한다.
@@ -173,14 +179,18 @@ $\mu$가 **$\sigma$-유한($\sigma$-finite)**이라고 하는 것은, $\mu(A_n) 
 ---
 
 **정리 1.1.9.** $\mathcal{S}$를 반대수라 하고, $\mathcal{S}$ 위에 정의된 $\mu$가 $\mu(\emptyset)=0$을 만족한다고 하자. 다음을 가정하자.
+
 (i) 만약 $S \in \mathcal{S}$가 $S_i \in \mathcal{S}$인 집합들의 유한 서로소 합집합이면, $\mu(S) = \sum_i \mu(S_i)$이다.
+
 (ii) 만약 $S_i, S \in \mathcal{S}$이고 $S = \text{+}_{i \ge 1} S_i$이면, $\mu(S) \le \sum_{i \ge 1} \mu(S_i)$이다.
+
 그러면 $\mu$는 $\mathcal{S}$에 의해 생성된 대수 $\bar{\mathcal{S}}$ 위의 측도인 유일한 확장 $\bar{\mu}$를 갖는다. 만약 $\bar{\mu}$가 시그마-유한이면, $\sigma(\mathcal{S})$ 위의 측도인 유일한 확장 $\nu$가 존재한다.
 
 위의 (ii)에서, 그리고 앞으로 $i \ge 1$은 가산 합집합을 나타내고, 평범한 첨자 $i$ 또는 $j$는 유한 합집합을 나타낸다. 정리 1.1.9의 증명은 상당히 복잡하므로 부록 A.1절에서 다룬다. 정리의 조건 (ii)를 확인하기 위해 다음이 유용하다.
 
 **보조정리 1.1.10.** (i)만 성립한다고 가정하자.
 (a) 만약 $A, B_i \in \bar{\mathcal{S}}$이고 $A = \text{+}_{i=1}^n B_i$이면, $\bar{\mu}(A) = \sum_i \bar{\mu}(B_i)$이다.
+
 (b) 만약 $A, B_i \in \bar{\mathcal{S}}$이고 $A \subset \cup_{i=1}^n B_i$이면, $\bar{\mu}(A) \le \sum_i \bar{\mu}(B_i)$이다.
 
 **증명.** 정의에 따라, 만약 $A = \text{+}_i B_i$가 $\bar{\mathcal{S}}$에 속한 집합들의 유한 서로소 합집합이고 $B_i = \text{+}_j S_{i,j}$이면, 다음이 성립함이 따라나온다.
@@ -215,8 +225,11 @@ $$ \bar{\mu}(A) = \sum_{k=1}^n \bar{\mu}(A \cap F_k) \le \sum_{k=1}^n \bar{\mu}(
 $$ F(\infty) = \lim_{x \uparrow \infty} F(x) \quad \text{그리고} \quad F(-\infty) = \lim_{x \downarrow -\infty} F(x) \quad \text{가 존재한다.} $$
 
 그리고 $\mu((a,b]) = F(b)-F(a)$는 $F(\infty) > -\infty$이고 $F(-\infty) < \infty$이므로 모든 $-\infty \le a < b \le \infty$에 대해 의미가 있다.
+
 만약 $(a, b] = \text{+}_{i=1}^n (a_i, b_i]$이면, 구간들을 재배열한 후에 우리는 $a_1=a, b_n=b$ 그리고 $2 \le i \le n$에 대해 $a_i=b_{i-1}$을 가져야만 하므로, 정리 1.1.9의 조건 (i)이 성립한다.
+
 조건 (ii)를 확인하기 위해, 먼저 $-\infty < a < b < \infty$이고, $(a, b] \subset \cup_{i \ge 1} (a_i, b_i]$ (일반성을 잃지 않고) $-\infty < a_i < b_i < \infty$라고 가정하자. $F(a+\delta) < F(a)+\epsilon$이 되도록 $\delta>0$을 선택하고, $F(b_i+\eta_i) < F(b_i) + \epsilon 2^{-i}$가 되도록 $\eta_i$를 선택하자.
+
 열린 구간 $(a_i, b_i+\eta_i)$들은 $[a+\delta, b]$를 덮으므로, 유한 부분 덮개(finite subcover) $( \alpha_j, \beta_j ), 1 \le j \le J$가 존재한다. $(a+\delta, b] \subset \cup_{j=1}^J (\alpha_j, \beta_j]$ 이므로, 보조정리 1.1.10의 (b)는 다음을 암시한다.
 
 $$ F(b) - F(a+\delta) \le \sum_{j=1}^J F(\beta_j) - F(\alpha_j) \le \sum_{i=1}^\infty (F(b_i+\eta_i)-F(a_i)) $$
@@ -237,7 +250,9 @@ $$ F(B) - F(A) \le \sum_{i=1}^\infty (F(b_i) - F(a_i)) $$
 우리의 다음 목표는 정리 1.1.4의 $\mathbb{R}^d$ 버전을 증명하는 것입니다. 첫 번째 단계는 정의 함수 $F$에 대한 가정을 도입하는 것입니다. $d=1$인 경우와의 유추를 통해 다음과 같이 가정하는 것이 자연스럽습니다:
 
 (i) $F$는 **비감소(nondecreasing)** 함수이다. 즉, 만약 $x \le y$ (모든 $i$에 대해 $x_i \le y_i$를 의미)이면 $F(x) \le F(y)$이다.
+
 (ii) $F$는 **우연속(right continuous)** 함수이다. 즉, $\lim_{y \downarrow x} F(y) = F(x)$이다 (여기서 $y \downarrow x$는 각 성분 $y_i$가 $x_i$로 감소하며 수렴함을 의미한다).
+
 (iii) 만약 $x_n \downarrow -\infty$ (즉, 각 좌표 성분이 $-\infty$로 가면) $F(x_n) \downarrow 0$이다. 만약 $x_n \uparrow \infty$ (즉, 각 좌표 성분이 $\infty$로 가면) $F(x_n) \uparrow 1$이다. (이 부분은 오타 수정 및 내용 보강. 원문은 $x_n \uparrow -\infty$는 오타로 보임. 일반적으로 분포함수는 무한대에서 1, 음의 무한대에서 0으로 수렴. 이 책 5판에서는 이 부분이 빠지고 대신 `(iv) Δ_A F ≥ 0 for all rectangles A` 조건으로 통합됨.)
 
 그러나 이번에는 이것만으로는 충분하지 않습니다. 다음 $F$를 고려해 봅시다.
