@@ -4,7 +4,8 @@
 
 **증명.** $M < N < \infty$라고 하자. 독립성과 $1-x \le e^{-x}$라는 부등식은 다음을 암시한다.
 
-$$ \begin{aligned} P(\cap _{n=M}^N A _n^c) &= \prod _{n=M}^N (1 - P(A _n)) \le \prod _{n=M}^N \exp(-P(A _n)) \\ &= \exp\left(-\sum _{n=M}^N P(A _n)\right) \to 0 \quad \text{as } N \to \infty \end{aligned} $$
+$$ \begin{aligned} P(\cap _{n=M}^N A _n^c) &= \prod _{n=M}^N (1 - P(A _n)) \le \prod _{n=M}^N \exp(-P(A _n)) \\ 
+&= \exp\left(-\sum _{n=M}^N P(A _n)\right) \to 0 \quad \text{as } N \to \infty \end{aligned} $$
 
 따라서 모든 $M$에 대해 $P(\cup _{n=M}^\infty A _n) = 1$이고, $\cup _{n=M}^\infty A _n \downarrow \limsup A _n$ 이므로, $P(\limsup A _n) = 1$이 따라나온다. ◻
 
