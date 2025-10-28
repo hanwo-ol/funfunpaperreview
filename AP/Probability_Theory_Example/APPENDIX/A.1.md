@@ -189,8 +189,9 @@ $\epsilon$은 임의적이므로 원하는 결과가 증명된다. ◻
 
 **(b)의 증명.** 첫 번째 결론을 증명하기 위해, $G$를 $\Omega$의 임의의 부분집합이라 하자. 준가법성, $E _2$의 가측성( (A.1.1)에서 $F=G \cap E _1^c$로 둠), 그리고 $E _1$의 가측성을 사용하면,
 
-$$ \begin{aligned} \mu^{\ast}(G \cap (E _1 \cup E _2)) + \mu^{\ast}(G \cap (E _1^c \cap E _2^c)) &\le \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c \cap E _2) + \mu^{\ast}(G \cap E _1^c \cap E _2^c) \\ 
-&= \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c) = \mu^{\ast}(G) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G \cap (E _1 \cup E _2)) + \mu^{\ast}(G \cap (E _1^c \cap E _2^c)) \\ 
+\le \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c \cap E _2) + \mu^{\ast}(G \cap E _1^c \cap E _2^c) \\ 
+= \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c) = \mu^{\ast}(G) \end{aligned} $$
 
 $E _1 \cap E _2$가 가측임을 증명하기 위해, $E _1 \cap E _2 = (E _1^c \cup E _2^c)^c$임을 관찰하고 (a)를 사용한다. ◻
 
