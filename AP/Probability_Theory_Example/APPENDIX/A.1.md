@@ -189,7 +189,8 @@ $\epsilon$은 임의적이므로 원하는 결과가 증명된다. ◻
 
 **(b)의 증명.** 첫 번째 결론을 증명하기 위해, $G$를 $\Omega$의 임의의 부분집합이라 하자. 준가법성, $E _2$의 가측성( (A.1.1)에서 $F=G \cap E _1^c$로 둠), 그리고 $E _1$의 가측성을 사용하면,
 
-$$ \begin{aligned} \mu^{\ast}(G \cap (E _1 \cup E _2)) + \mu^{\ast}(G \cap (E _1^c \cap E _2^c)) &\le \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c \cap E _2) + \mu^{\ast}(G \cap E _1^c \cap E _2^c) \\ &= \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c) = \mu^{\ast}(G) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G \cap (E _1 \cup E _2)) + \mu^{\ast}(G \cap (E _1^c \cap E _2^c)) &\le \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c \cap E _2) + \mu^{\ast}(G \cap E _1^c \cap E _2^c) \\ 
+&= \mu^{\ast}(G \cap E _1) + \mu^{\ast}(G \cap E _1^c) = \mu^{\ast}(G) \end{aligned} $$
 
 $E _1 \cap E _2$가 가측임을 증명하기 위해, $E _1 \cap E _2 = (E _1^c \cup E _2^c)^c$임을 관찰하고 (a)를 사용한다. ◻
 
@@ -199,7 +200,8 @@ $$ \mu^{\ast}(G \cap \cup _{i=1}^n E _i) = \sum _{i=1}^n \mu^{\ast}(G \cap E _i)
 
 **(c)의 증명.** $F _m = \cup _{i \le m} E _i$라 하자. $E _n$은 가측이고, $F _n \supset E _n$, 그리고 $F _{n-1} \cap E _n = \emptyset$ 이므로,
 
-$$ \begin{aligned} \mu^{\ast}(G \cap F _n) &= \mu^{\ast}(G \cap F _n \cap E _n) + \mu^{\ast}(G \cap F _n \cap E _n^c) \\ &= \mu^{\ast}(G \cap E _n) + \mu^{\ast}(G \cap F _{n-1}) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G \cap F _n) &= \mu^{\ast}(G \cap F _n \cap E _n) + \mu^{\ast}(G \cap F _n \cap E _n^c) \\ 
+&= \mu^{\ast}(G \cap E _n) + \mu^{\ast}(G \cap F _{n-1}) \end{aligned} $$
 
 이로부터 귀납법에 의해 원하는 결과가 따라나온다. ◻
 
@@ -207,7 +209,8 @@ $$ \begin{aligned} \mu^{\ast}(G \cap F _n) &= \mu^{\ast}(G \cap F _n \cap E _n) 
 
 **(d)의 증명.** $E' _i = E _i \cap (\cap _{j<i} E _j^c)$라 하자. (a)와 (b)는 $E' _i$가 가측임을 암시하므로, 우리는 일반성을 잃지 않고 $E _i$들이 서로소라고 가정할 수 있다. $F _n = E _1 \cup \dots \cup E _n$이라 하자. $F _n$은 (b)에 의해 가측이므로, 단조성과 (c)를 사용하면,
 
-$$ \begin{aligned} \mu^{\ast}(G) &= \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap F _n^c) \ge \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap E^c) \\ &= \sum _{i=1}^n \mu^{\ast}(G \cap E _i) + \mu^{\ast}(G \cap E^c) \end{aligned} $$
+$$ \begin{aligned} \mu^{\ast}(G) &= \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap F _n^c) \ge \mu^{\ast}(G \cap F _n) + \mu^{\ast}(G \cap E^c) \\ 
+&= \sum _{i=1}^n \mu^{\ast}(G \cap E _i) + \mu^{\ast}(G \cap E^c) \end{aligned} $$
 
 $n \to \infty$로 보내고 준가법성을 사용하면,
 
