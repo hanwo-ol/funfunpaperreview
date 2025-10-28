@@ -18,9 +18,7 @@ $$ \text{var}(Y _k) \le E(Y _k^2) = \int _0^\infty 2y P(|Y _k|>y) dy \le \int _0
 
 따라서 푸비니의 정리를 사용하면 (모든 것이 $\ge 0$이고 합은 카운팅 측도에 대한 적분이므로),
 
-$$ \begin{aligned} \sum_{k=1}^\infty \frac{E(Y_k^2)} {k^2} &\le 
-\sum_{k=1}^\infty k^{-2} \int_0^\infty \mathbf{1}_{\{y<k\}}\, 2y\, P(|X_1|>y)\, dy \\ 
-&= \int_0^\infty \left( \sum _{k=1}^\infty k^{-2} \mathbf{1} _{\{y<k\}} \right) 2y\, P(|X_1|>y)\, dy \end{aligned} $$
+<img width="629" height="184" alt="image" src="https://github.com/user-attachments/assets/7c5f777f-aa5a-4af0-b652-00a1b90cbbf9" />
 
 
 $E|X _1| = \int _0^\infty P(|X _1|>y) dy$ 이므로, 우리는 다음을 보임으로써 증명을 완성할 수 있다.
