@@ -35,7 +35,7 @@ $$
 *   $\theta _t$: 타임 스텝 $t$에서의 현재 모델 파라미터입니다.
 *   $\nabla L(\theta _t)$: 현재 파라미터 $\theta _t$ 위치에서 계산된 손실 함수의 기울기입니다.
 *   $\alpha \nabla L(\theta _t)$: 기울기 벡터 $\nabla L(\theta _t)$에 학습률 $\alpha$만큼 스케일을 조정한 값입니다. 이는 파라미터를 업데이트할 보폭(step size)과 방향을 결정합니다.
-*   $\theta _t - \alpha \nabla L(\theta _t)$: 현재 파라미터 $\theta _t$에서, 손실 함수가 가장 가파르게 증가하는 방향($\nabla L(\theta _t)$)의 **반대 방향**으로 $\alpha$만큼 이동합니다. 이 연산을 통해 파라미터는 손실 값이 더 낮은 지점으로 이동하게 됩니다.
+*   $\theta _t - \alpha \nabla L(\theta _t)$: 현재 파라미터 $\theta _t$에서, 손실 함수가 가장 가파르게 증가하는 방향( $\nabla L (\theta _t)$ )의 **반대 방향**으로 $\alpha$만큼 이동합니다. 이 연산을 통해 파라미터는 손실 값이 더 낮은 지점으로 이동하게 됩니다.
 *   $\theta _{t+1}$: 위 연산을 통해 업데이트된, 다음 타임 스텝 $t+1$에서의 새로운 파라미터입니다.
 
 이 과정을 손실 함수 값이 충분히 낮아질 때까지 반복하여 모델을 최적화합니다.
@@ -44,7 +44,7 @@ $$
 
 ### Part 2: Gradient Descent를 통한 Gradient Descent 학습
 
-이제 고정된 규칙($\theta _{t+1} = \theta _t - \alpha \nabla L(\theta _t)$)을 사용하는 대신, 이 업데이트 규칙 자체를 학습하는 모델을 설계합니다.
+이제 고정된 규칙( $\theta _{t+1} = \theta _t - \alpha \nabla L(\theta _t)$ )을 사용하는 대신, 이 업데이트 규칙 자체를 학습하는 모델을 설계합니다.
 
 #### 2.1. 역할 정의
 
