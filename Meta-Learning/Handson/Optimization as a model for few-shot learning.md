@@ -52,7 +52,7 @@ $$
 *   $c_{t-1} \leftrightarrow \theta_{t-1}$ (이전 파라미터)
 *   $f_t \leftrightarrow \mathbf{1}$ (망각 게이트가 모든 이전 정보를 기억한다고 가정)
 *   $i_t \leftrightarrow \alpha_t$ (입력 게이트가 학습률의 역할을 수행)
-*   $\tilde{c}_t \leftrightarrow -\nabla_{\theta_{t-1}} L_t$ (후보 정보가 음의 그래디언트 역할을 수행)
+*   $\tilde{c}_t \leftrightarrow -\nabla _{\theta _{t-1}} L _t$ (후보 정보가 음의 그래디언트 역할을 수행)
 
 이러한 유사성에서 착안하여, 고정된 규칙을 따르는 경사 하강법 대신 **LSTM 자체를 최적화기로 사용**하여 파라미터 업데이트 규칙을 '학습'하도록 만들 수 있습니다.
 
