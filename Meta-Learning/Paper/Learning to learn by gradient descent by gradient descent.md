@@ -28,17 +28,17 @@
 
 1.  **최적화의 재정의**: 최적화 알고리즘 설계를 학습 문제로 재정의합니다. 최적화기의 파라미터 `φ`를 찾는 것을 목표로 하며, 이는 특정 함수 `f`의 분포에 대한 기대 손실(expected loss)을 최소화하는 과정으로 공식화됩니다.
     
-    $L(\phi) = \mathbb{E}_{f} [f(\theta^*(f, \phi))]$
+$$L(\phi) = \mathbb{E}_{f} [f(\theta^*(f, \phi))]$$
     
 2.  **LSTM을 통한 파라미터화**: 업데이트 규칙 `g`를 파라미터 `φ`를 가진 LSTM 네트워크 `m`으로 구현합니다. 이 네트워크는 현재 스텝의 그래디언트 `∇_t`와 이전 스텝의 은닉 상태 `h_t`를 입력받아 파라미터 업데이트 값 `g_t`를 출력합니다.
     
-    $\begin{bmatrix} g_t \\ h_{t+1} \end{bmatrix} = m(\nabla_t, h_t, \phi)$
+$$\begin{bmatrix} g_t \\ h_{t+1} \end{bmatrix} = m(\nabla _t, h_t, \phi)$$
     
-    $\theta_{t+1} = \theta_t + g_t$
+$$\theta_{t+1} = \theta_t + g_t$$
     
 3.  **메타-최적화(Meta-optimization)**: 최적화기(LSTM)의 파라미터 `φ`를 학습시키기 위해 경사 하강법을 사용합니다. 무작위로 샘플링된 함수 `f`에 대해 최적화 과정을 여러 스텝에 걸쳐 펼친(unroll) 후, 전체 최적화 경로(trajectory)의 손실 합을 최소화하도록 역전파(Backpropagation Through Time, BPTT)를 통해 `φ`에 대한 그래디언트를 계산하고 업데이트합니다.
     
-    $L(\phi) = \mathbb{E}_{f} [\sum_{t=1}^{T} w_t f(\theta_t)]$
+$$L(\phi) = \mathbb{E}_{f} [\sum_{t=1}^{T} w_t f(\theta_t)]$$
     
 
 ### (5) What is achieved with the new method? (새로운 방법으로 무엇을 달성했는가?)
