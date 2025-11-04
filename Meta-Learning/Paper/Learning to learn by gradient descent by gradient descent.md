@@ -68,3 +68,54 @@ $$L(\phi) = \mathbb{E}_{f} [\sum_{t=1}^{T} w_t f(\theta_t)]$$
 2.  **일반화의 한계**: MNIST 실험에서, 시그모이드(sigmoid) 활성화 함수를 사용하는 네트워크로 훈련된 최적화기는 ReLU 활성화 함수를 사용하는 네트워크에는 잘 일반화되지 못했습니다. 이는 학습된 최적화기가 훈련 데이터 분포의 특정 동역학에 과적합될 수 있음을 시사합니다.
 3.  **아키텍처의 수동 조정**: 단순한 좌표별 LSTM 아키텍처는 CIFAR-10의 CNN과 같이 복잡한 모델에는 충분하지 않았습니다. 연구진은 완전 연결 계층과 합성곱 계층을 위한 별도의 LSTM을 도입해야 했습니다. 이는 문제의 복잡도에 따라 최적화기 아키텍처에 대한 수동 조정이 필요할 수 있음을 의미합니다.
 4.  **메타-훈련 비용**: 최적화기를 훈련시키는 과정(메타-러닝)은 많은 계산 비용을 요구합니다. 수많은 최적화 문제를 반복적으로 풀어야 하기 때문입니다. 논문에서는 이 비용에 대해 구체적으로 다루지 않지만, 이는 본질적인 한계입니다.
+
+
+
+---
+
+### 1. 훈련의 단순화 가정 (2차 미분 계산 회피)
+
+이 내용은 **3페이지, 2장 "Learning to learn with recurrent neural networks"의 마지막 문단**에서 직접적으로 언급됩니다.
+
+*   **위치**: 3페이지, 그림 2 바로 아래 문단
+*   **원문**:
+    > Ignoring gradients along the dashed edges amounts to making the assumption that the gradients of the optimizee do not depend on the optimizer parameters, i.e. $\partial \nabla_t / \partial \phi = 0$. This assumption allows us to avoid computing second derivatives of f.
+*   **해석**:
+    > 점선 엣지를 따라 흐르는 그래디언트를 무시하는 것은, 최적화 대상(optimizee)의 그래디언트가 최적화기(optimizer)의 파라미터에 의존하지 않는다는 가정(즉, $\partial \nabla_t / \partial \phi = 0$)을 하는 것과 같습니다. 이 가정 덕분에 우리는 f의 2차 미분을 계산하는 것을 피할 수 있습니다.
+*   **설명**:
+    이 문장은 연구진이 최적화기를 훈련시키는 과정(메타-최적화)을 단순화하기 위해 의도적으로 가정을 도입했음을 명확히 밝히는 부분입니다. 이는 계산상의 이점을 주지만, 이론적으로는 완전한 그래디언트를 사용하지 않는다는 한계점을 내포합니다.
+
+### 2. 일반화의 한계 (Sigmoid → ReLU)
+
+이 한계점은 **6페이지, 3.2절 "Training a small neural network on MNIST"의 "Generalization to different architectures" 문단**과 **그림 5**에서 확인할 수 있습니다.
+
+*   **위치**: 6페이지, 하단 문단
+*   **원문**:
+    > However, changing the activation function to ReLU makes the dynamics of the learning procedure sufficiently different that the learned optimizer is no longer able to generalize.
+*   **해석**:
+    > 하지만, 활성화 함수를 ReLU로 바꾸는 것은 학습 절차의 동역학을 매우 다르게 만들어서, 학습된 최적화기는 더 이상 일반화할 수 없게 됩니다.
+*   **설명**:
+    이 문장은 시그모이드(sigmoid) 함수로 훈련된 LSTM 최적화기가 ReLU를 사용하는 네트워크에는 효과적이지 않았다는 실험 결과를 직접적으로 서술합니다. **6페이지의 그림 5(Figure 5) 오른쪽 그래프("MNIST, RELU")**를 보면, 다른 실험에서는 최고의 성능을 보이던 LSTM(실선)이 ReLU 환경에서는 다른 최적화기들과 비슷하거나 더 나쁜 성능을 보이는 것을 시각적으로 확인할 수 있습니다. 이는 학습된 최적화기가 훈련 데이터의 특정 속성에 과적합될 수 있음을 보여주는 명백한 증거입니다.
+
+### 3. 아키텍처의 수동 조정 (CIFAR-10)
+
+이 내용은 **7페이지, 3.3절 "Training a convolutional network on CIFAR-10"의 두 번째 문단**에서 나타납니다.
+
+*   **위치**: 7페이지, 두 번째 문단
+*   **원문**:
+    > The coordinatewise network decomposition introduced in Section 2.1... We found that this decomposition was not sufficient for the model architecture introduced in this section due to the differences between the fully connected and convolutional layers. Instead we modify the optimizer by introducing two LSTMs: one proposes parameter updates for the fully connected layers and the other updates the convolutional layer parameters.
+*   **해석**:
+    > 2.1절에서 소개된 좌표별 네트워크 분해 방식은... 완전 연결 계층과 합성곱 계층 간의 차이 때문에 이 절에서 소개된 모델 아키텍처에는 충분하지 않다는 것을 발견했습니다. 대신 우리는 두 개의 LSTM을 도입하여 최적화기를 수정합니다: 하나는 완전 연결 계층을 위한 파라미터 업데이트를 제안하고, 다른 하나는 합성곱 계층의 파라미터를 업데이트합니다.
+*   **설명**:
+    연구진은 MNIST 실험에서 성공적이었던 단순한 좌표별(coordinate-wise) LSTM 구조가 CNN 모델에는 "충분하지 않다(not sufficient)"고 인정하고 있습니다. 이 문제를 해결하기 위해 계층의 종류(FC layer, Conv layer)에 따라 별도의 LSTM을 사용하도록 아키텍처를 수동으로 수정했습니다. 이는 제안된 방법이 모든 문제에 자동으로 적용되는 것이 아니라, 문제의 구조에 따라 최적화기 자체의 아키텍처를 사람이 직접 조정해야 할 수 있다는 한계점을 보여줍니다.
+
+### 4. 메타-훈련 비용
+
+이 한계점은 논문 한 곳에 명시적으로 "비용이 높다"고 적혀있지는 않지만, **2장과 3장의 훈련 절차 설명 전반**에 걸쳐 암시되어 있습니다.
+
+*   **위치**: 2장과 3장 서두의 훈련 방법론 설명 부분
+*   **근거**:
+    1.  **기대 손실 최소화**: 2장의 수식 (2) $L(\phi) = \mathbb{E}_{f} [f(\theta^*(f, \phi))]$는 여러 다른 함수 `f`에 대한 평균적인 성능을 최적화해야 함을 의미합니다. 이는 실제 훈련에서 수많은 문제 인스턴스(함수 `f`)를 샘플링하여 각각에 대해 최적화 과정을 실행해야 함을 뜻합니다.
+    2.  **BPTT 사용**: 3페이지에서는 최적화기 훈련을 위해 BPTT(Backpropagation Through Time)를 사용한다고 설명합니다. 이는 각 훈련 스텝에서, 최적화 과정을 T 스텝만큼 펼친(unroll) 후 전체 과정에 대해 역전파를 수행해야 함을 의미합니다.
+*   **설명**:
+    종합하면, 최적화기 자체를 훈련시키는 '한 스텝'은 (1) 특정 최적화 문제 하나를 샘플링하고, (2) 제안하는 LSTM 최적화기로 그 문제를 T 스텝 동안 풀고, (3) 그 전체 T 스텝의 과정에 대해 그래디언트를 계산하여 LSTM의 가중치를 업데이트하는 복잡한 과정을 포함합니다. 이는 일반적인 모델 훈련보다 훨씬 더 많은 계산량을 요구하는 본질적인 특성이며, 논문에 기술된 훈련 절차 자체가 이 한계점을 암시합니다.
