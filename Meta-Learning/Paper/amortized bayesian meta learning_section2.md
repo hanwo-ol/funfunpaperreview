@@ -79,7 +79,7 @@ $$
 \end{aligned}
 $$
 
-마지막 항은 쿨백-라이블러 발산(KL Divergence)의 정의에 따라 정리되었습니다. KL(q\Vert p) = $\int q(x) \log \frac{q(x)}{p(x)} dx = -\mathbb{E}_q[\log \frac{p(x)}{q(x)}]$. 이것이 논문의 두 번째 줄 `≥ E_q(θ;ψ)[...] - KL(...)`에 해당합니다.
+마지막 항은 쿨백-라이블러 발산(KL Divergence)의 정의에 따라 정리되었습니다. $KL(q \Vert p)$ = $\int q(x) \log \frac{q(x)}{p(x)} dx = -\mathbb{E}_q[\log \frac{p(x)}{q(x)}]$. 이것이 논문의 두 번째 줄 `≥ E_q(θ;ψ)[...] - KL(...)`에 해당합니다.
 
 ---
 **[2단계]** 두 번째 변분 추론 근사: **지역 변수 $\phi_i$에 대한 ELBO**
