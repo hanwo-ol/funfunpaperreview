@@ -1,3 +1,30 @@
-title: FunFun Paper Review
-description: 논문 및 서적 리뷰 모음
-theme: jekyll-theme-minimal # 예시 테마 (다양한 테마 사용 가능)
+# 사이트 기본
+title: Fun Fun Paper Review
+description: Notes & reviews
+permalink: pretty
+
+# GitHub Pages에서 허용되는 플러그인들 (예: optional-front-matter, default-layout, titles-from-headings 등)
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+# GitHub Pages 호환 원격 테마(원하면 다른 테마로 교체 가능)
+remote_theme: pages-themes/cayman@v0.2.0
+
+# 프런트매터 없이도 기본 레이아웃 적용
+defaults:
+  - scope:
+      path: ""          # 레포 전체
+      type: pages
+    values:
+      layout: page
+
+# 상대 링크를 폴더/파일 구조대로 동작하게
+relative_links:
+  enabled: true
+  collections: true
