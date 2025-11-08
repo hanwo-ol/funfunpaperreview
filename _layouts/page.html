@@ -1,0 +1,57 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ page.title | default: site.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- 심플 기본 스타일 (원하면 제거/교체) -->
+  <link rel="stylesheet"
+        href="https://unpkg.com/@simpledotcss/simple@2.3.1/dist/simple.min.css">
+  <style>
+    .layout { display: grid; grid-template-columns: 1fr 320px; gap: 2rem; }
+    @media (max-width: 1000px) { .layout { grid-template-columns: 1fr; } }
+    .sidebar { position: sticky; top: 1rem; max-height: 90vh; overflow: auto; }
+    .file-path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; opacity: .8; }
+    .muted { opacity: .7; font-size: .9em; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    {% if site.description %}<p class="muted">{{ site.description }}</p>{% endif %}
+  </header>
+
+  <main class="layout">
+    <article>
+      {{ content }}
+    </article>
+
+    <aside class="sidebar">
+      <h3>All pages</h3>
+      <ul>
+        {%- assign pages_sorted = site.pages | sort: 'path' -%}
+        {%- for p in pages_sorted -%}
+          {%- comment -%}
+            site.pages에는 변환된 페이지가 들어옵니다.
+            README가 홈으로 쓰일 경우(plugins: jekyll-readme-index), 중복 링크는 제외합니다.
+          {%- endcomment -%}
+          {%- if p.url != '/' and p.path contains '.md' -%}
+            <li>
+              <a href="{{ p.url | relative_url }}">
+                {{ p.title | default: p.path }}
+              </a>
+              <div class="file-path">{{ p.path }}</div>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="muted">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </footer>
+</body>
+</html>
