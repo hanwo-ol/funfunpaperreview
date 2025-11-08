@@ -16,6 +16,19 @@
     .file-path { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; opacity: .8; }
     .muted { opacity: .7; font-size: .9em; }
   </style>
+  <!-- MathJax config: \( \) / \[ \] / $$ $$ 모두 허용 -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(','\\)'], ['$', '$']],
+        displayMath: [['\\[','\\]'], ['$$','$$']],
+        processEscapes: true
+      },
+      options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
   <header>
