@@ -165,3 +165,119 @@ $$
 *   $\text{KL}(...)$: KL 패널티 항. 근사 사후분포가 사전분포로부터 멀어지는 것에 대한 페널티입니다.
 
 이로써 2장의 모든 수식에 대한 상세한 유도와 설명이 마무리되었습니다. 이 장은 변분 추론을 이용한 베이지안 메타-러닝의 이론적 토대를 마련하는 부분이며, 이후 3장에서는 이 최적화 문제를 어떻게 확장 가능하게(scalable) 풀 것인지에 대한 구체적인 방법을 제시합니다.
+
+
+---
+
+일반적인 변분 추론(Variational Inference, VI)과 이 논문에서 사용된 계층적 변분 추론(Hierarchical Variational Inference)은 뭐가 다른가?
+
+### **비교의 핵심: 모델의 구조와 추론의 목표**
+
+가장 큰 차이점은 **추론하고자 하는 확률 모델의 구조**와 **추론의 목표**에 있습니다. 일반 VI는 단일 데이터셋에 대한 단일 잠재 변수를 다루는 반면, 계층적 VI는 여러 관련 그룹(태스크)에 걸쳐 공유되는 구조를 가진 잠-재 변수들을 다룹니다.
+
+---
+
+### **1. 일반 변분 추론 (Standard Variational Inference)**
+
+#### **상황 (Scenario)**
+
+*   하나의 데이터셋 $\mathcal{D} = \{x_1, \dots, x_N\}$가 주어집니다.
+*   이 데이터를 설명하는 잠재 변수(latent variable) $\mathbf{z}$가 있습니다. 예를 들어, $\mathbf{z}$는 신경망의 모든 가중치(weights)가 될 수 있습니다.
+*   우리는 데이터 $\mathcal{D}$가 주어졌을 때의 잠재 변수 $\mathbf{z}$의 사후분포(posterior) $p(\mathbf{z}|\mathcal{D})$를 알고 싶습니다.
+
+#### **문제점 (Problem)**
+
+베이즈 정리에 따라 사후분포는 다음과 같습니다.
+
+$$ p(\mathbf{z}|\mathcal{D}) = \frac{p(\mathcal{D}|\mathbf{z}) p(\mathbf{z})}{p(\mathcal{D})} = \frac{p(\mathcal{D}|\mathbf{z}) p(\mathbf{z})}{\int p(\mathcal{D}|\mathbf{z}) p(\mathbf{z}) d\mathbf{z}} $$
+
+여기서 분모에 있는 증거(evidence) $p(\mathcal{D})$의 적분 계산이 대부분의 경우 불가능(intractable)합니다.
+
+#### **해결책 (Solution)**
+
+*   다루기 쉬운 분포(예: 가우시안)인 **변분 분포(variational distribution) $q(\mathbf{z}; \lambda)$**를 도입하여 실제 사후분포 $p(\mathbf{z}|\mathcal{D})$를 근사합니다. 여기서 $\lambda$는 변분 파라미터입니다.
+
+*   $q(\mathbf{z}; \lambda)$와 $p(\mathbf{z}|\mathcal{D})$ 사이의 **KL 발산(KL Divergence)을 최소화**하는 최적의 파라미터 $\lambda^*$를 찾습니다.
+
+$$ \lambda^* = \underset{\lambda}{\arg\min} \quad \text{KL}(q(\mathbf{z}; \lambda) || p(\mathbf{z}|\mathcal{D})) $$
+
+*   KL 발산을 직접 최소화하는 것은 $p(\mathbf{z}|\mathcal{D})$를 모르기 때문에 불가능합니다. 대신, 이와 동치인 **증거 하한(Evidence Lower Bound, ELBO)을 최대화**합니다.
+
+$$ \mathcal{L}(\lambda) = \mathbb{E}_{q(\mathbf{z}; \lambda)}[\log p(\mathcal{D}|\mathbf{z})] - \text{KL}(q(\mathbf{z}; \lambda) || p(\mathbf{z})) $$
+
+#### **그래프 모델 (Graphical Model)**
+일반 VI의 모델 구조는 간단합니다.
+
+```
+   z (Latent Variable)
+   |
+   V
+   x (Observed Data)
+```
+
+#### **요약 (Summary)**
+*   **목표**: 단일 데이터셋에 대한 사후분포 $p(\mathbf{z}|\mathcal{D})$ 추론.
+*   **구조**: 단일 계층 (잠재 변수 → 데이터).
+*   **결과물**: 데이터셋 $\mathcal{D}$를 가장 잘 설명하는 **하나의** 근사 사후분포 $q(\mathbf{z}; \lambda^*)$.
+
+---
+
+### **2. 계층적 변분 추론 (Hierarchical Variational Inference) - 이 논문의 경우**
+
+#### **상황 (Scenario)**
+
+*   단일 데이터셋이 아니라, 서로 관련은 있지만 다른 **여러 개의 데이터셋(태스크)** $\mathcal{D}_1, \dots, \mathcal{D}_M$이 주어집니다. (예: 각 태스크는 다른 종류의 동물 이미지를 분류하는 문제)
+*   **잠재 변수가 계층 구조**를 가집니다.
+    *   **전역 잠재 변수 $\theta$**: 모든 태스크에 걸쳐 공유되는 정보. (예: 모든 동물 이미지 분류에 공통적으로 유용한 특징 추출기 가중치의 분포)
+    *   **지역 잠재 변수 $\phi_i$**: 각 태스크 $\mathcal{D}_i$에만 특화된 정보. (예: $i$번째 동물 분류기를 위해 미세 조정된 가중치)
+*   우리는 모든 태스크 데이터가 주어졌을 때의 전역 사후분포 $p(\theta|\mathcal{D}_1, \dots, \mathcal{D}_M)$와 각 태스크에 대한 지역 사후분포 $p(\phi_i|\mathcal{D}_i, \theta)$를 동시에 알고 싶습니다.
+
+#### **문제점 (Problem)**
+일반 VI보다 훨씬 더 복잡한 계층적 구조 때문에, 사후분포 $p(\theta, \phi_1, \dots, \phi_M | \mathcal{D}_1, \dots, \mathcal{D}_M)$를 계산하는 것은 더욱 어렵습니다.
+
+#### **해결책 (Solution)**
+
+*   계층 구조를 반영하여 **두 종류의 변분 분포**를 도입합니다.
+    *   전역 변수 $\theta$를 근사하는 $q(\theta; \psi)$.
+    *   각 지역 변수 $\phi_i$를 근사하는 $q(\phi_i; \lambda_i)$.
+*   전체 데이터셋에 대한 **결합 증거 하한(Joint ELBO)을 최대화**합니다. 이 ELBO는 모든 변분 파라미터($\psi, \lambda_1, \dots, \lambda_M$)에 대해 최적화됩니다.
+
+$$ \mathcal{L}(\psi, \{\lambda_i\}) = \mathbb{E}_{q(\theta;\psi)}\left[ \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(\mathcal{D}_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i)||p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi)||p(\theta)) $$
+
+*   이 최적화 과정을 통해, **여러 태스크로부터 정보를 공유(information sharing)**하여 각 태스크를 더 잘 학습할 수 있습니다. 예를 들어, 데이터가 부족한 태스크 $\mathcal{D}_j$는 다른 태스크들로부터 학습된 강력한 전역 정보 $\theta$의 도움을 받아 더 나은 사후분포 $q(\phi_j)$를 추정할 수 있습니다.
+
+#### **그래프 모델 (Graphical Model)**
+계층적 모델은 여러 태스크가 전역 변수를 공유하는 구조를 가집니다. (논문의 Figure 1a 참조)
+```
+            θ (Global Variable)
+           / | \
+          /  |  \
+         V   V   V
+       φ_1 φ_2 ... φ_M (Local Variables)
+        |   |       |
+        V   V       V
+       D_1 D_2 ... D_M (Observed Data)
+```
+
+#### **요약 (Summary)**
+*   **목표**: 여러 관련 데이터셋(태스크)에 대한 계층적 사후분포 $p(\theta, \{\phi_i\} | \{\mathcal{D}_i\})$ 추론.
+*   **구조**: 다중 계층 (전역 변수 → 지역 변수 → 데이터).
+*   **결과물**:
+    *   모든 태스크의 공통 정보를 담은 **하나의** 전역 근사 사후분포 $q(\theta; \psi^*)$.
+    *   각 태스크에 특화된 **M개의** 지역 근사 사후분포 $q(\phi_i; \lambda_i^*)$.
+
+---
+
+### **핵심 차이점 표로 정리**
+
+| 구분 | 일반 변분 추론 (Standard VI) | 계층적 변분 추론 (Hierarchical VI) |
+| :--- | :--- | :--- |
+| **적용 대상** | 단일 데이터셋 | 여러 개의 관련된 데이터셋 (태스크 그룹) |
+| **모델 구조** | 단일 계층 | 다중 계층 (계층적) |
+| **잠재 변수** | 단일 잠재 변수 $\mathbf{z}$ | 전역 변수 $\theta$와 다수의 지역 변수 $\phi_i$ |
+| **추론 목표** | $p(\mathbf{z} \vert \mathcal{D})$ | $p(\theta, \{\phi_i\} \vert \{\mathcal{D}_i\})$ |
+| **변분 분포** | $q(\mathbf{z})$ 하나 | $q(\theta)$와 다수의 $q(\phi_i)$ |
+| **핵심 이점** | intractable한 사후분포의 근사 | **정보 공유 (Information Sharing)**를 통한 학습 효율 증대 |
+| **메타-러닝**<br>**관점** | (해당 없음) | **전역 변수 $\theta$가 "학습하는 법"** 또는 "좋은 사전 지식"을 인코딩 |
+
+이 논문에서 계층적 VI를 사용하는 이유는 메타-러닝의 본질, 즉 **"여러 태스크를 통해 얻은 경험으로 새로운 태스크를 더 빨리 배우는 것"**을 수학적으로 모델링하기에 완벽한 프레임워크이기 때문입니다. 전역 변수 $\theta$가 바로 여러 태스크에서 축적된 '경험' 또는 '사전 지식'의 역할을 수행합니다.
