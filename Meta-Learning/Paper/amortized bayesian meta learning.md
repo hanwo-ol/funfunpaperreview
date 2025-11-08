@@ -98,16 +98,16 @@ $$
 
 6.  기댓값을 각 항에 분배하고 KL 발산(Kullback-Leibler divergence) 형태로 정리합니다.
 
-$\text{KL}(q||p) = \mathbb{E}_q[\log \frac{q}{p}] = -\mathbb{E}_q[\log \frac{p}{q}]$
+$\text{KL}(q\Vert p) = \mathbb{E}_q[\log \frac{q}{p}] = -\mathbb{E}_q[\log \frac{p}{q}]$
 
 $$
-= \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] \right] - \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \text{KL}(q(\phi_i;\lambda_i) || p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) || p(\theta))
+= \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] \right] - \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) \Vert  p(\theta))
 $$
 
 이 마지막 식이 바로 논문의 `\mathcal{L}(\psi, \lambda_1, ..., \lambda_M)`에 해당하는 **ELBO**입니다. 논문에서는 기댓값 순서를 조금 다르게 표현했을 뿐, 본질적으로 동일한 식입니다.
 
 $$
-\mathcal{L} = \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i) || p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) || p(\theta))
+\mathcal{L} = \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) \Vert  p(\theta))
 $$
 
 ### 3단계: 최적화 문제로의 전환 (수식 1, 2)
@@ -115,18 +115,18 @@ $$
 이제 우리의 목표는 이 ELBO($\mathcal{L}$)를 최대화하는 $\psi$와 $\lambda_i$를 찾는 것입니다. 이것이 바로 **수식 (1)** 입니다.
 
 $$
-\underset{\psi, \lambda_1, ..., \lambda_M}{\arg\max} \quad \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i) || p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) || p(\theta)) \quad (1)
+\underset{\psi, \lambda_1, ..., \lambda_M}{\arg\max} \quad \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) \Vert  p(\theta)) \quad (1)
 $$
 
 수식 (1)은 세 부분으로 해석할 수 있습니다.
 1.  $\mathbb{E}[\log p(D_i|\phi_i)]$: **재구성 항(Reconstruction Term)**. 데이터 $D_i$를 얼마나 잘 설명하는지를 나타냅니다. (이 값을 최대화)
-2.  $\text{KL}(q(\phi_i) || p(\phi_i|\theta))$: **지역 정규화 항(Local Regularizer)**. 태스크별 사후분포 $q(\phi_i)$가 사전분포 $p(\phi_i|\theta)$에서 너무 멀어지지 않도록 규제합니다. (KL은 거리와 유사하므로 최소화, 즉 `-KL`은 최대화)
-3.  $\text{KL}(q(\theta) || p(\theta))$: **전역 정규화 항(Global Regularizer)**. 전역 사후분포 $q(\theta)$가 하이퍼파라미터 $p(\theta)$에서 너무 멀어지지 않도록 규제합니다. (마찬가지로 `-KL`은 최대화)
+2.  $\text{KL}(q(\phi_i) \Vert  p(\phi_i|\theta))$: **지역 정규화 항(Local Regularizer)**. 태스크별 사후분포 $q(\phi_i)$가 사전분포 $p(\phi_i|\theta)$에서 너무 멀어지지 않도록 규제합니다. (KL은 거리와 유사하므로 최소화, 즉 `-KL`은 최대화)
+3.  $\text{KL}(q(\theta) \Vert  p(\theta))$: **전역 정규화 항(Global Regularizer)**. 전역 사후분포 $q(\theta)$가 하이퍼파라미터 $p(\theta)$에서 너무 멀어지지 않도록 규제합니다. (마찬가지로 `-KL`은 최대화)
 
 일반적으로 최적화 문제는 손실 함수를 '최소화'하는 것으로 표현합니다. 따라서 `argmax F(x)`는 `argmin -F(x)`와 같습니다. 수식 (1)의 모든 항에 음수 부호를 붙여 최소화 문제로 바꾸면 **수식 (2)**가 됩니다.
 
 $$
-\underset{\psi, \lambda_1, ..., \lambda_M}{\arg\min} \quad \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M -\mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] + \text{KL}(q(\phi_i;\lambda_i) || p(\phi_i|\theta)) \right] + \text{KL}(q(\theta;\psi) || p(\theta)) \quad (2)
+\underset{\psi, \lambda_1, ..., \lambda_M}{\arg\min} \quad \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M -\mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] + \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] + \text{KL}(q(\theta;\psi) \Vert  p(\theta)) \quad (2)
 $$
 
 이것이 바로 경사 하강법을 통해 우리가 실제로 최적화할 최종 손실 함수입니다.
@@ -207,3 +207,132 @@ $$ \ge \mathbb{E}_{q(\theta)\prod q(\phi_i)} \left[ \log \frac{p(\theta) \prod_{
 *   **분모 $q(\theta)\prod ...$**: **평균장 가정**을 통해 $q(Z)$를 단순화한 결과입니다.
 
 결론적으로, 4번 과정은 ELBO를 유도하기 위해 기댓값 내부의 복잡한 확률 분포들을 **(1) 모델의 구조적 가정**과 **(2) 계산의 편의를 위한 단순화 가정(평균장 가정)**을 사용해 구체적인 형태로 풀어 쓴 단계입니다.
+
+
+----
+
+5번에서 6번으로 넘어가는 과정. 이 과정은 기댓값의 선형성(linearity of expectation)과 KL 발산의 정의를 이용.
+
+### 시작: 5번 수식
+
+5번 수식은 기댓값 안에 여러 항의 합이 있는 형태입니다.
+
+$$
+\mathbb{E}_{q(\theta)\prod_{j=1}^M q(\phi_j)} \left[ \sum_{i=1}^M \log p(D_i|\phi_i) + \sum_{i=1}^M \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} + \log \frac{p(\theta)}{q(\theta; \psi)} \right]
+$$
+
+(혼동을 피하기 위해 기댓값 아래의 곱셈 인덱스를 `j`로, 썸네이션 인덱스를 `i`로 표기했습니다. 본질은 같습니다.)
+
+### 1단계: 기댓값의 선형성 적용
+
+기댓값의 중요한 성질 중 하나는 **선형성**입니다. 즉, $\mathbb{E}[A + B] = \mathbb{E}[A] + \mathbb{E}[B]$가 성립합니다. 이 성질을 이용해 기댓값 안의 세 덩어리를 각각 분리할 수 있습니다.
+
+**[덩어리 1]**
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \sum_{i=1}^M \log p(D_i|\phi_i) \right] $$
+
+**[덩어리 2]**
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \sum_{i=1}^M \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} \right] $$
+
+**[덩어리 3]**
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \log \frac{p(\theta)}{q(\theta; \psi)} \right] $$
+
+이제 각 덩어리를 하나씩 자세히 살펴보겠습니다.
+
+---
+
+### 2단계: 각 덩어리 정리하기
+
+#### [덩어리 3] 분석 (가장 간단한 항)
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \log \frac{p(\theta)}{q(\theta; \psi)} \right] $$
+
+이 기댓값은 $q(\theta)$와 모든 $q(\phi_j)$에 대해 계산됩니다. 하지만 기댓값 안의 표현식 $\log \frac{p(\theta)}{q(\theta; \psi)}$은 오직 $\theta$에만 의존하고, $\phi_j$와는 아무런 관련이 없습니다.
+
+따라서, $\phi_j$에 대한 기댓값은 아무런 영향을 주지 않습니다 (마치 $\mathbb{E}_{Y}[f(X)] = f(X)$ 와 같습니다). 결국 이 항은 $q(\theta)$에 대한 기댓값만 남게 됩니다.
+
+$$ = \mathbb{E}_{q(\theta)} \left[ \log \frac{p(\theta)}{q(\theta; \psi)} \right] $$
+
+이제 KL 발산의 정의를 봅시다: $\text{KL}(q \Vert  p) = \mathbb{E}_q \left[ \log \frac{q}{p} \right] = -\mathbb{E}_q \left[ \log \frac{p}{q} \right]$
+따라서 위 식은 다음과 같이 정리됩니다.
+
+$$ = - \text{KL}(q(\theta; \psi) \Vert  p(\theta)) $$
+
+이것으로 6번 수식의 마지막 항이 유도되었습니다.
+
+---
+
+#### [덩어리 1] 분석 (재구성 항)
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \sum_{i=1}^M \log p(D_i|\phi_i) \right] $$
+
+기댓값과 썸네이션의 순서를 바꿀 수 있습니다 ($\mathbb{E}[\sum X_i] = \sum \mathbb{E}[X_i]$).
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \log p(D_i|\phi_i) \right] $$
+
+이제 썸네이션 안의 기댓값을 봅시다. 기댓값 안의 표현식 $\log p(D_i|\phi_i)$는 오직 $\phi_i$ 하나에만 의존합니다. $\theta$나 다른 $\phi_j$ (단, $j \neq i$)와는 관련이 없습니다.
+
+따라서, $\theta$와 다른 $\phi_j$에 대한 기댓값은 아무런 영향을 미치지 않고, 오직 $q(\phi_i)$에 대한 기댓값만 남습니다.
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\phi_i;\lambda_i)} [\log p(D_i|\phi_i)] $$
+
+여기서 한 단계 더 나아가봅시다. $\lambda_i$는 $i$번째 태스크에만 해당하므로 괜찮지만, 논문의 최종 ELBO 형태를 보면 이 항도 $q(\theta)$에 대한 기댓값 안에 포함되어 있습니다. 이것은 논문의 최종 목표 함수가 $\theta$에 대한 기댓값으로 전체를 묶고 있기 때문입니다. 하지만 $\log p(D_i|\phi_i)$ 항은 $\theta$와 직접적인 관련이 없습니다. 왜 이런 표현이 나올까요?
+
+사실, 엄밀히 말하면 $\lambda_i$ 자체가 $\theta$에 의존하는 모델 구조(Amortized VI)를 나중에 도입하기 때문에, 최종적으로는 $\theta$에 대한 의존성이 생깁니다. 하지만 현재 단계의 순수 계층 모델에서는 의존성이 없습니다. **이 부분에서 수식 유도 과정이 약간의 비약을 포함하고 있는 것으로 보입니다.**
+
+일단 순수한 계층 모델로만 보면, $q(\theta)$와 독립인 것처럼 보입니다.
+하지만 논문의 최종 형태에 맞추기 위해, "어차피 모든 항이 나중에는 $\theta$에 대한 기댓값으로 묶일 것이다"라고 생각하고, 억지로 $q(\theta)$에 대한 기댓값을 씌워 표현할 수 있습니다. (엄밀한 수학적 과정이라기 보단, 최종 목표식을 향한 정리 과정으로 이해하는 것이 좋습니다)
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \mathbb{E}_{q(\phi_i;\lambda_i)} [\log p(D_i|\phi_i)] \right] $$
+
+이것이 6번 수식의 첫 번째 항이 됩니다.
+
+---
+
+#### [덩어리 2] 분석 (지역 정규화 항)
+
+$$ \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \sum_{i=1}^M \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} \right] $$
+
+마찬가지로 기댓값과 썸네이션 순서를 바꿉니다.
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta)\prod q(\phi_j)} \left[ \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} \right] $$
+
+썸네이션 안의 기댓값을 봅시다. 기댓값 안의 표현식 $\log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)}$은 $\theta$와 $\phi_i$에 의존합니다. 다른 $\phi_j$ ($j \neq i$)와는 관련이 없습니다.
+
+따라서 다른 $\phi_j$에 대한 기댓값은 사라지고, $q(\theta)$와 $q(\phi_i)$에 대한 기댓값만 남습니다.
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta)q(\phi_i)} \left[ \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} \right] $$
+
+기댓값을 분리해서 쓸 수 있습니다.
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \mathbb{E}_{q(\phi_i;\lambda_i)} \left[ \log \frac{p(\phi_i|\theta)}{q(\phi_i; \lambda_i)} \right] \right] $$
+
+안쪽 기댓값 $\mathbb{E}_{q(\phi_i;\lambda_i)} [ \dots ]$를 잘 보면, 특정 $\theta$ 값이 **고정되어 있을 때**의 KL 발산 형태와 매우 유사합니다.
+
+$\mathbb{E}_{q(\phi_i)} [ \log \frac{p(\phi_i|\theta)}{q(\phi_i)} ]$는 $q(\phi_i)$와 $p(\phi_i|\theta)$ 사이의 `-KL 발산`입니다.
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ - \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] $$
+
+기댓값 밖으로 음수 부호를 빼내면,
+
+$$ = - \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] $$
+
+이것이 6번 수식의 두 번째 항이 됩니다.
+
+---
+
+### 최종 결합
+
+위에서 유도한 3개의 덩어리를 모두 합치면 다음과 같습니다.
+
+$$ \text{[덩어리 1]} + \text{[덩어리 2]} + \text{[덩어리 3]} $$
+
+$$ = \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] \right] - \sum_{i=1}^M \mathbb{E}_{q(\theta;\psi)} \left[ \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right] - \text{KL}(q(\theta;\psi) \Vert  p(\theta)) $$
+
+이제 첫 번째와 두 번째 항을 $q(\theta)$에 대한 기댓값으로 묶고, $\sum$ 기호도 기댓값 안으로 넣으면 논문의 최종 ELBO 형태와 일치하게 됩니다.
+
+$$ \mathcal{L} = \mathbb{E}_{q(\theta;\psi)} \left[ \sum_{i=1}^M \left( \mathbb{E}_{q(\phi_i;\lambda_i)}[\log p(D_i|\phi_i)] - \text{KL}(q(\phi_i;\lambda_i) \Vert  p(\phi_i|\theta)) \right) \right] - \text{KL}(q(\theta;\psi) \Vert  p(\theta)) $$
+
+이렇게 5번에서 6번으로의 전개가 완료됩니다. 핵심은 **기댓값의 선형성**과 **관련 없는 변수에 대한 기댓값은 사라진다**는 점, 그리고 **KL 발산의 정의**를 정확히 적용하는 것입니다.
