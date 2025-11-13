@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>문서 보기 - FunFun Paper Review</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
+      line-height: 1.7;
+    }
+    header {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin: 0 0 0.25rem;
+    }
+    .path {
+      font-size: 0.9rem;
+      color: #777;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .back-link {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+    .content img {
+      max-width: 100%;
+    }
+    pre {
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #eee;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      background: #fafafa;
+    }
+    code {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9rem;
+    }
+    .loading {
+      color: #777;
+    }
+    .error {
+      color: #b00;
+      font-weight: 600;
+    }
+  </style>
+  <!-- 마크다운 렌더링 라이브러리 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="/funfunpaperreview/" class="back-link">← 레포 구조로 돌아가기</a>
+    <h1 id="doc-title">문서 로딩 중...</h1>
+    <div class="path" id="doc-path"></div>
+  </header>
+
+  <main id="content" class="content loading">
+    문서를 불러오는 중입니다...
+  </main>
+
+  <script>
+    const owner = "hanwo-ol";
+    const repo = "funfunpaperreview";
+    const branch = "main";
+
+    function getPathFromQuery() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("path");
+    }
+
+    async function loadDocument() {
+      const path = getPathFromQuery();
+      const contentEl = document.getElementById("content");
+      const titleEl = document.getElementById("doc-title");
+      const pathEl = document.getElementById("doc-path");
+
+      if (!path) {
+        titleEl.textContent = "경로가 없습니다";
+        contentEl.classList.remove("loading");
+        contentEl.classList.add("error");
+        contentEl.textContent = "URL에 ?path=... 쿼리가 없습니다.";
+        return;
+      }
+
+      pathEl.textContent = path;
+
+      const filename = path.split("/").pop() || path;
+      const prettyTitle = filename.replace(/\.md$/i, "");
+      titleEl.textContent = prettyTitle;
+
+      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+
+      try {
+        const res = await fetch(rawUrl);
+        if (!res.ok) {
+          throw new Error("HTTP " + res.status);
+        }
+        const markdown = await res.text();
+
+        const html = marked.parse(markdown);
+        contentEl.classList.remove("loading");
+        contentEl.innerHTML = html;
+      } catch (err) {
+        contentEl.classList.remove("loading");
+        contentEl.classList.add("error");
+        contentEl.textContent =
+          "문서를 불러오지 못했습니다. 경로나 브랜치를 확인해 주세요.";
+        console.error(err);
+      }
+    }
+
+    loadDocument();
+  </script>
+</body>
+</html>
