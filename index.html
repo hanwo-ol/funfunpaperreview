@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>FunFun Paper Review Repo Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -66,7 +67,6 @@
     </a>
     &nbsp;·&nbsp;
     📝 <a href="/funfunpaperreview/blog/">블로그(포스트 목록)로 이동</a>
-    <!-- 나중에 /blog/ 만들면 이 링크 살아남 -->
   </div>
 
   <div id="tree" class="loading">레포 구조 불러오는 중...</div>
@@ -75,14 +75,14 @@
     const owner = "hanwo-ol";
     const repo = "funfunpaperreview";
 
-      // 트리에서 숨기고 싶은 이름들
+    // 트리에서 숨기고 싶은 이름들
     const HIDDEN_NAMES = new Set([
       "index.html",
-      "viewer.html",   // 2번에서 만들 새 페이지도 같이 숨김
+      "viewer.html",
       "_layouts",
       "blog"
     ]);
-    
+
     async function fetchDir(path = "") {
       const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
       const res = await fetch(apiUrl);
@@ -102,9 +102,10 @@
       });
 
       for (const item of items) {
-        // 숨기고 싶은 파일/폴더는 여기서 걸러도 됨 (예: .gitignore, _config.yml 등)
-        if (item.name.startsWith(".")) continue;   // 숨김 파일
-        if (["README.md"].includes(item.name)) continue; // README는 패스하고 싶으면
+        // 숨기고 싶은 파일/폴더 걸러내기
+        if (item.name.startsWith(".")) continue; // 숨김 파일
+        if (HIDDEN_NAMES.has(item.name)) continue;
+        if (["README.md"].includes(item.name)) continue; // 원하면 제거해도 됨
 
         const li = document.createElement("li");
         const link = document.createElement("a");
@@ -112,29 +113,23 @@
 
         if (item.type === "dir") {
           li.classList.add("folder");
-          // GitHub 웹에서 폴더 열기
+          // GitHub 웹에서 폴더 열기 (Ctrl/Cmd+클릭 시)
           link.href = `https://github.com/${owner}/${repo}/tree/main/${item.path}`;
           link.target = "_blank";
           li.appendChild(link);
 
-          // 폴더 클릭 시에만 하위 폴더 로딩 (지연 로딩)
           const childContainer = document.createElement("div");
           childContainer.style.marginLeft = "0.5rem";
           li.appendChild(childContainer);
 
           let isLoaded = false;
           link.addEventListener("click", async (e) => {
-            // Ctrl/Cmd 클릭은 새 탭 열기 유지
-            if (e.metaKey || e.ctrlKey) return;
+            if (e.metaKey || e.ctrlKey) return; // 새 탭 열기 유지
 
             e.preventDefault();
             if (isLoaded) {
-              // 열려 있으면 접는 기능 넣고 싶으면 여기에서 토글
-              if (childContainer.style.display === "none") {
-                childContainer.style.display = "block";
-              } else {
-                childContainer.style.display = "none";
-              }
+              childContainer.style.display =
+                childContainer.style.display === "none" ? "block" : "none";
               return;
             }
             childContainer.textContent = "불러오는 중...";
@@ -149,9 +144,18 @@
           });
         } else {
           li.classList.add("file");
-          // GitHub에서 파일 보기
-          link.href = `https://github.com/${owner}/${repo}/blob/main/${item.path}`;
-          link.target = "_blank";
+
+          // .md 파일은 viewer.html에서 렌더링해서 보기
+          if (item.name.endsWith(".md")) {
+            const encodedPath = encodeURIComponent(item.path);
+            link.href = `/funfunpaperreview/viewer.html?path=${encodedPath}`;
+            link.target = "_self";
+          } else {
+            // 그 외 파일은 GitHub에서 보기
+            link.href = `https://github.com/${owner}/${repo}/blob/main/${item.path}`;
+            link.target = "_blank";
+          }
+
           li.appendChild(link);
         }
 
