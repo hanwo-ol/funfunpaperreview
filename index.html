@@ -75,6 +75,14 @@
     const owner = "hanwo-ol";
     const repo = "funfunpaperreview";
 
+      // 트리에서 숨기고 싶은 이름들
+    const HIDDEN_NAMES = new Set([
+      "index.html",
+      "viewer.html",   // 2번에서 만들 새 페이지도 같이 숨김
+      "_layouts",
+      "blog"
+    ]);
+    
     async function fetchDir(path = "") {
       const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
       const res = await fetch(apiUrl);
