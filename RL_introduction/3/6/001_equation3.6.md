@@ -1,3 +1,5 @@
+## 식 (3.6) 뜯어보기
+
 ### 1. 식 (3.6)
 
 $$p(s', r | s, a) \doteq \Pr\{S_{t+1}=s', R_{t+1}=r | S_t=s, A_t=a\}$$
@@ -36,3 +38,47 @@ $$p(s', r | s, a) \doteq \Pr\{S_{t+1}=s', R_{t+1}=r | S_t=s, A_t=a\}$$
 $$ \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r | s, a) = 1 $$
 
 ---
+
+## 그럼 얘는 뭐냐?
+
+$$ \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r | s, a) = 1 $$
+
+> **특정 상태 $s$에서 특정 행동 $a$를 취했을 때, 발생 가능한 모든 결과(다음 상태 $s'$와 보상 $r$)에 대한 확률의 총합**을 의미합니다.
+
+
+---
+
+### 1. 식 (3.6)의 정의 대입
+먼저, $p(s', r | s, a)$를 확률 변수의 표기법으로 바꿉니다.
+
+$$ \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r | s, a) = \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} \Pr \{ S_{t+1}=s', R_{t+1}=r \mid S_t=s, A_t=a \} $$
+
+여기서 **조건($S_t=s, A_t=a$)**은 고정된 값입니다. 즉, "에이전트가 $s$에서 $a$를 했다"는 사건이 이미 일어난 상황에서의 확률 분포를 보는 것입니다.
+
+### 2. 주변 확률 분포(Marginal Distribution)로의 전개
+이중 합산에서 안쪽의 합($\sum_{r \in \mathcal{R}}$)을 먼저 계산해 봅니다. 
+
+어떤 결합 확률 분포에서 하나의 변수($r$)에 대해 모든 가능한 값을 더하면, 다른 변수($s'$)에 대한 **주변 확률(Marginal Probability)**이 나옵니다.
+
+$$ \sum_{r \in \mathcal{R}} \Pr\{S_{t+1}=s', R_{t+1}=r \mid S_t=s, A_t=a\} = \Pr\{S_{t+1}=s' \mid S_t=s, A_t=a\} $$
+
+이 식의 의미는 다음과 같습니다.
+> "상태 $s$에서 행동 $a$를 했을 때, 보상이 얼마인지에 상관없이(**합산 처리**) 다음 상태가 $s'$가 될 확률"
+
+이를 교재에서는 **상태 전이 확률(State-transition probability)**이라 부르며 $p(s' | s, a)$라고 표기하기도 합니다.
+
+### 3. 최종 상태 공간($\mathcal{S}$)에 대한 합산
+이제 남은 바깥쪽의 합($\sum_{s' \in \mathcal{S}}$)을 적용합니다.
+
+$$ \sum_{s' \in \mathcal{S}} \left( \Pr\{S_{t+1}=s' \mid S_t=s, A_t=a\} \right) = \sum_{s' \in \mathcal{S}} p(s' \mid s, a) $$
+
+이 식은 "상태 $s$에서 행동 $a$를 했을 때, 다음에 도달할 수 있는 모든 가능한 상태 $s'$에 대한 확률을 모두 더하라"는 뜻입니다.
+
+### 4. 확률의 공리(Axiom of Probability)에 의한 결론
+확률론의 기본 원칙에 따라, 어떤 사건이 일어난 후 발생 가능한 **표본 공간(Sample Space) 전체에 대한 확률의 합은 항상 1**입니다.
+
+에이전트가 행동 $a$를 취했다면, 환경은 반드시 어떤 상태 $s' \in \mathcal{S}$로 전이되어야 하며(그것이 자기 자신일지라도), 어떤 보상 $r \in \mathcal{R}$을 주어야 합니다. 
+
+따라서 모든 $s'$와 $r$의 조합에 대해 확률을 더하면:
+
+$$ \sum_{s' \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s', r | s, a) = 1 $$
