@@ -1,0 +1,1444 @@
+[
+  {
+    "type": "dir",
+    "name": "AP",
+    "path": "AP",
+    "children": [
+      {
+        "type": "dir",
+        "name": "Probability_Theory_Example",
+        "path": "AP/Probability_Theory_Example",
+        "children": [
+          {
+            "type": "dir",
+            "name": "APPENDIX",
+            "path": "AP/Probability_Theory_Example/APPENDIX",
+            "children": [
+              {
+                "type": "file",
+                "name": "A.1.md",
+                "path": "AP/Probability_Theory_Example/APPENDIX/A.1.md",
+                "title": "A.1",
+                "description": "A.1 카라테오도리 확장 정리 (Carathéodory's Extension Theorem) 이 절은 다음 정리의 증명에 할애됩니다. 정리 A.1.1.   $\\mathcal{S}$를 반대수(semialgebra)라 하고, $\\mathcal{S}$ 위에 정의된 $\\mu$가 $\\mu(\\emptyset)=0$을 만족한다고 하자. 다음을 가정하자. (i) 만약 $"
+              },
+              {
+                "type": "file",
+                "name": "lecture_quiz.md",
+                "path": "AP/Probability_Theory_Example/APPENDIX/lecture_quiz.md",
+                "title": "lecture_quiz",
+                "description": "퀴즈 문제 풀이 및 핵심 아이디어 1번 문제: 유리수 집합의 Cardinality (|Q| = |N|) 이 문제는 유리수 집합 Q가 자연수 집합 N과 같이 '셀 수 있는' 무한 집합(countably infinite)임을 보이는 것입니다. 즉, 유리수의 원소들을 자연수와 일대일로 대응시킬 수 있음을 보이는 문제입니다. (1) 양의 유리수 |Q⁺| = |N|"
+              }
+            ]
+          },
+          {
+            "type": "dir",
+            "name": "CH1",
+            "path": "AP/Probability_Theory_Example/CH1",
+            "children": [
+              {
+                "type": "file",
+                "name": "section1.1.md",
+                "path": "AP/Probability_Theory_Example/CH1/section1.1.md",
+                "title": "section1.1",
+                "description": "제1장 측도론 (Measure Theory) 이 장에서는 측도론의 몇 가지 정의와 결과들을 다시 살펴볼 것입니다. 여기서의 목적은 이 개념들을 이전에 접해보지 못한 독자들에게 입문을 제공하고, 이미 본 적이 있는 독자들에게는 해당 내용을 복습하는 것입니다. 더 어려운 증명들, 특히 직관에 크게 기여하지 않는 것들은 부록에 숨겨져 있습니다. 측도론에 대한 탄"
+              },
+              {
+                "type": "file",
+                "name": "section1.2.md",
+                "path": "AP/Probability_Theory_Example/CH1/section1.2.md",
+                "title": "section1.2",
+                "description": "1.2 분포 (Distributions) 확률 공간은 그 위에   확률 변수(random variables)  를 정의할 때 조금 더 흥미로워집니다. $\\Omega$ 위에서 정의된 실수 값 함수(real valued function) $X$가   확률 변수  라고 불리는 것은, 모든 보렐 집합 $B \\subset \\mathbb{R}$에 대해 다음을 만족하는"
+              },
+              {
+                "type": "file",
+                "name": "section1.3.md",
+                "path": "AP/Probability_Theory_Example/CH1/section1.3.md",
+                "title": "section1.3",
+                "description": "1.3 확률 변수 (Random Variables) 이 절에서는 나중에 우리가 정의하는 양(quantities)들이 확률 변수, 즉 가측(measurable)임을 증명하는 데 도움이 될 몇 가지 결과들을 전개할 것입니다. 우리가 말해야 할 것의 대부분은 임의의 가측 공간 $(S, \\mathcal{S})$의 확률적 원소(random elements)에 대해서"
+              }
+            ]
+          },
+          {
+            "type": "dir",
+            "name": "CH2",
+            "path": "AP/Probability_Theory_Example/CH2",
+            "children": [
+              {
+                "type": "file",
+                "name": "section2.1.1.md",
+                "path": "AP/Probability_Theory_Example/CH2/section2.1.1.md",
+                "title": "section2.1.1",
+                "description": "2.1.1 독립을 위한 충분 조건 (Sufficient Conditions for Independence) 우리의 주된 결과는 정리 2.1.7입니다. 그 결과를 기술하기 위해, 우리의 이전 모든 정의들을 일반화하는 정의가 필요합니다. 집합들의 모임(collections of sets) $\\mathcal{A}  1, \\mathcal{A}  2, \\dots,"
+              },
+              {
+                "type": "file",
+                "name": "section2.1.4.md",
+                "path": "AP/Probability_Theory_Example/CH2/section2.1.4.md",
+                "title": "section2.1.4",
+                "description": "2.1.4 독립 확률 변수의 구성 (Constructing Independent Random Variables) 우리가 독립 확률 변수들을 연구하기 전에 다루어야 할 마지막 질문은: 그들이 존재하는가? 입니다. (만약 존재하지 않는다면, 그것들을 연구할 이유가 없습니다!) 만약 우리에게 $1 \\le i \\le n$에 대해 분포 함수 $F  i$가 유한 개"
+              },
+              {
+                "type": "file",
+                "name": "theorem2.3.7.md",
+                "path": "AP/Probability_Theory_Example/CH2/theorem2.3.7.md",
+                "title": "theorem2.3.7",
+                "description": "정리 2.3.7. 두 번째 보렐 칸텔리 보조정리 (The second Borel Cantelli lemma). 만약 사건들 $A  n$이   독립(independent)  이라면, $\\sum P(A  n) = \\infty$는 $P(A  n \\text{ i.o.}) = 1$을 암시한다. 증명.   $M < N < \\infty$라고 하자. 독립성과 $1 x \\"
+              },
+              {
+                "type": "file",
+                "name": "theorem2.4.1.md",
+                "path": "AP/Probability_Theory_Example/CH2/theorem2.4.1.md",
+                "title": "theorem2.4.1",
+                "description": "정리 2.4.1. 대수의 강법칙 (Strong law of large numbers). $X  1, X  2, \\dots$를   쌍마다 독립(pairwise independent)  이고 동일하게 분포된(identically distributed) 확률 변수들이고 $E|X  i| < \\infty$라고 하자. $EX  i = \\mu$이고 $S  n = X"
+              }
+            ]
+          },
+          {
+            "type": "dir",
+            "name": "CH4",
+            "path": "AP/Probability_Theory_Example/CH4",
+            "children": [
+              {
+                "type": "file",
+                "name": "section4.1.md",
+                "path": "AP/Probability_Theory_Example/CH4/section4.1.md",
+                "title": "section4.1",
+                "description": "제4장 마팅게일 (Martingales) 마팅게일 $X  n$은 공정한 게임에 돈을 거는 플레이어의 시간 $n$에서의 재산으로 생각할 수 있습니다. 서브마팅게일(submartingales) (또는 슈퍼마팅게일(supermartingales))은 유리한 (또는 불리한) 게임에 돈을 거는 결과입니다. 마팅게일에 관한 두 가지 기본 사실이 있습니다. 첫 번째는"
+              },
+              {
+                "type": "file",
+                "name": "sub4.1_martingale.md",
+                "path": "AP/Probability_Theory_Example/CH4/sub4.1_martingale.md",
+                "title": "sub4.1_martingale",
+                "description": "마팅게일 정의 복습 수열 $X  n$이 여과(filtration) $\\mathcal{F}  n$에 대한 마팅게일이라는 것은 다음 세 가지를 만족하는 것입니다. 1.    적분 가능성  : 모든 $n$에 대해 $E|X  n| < \\infty$. 2.    적응성(Adaptedness)  : 모든 $n$에 대해 $X  n$은 $\\mathcal{F}  n$ 가측"
+              }
+            ]
+          },
+          {
+            "type": "dir",
+            "name": "CH5",
+            "path": "AP/Probability_Theory_Example/CH5",
+            "children": [
+              {
+                "type": "file",
+                "name": "Theorem5.2.1.md",
+                "path": "AP/Probability_Theory_Example/CH5/Theorem5.2.1.md",
+                "title": "Theorem5.2.1",
+                "description": "정리 5.2.1. $X  n$은 전이 확률(transition probability) $p$를 갖는 마르코프 연쇄이다 (단, $\\mathcal{F}  n = \\sigma(X  0, X  1, \\dots, X  n)$에 관하여). 즉, 증명. 이를 증명하기 위해, $A = \\{X  0 \\in B  0, X  1 \\in B  1, \\dots, X  n \\in"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "sub_1.md",
+            "path": "AP/Probability_Theory_Example/sub_1.md",
+            "title": "sub_1",
+            "description": "문제: 확률의 공리를 만족하면 측도의 공리를 만족함을 보여라. 이 명제를 증명하기 위해, 먼저 강의 자료와 교재에 나온 두 개념의 정의(공리)를 명확히 하고 시작하겠습니다. 1. 정의 비교 확률 (Probability)의 공리 (콜모고로프 공리) '잴 수 있는 공간' (Ω, F)가 주어졌을 때, 함수 P: F → [0, 1]가 다음을 만족하면   확률  이"
+          },
+          {
+            "type": "file",
+            "name": "sub_2.md",
+            "path": "AP/Probability_Theory_Example/sub_2.md",
+            "title": "sub_2",
+            "description": "개념 1: 가산 무한(Countably Infinite)과 Cardinality ℵ₀ 강의 자료의 핵심은 다음과 같습니다. 어떤 집합 A의 Cardinality가   ℵ₀ (알레프 널)  이라는 것은, 그 집합의 모든 원소를 자연수 1, 2, 3, ... 에 빠짐없이 그리고 중복 없이 하나씩   번호를 붙여 나열할 수 있다  는 의미입니다. 이를 수학적으로"
+          },
+          {
+            "type": "file",
+            "name": "sub_3.md",
+            "path": "AP/Probability_Theory_Example/sub_3.md",
+            "title": "sub_3",
+            "description": "Let   Rᵈ   be the set of vectors ... and   Rᵈ   be the   Borel sets  , the   smallest σ field containing the open sets  . 이 정의를 차근차근 풀어보겠습니다. 1.    출발점: 열린 집합 (Open Sets) 보렐 σ 대수를 만드는 가장 기본적인 재료는   열린"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "README.md",
+        "path": "AP/README.md",
+        "title": "README",
+        "description": "전북대 통계학과 대학원 2025년 2학기 수업   고급확률론(최규빈 교수님 수업)    참고교재인   Probability: Theory and Examples  의 번역을 올리는 저장소입니다. 원래는 개인 쥬피터에 작성하다가, 최근 서버들이 해킹당해서 포맷하는 사례들을 보고 깃허브에 올리게 되었습니다. 모든 저작권 및 일체의 권리는 원 저자인  Rick"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "CowAndGrass",
+    "path": "CowAndGrass",
+    "children": [
+      {
+        "type": "file",
+        "name": "20250901쇠고기도체특성별도매가격결정요인분석연구.md",
+        "path": "CowAndGrass/20250901쇠고기도체특성별도매가격결정요인분석연구.md",
+        "title": "20250901쇠고기도체특성별도매가격결정요인분석연구",
+        "description": "허화원, 지인배. (2025). 쇠고기 도체특성별 도매가격 결정요인 분석 연구. 사회과학연구, 32(1), 129 148. 10.46415/jss.2025.03.32.1.129 쇠고기 도매가격 결정요인 분석 연구: 요약 및 결론 연구 목적 쇠고기 도체 특성(품질, 지리적, 시간적)이 도매가격에 미치는 영향을 헤도닉가격모형으로 분석하여, 한우 농가의 출하 의"
+      },
+      {
+        "type": "file",
+        "name": "20250903육성기와비육후기생균제급여가한우거세우의비육성적과도체특성에미치는영향.md",
+        "path": "CowAndGrass/20250903육성기와비육후기생균제급여가한우거세우의비육성적과도체특성에미치는영향.md",
+        "title": "20250903육성기와비육후기생균제급여가한우거세우의비육성적과도체특성에미치는영향",
+        "description": "초록 번역 본 연구는 육성기와 비육후기 동안 생균제(DFMs)를 급여하는 것이 한우 거세우의 성장 성적과 도체 특성에 미치는 영향을 조사하기 위해 수행되었습니다. 생균제는 입식 후 첫 3개월과 출하 전 마지막 3개월 동안에만 투여되었으며, 사양 시험은 740일간 진행되었습니다. 육성기 동안, 처리구는 대조구의 0.80 kg에 비해 0.89 kg으로 유의하게"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "GLCM",
+    "path": "GLCM",
+    "children": [
+      {
+        "type": "file",
+        "name": "GLCM-Based Feature Combination for Extraction Model.md",
+        "path": "GLCM/GLCM-Based Feature Combination for Extraction Model.md",
+        "title": "GLCM-Based Feature Combination for Extraction Model",
+        "description": "논문명: GLCM Based Feature Combination for Extraction Model Optimization in Object Detection Using Machine Learning Jurnal Ilmiah Teknik Elektro Komputer dan Informatika (JITEKI) Vol. 9, No. 4, December"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "GLMM",
+    "path": "GLMM",
+    "children": [
+      {
+        "type": "dir",
+        "name": "Homework",
+        "path": "GLMM/Homework",
+        "children": [
+          {
+            "type": "file",
+            "name": "1-1.md",
+            "path": "GLMM/Homework/1-1.md",
+            "title": "1. 비율 정의",
+            "description": "문제 분석 및 변수 정의 이 문제는 두 나라(미국, 영국)의 총기 살인사건 비율을 비교하는 것입니다. 미국 (그룹 1)  : 비율 $\\pi 1 = 62.4 / 1,000,000 = 0.0000624$ 영국 (그룹 2)  : 비율 $\\pi 2 = 1.3 / 1,000,000 = 0.0000013$ a. (i) 비율의 차와 (ii) 상대위험도를 이용하여 비교하"
+          },
+          {
+            "type": "file",
+            "name": "1-2.md",
+            "path": "GLMM/Homework/1-2.md",
+            "title": "1. 비율 정의",
+            "description": "문제 분석 및 변수 정의 이 문제는 두 그룹(백인, 흑인)이 특정 시술(심장도관술)을 받는 확률을 비교하는 것입니다. 백인 (그룹 1)  : 시술받을 확률 $\\pi 1 = 0.906$ 흑인 (그룹 2)  : 시술받을 확률 $\\pi 2 = 0.847$ a. 흑인들의 오즈가 백인들의 오즈의 60%(정확하게는 57%)라는 값을 어떻게 구하였는지 설명하라. 식 ("
+          },
+          {
+            "type": "file",
+            "name": "1-3.md",
+            "path": "GLMM/Homework/1-3.md",
+            "title": "1. 주어진 비율 입력",
+            "description": "문제 분석 및 변수 정의 이 문제는 흡연 여부(설명 변수)와 두 가지 다른 사망 원인(폐암, 심장병, 각각 반응 변수) 간의 연관성을 비교하는 것입니다. 주어진 비율: 폐암 (Lung Cancer)  : 흡연자 그룹 ($\\pi 1$): $\\pi {1,LC} = 0.00140$ 비흡연자 그룹 ($\\pi 2$): $\\pi {2,LC} = 0.00010$ 심장병"
+          },
+          {
+            "type": "file",
+            "name": "1-4.md",
+            "path": "GLMM/Homework/1-4.md",
+            "title": "1. 분할표 데이터 생성 (행: 흡연여부, 열: 폐암여부)",
+            "description": "문제 분석 및 데이터 이 문제는 폐암과 흡연의 연관성을 조사한   환자 대조군 연구(Case Control Study)   데이터를 분석하는 것입니다. 환자군 (Cases)  : 폐암 환자 (총 709명) 흡연자: 688명 비흡연자: 21명 대조군 (Controls)  : 폐암이 아닌 환자 (총 709명) 흡연자: 650명 비흡연자: 59명 이를 $2 \\t"
+          },
+          {
+            "type": "file",
+            "name": "1-5.md",
+            "path": "GLMM/Homework/1-5.md",
+            "title": "1. 관측도수 데이터로 행렬 생성",
+            "description": "문제 분석 및 데이터 이 문제는 수입(Income)과 행복도(Happiness)라는 두 순서형 변수 간의 관계를 분석하는 것입니다. 표에는 각 셀의   관측도수(Observed)  ,   기대도수(Expected)  , 그리고   표준화 잔차(Standardized Residual)  가 주어져 있습니다. 주어진 데이터 (관측도수): | 수입(Income)"
+          },
+          {
+            "type": "file",
+            "name": "1-6.md",
+            "path": "GLMM/Homework/1-6.md",
+            "title": "1. 관측도수 데이터로 행렬 생성",
+            "description": "네, 과제 1의 6번 문제를 푸는 과정을 수학적 전개와 R 코드로 나누어 제시하겠습니다. 문제 분석 및 데이터 이 문제는 환자의 진단 결과(5개 범주)와 약 처방 여부(2개 범주) 사이의 연관성을 분석하는 것입니다. 주어진 데이터 (관측도수): | 진단 결과(Diagnosis) |   예(Yes)   |   아니오(No)   | | :    | :    |"
+          },
+          {
+            "type": "file",
+            "name": "1-7.md",
+            "path": "GLMM/Homework/1-7.md",
+            "title": "1. 각 연령대별로 데이터 행렬 생성",
+            "description": "문제 분석 및 데이터 이 문제는 운동 여부(X), 심장질환 여부(Y), 그리고 연령대(Z)라는 세 변수 간의 관계를 분석하는 것입니다. 연령대(Z)는 제3의 변수, 즉   통제 변수(control variable)   또는   층화 변수(stratifying variable)   역할을 합니다. 주어진 데이터: 40대 (Z=1)  : $2 \\times 2$"
+          },
+          {
+            "type": "file",
+            "name": "2-1.md",
+            "path": "GLMM/Homework/2-1.md",
+            "title": "1. 데이터 입력",
+            "description": "문제 분석 및 모델 설정 이 문제는 설명 변수인 Labeling Index(LI, 양적 변수)가 반응 변수인 회복 여부(Remissions, 이항 변수)에 미치는 영향을 분석하는 것입니다. 따라서 로지스틱 회귀 모델을 사용합니다. 회복할 확률을 $\\pi$, LI 값을 $x$라고 할 때, 로지스틱 회귀 모델은 다음과 같습니다. 여기서 $\\alpha$는 절편,"
+          },
+          {
+            "type": "file",
+            "name": "2-2.md",
+            "path": "GLMM/Homework/2-2.md",
+            "title": "1. 데이터 입력",
+            "description": "문제 분석 및 모델 설정 이 문제는 환자의 수술 시 연령(Age, 양적 변수)이 수술 후 kyphosis 발생 여부(Kyphosis, 이항 변수)에 미치는 영향을 분석하는 것입니다. 로지스틱 회귀 모델을 사용합니다. Kyphosis 발생 확률을 $\\pi$, 수술 시 연령을 $x$라고 할 때, 로지스틱 회귀 모델을 설정할 수 있습니다. a. 나이를 예측변수로"
+          },
+          {
+            "type": "file",
+            "name": "2-3.md",
+            "path": "GLMM/Homework/2-3.md",
+            "title": "1. 주어진 추정치 입력",
+            "description": "문제 분석 및 모델 설정 반응 변수 (Y)  : 낙태 합법화 법률에 대한 의견 (1 = 찬성, 0 = 반대) 설명 변수  : 성별 (h)  : $h=1$ (여성), $h=2$ (남성) 종교 (i)  : $i=1$ (개신교), $i=2$ (천주교), $i=3$ (유대교) 정당 (j)  : $j=1$ (민주당), $j=2$ (공화당), $j=3$ (무소속) 이"
+          },
+          {
+            "type": "file",
+            "name": "2-4.md",
+            "path": "GLMM/Homework/2-4.md",
+            "title": "1. 주어진 추정치 입력",
+            "description": "문제 분석 및 모델 설정 반응 변수  : 올스타 선정 여부 (확률 $\\pi$) 설명 변수  : 드래프트 순위 ($d = 1, 2, 3, \\dots$) 선수의 드래프트 순위($d$)가 올스타로 선정될 확률($\\pi$)에 미치는 영향을 평가하기 위해 다음 모델이 사용되었습니다. 이 모델은 순위($d$) 자체가 아니라,   순위의 로그값($\\log d$)  에"
+          },
+          {
+            "type": "file",
+            "name": "2-5.md",
+            "path": "GLMM/Homework/2-5.md",
+            "title": "1. 데이터 입력",
+            "description": "문제 분석 및 모델 설정 이 문제는 토끼에게 페니실린을 투여했을 때, 두 가지 변수(지연 여부, 페니실린 농도)가 치료 성공 여부에 미치는 영향을 분석하는 것입니다. 반응 변수 (Y)  : 치료 성공 여부(Cured=1, Died=0) 설명 변수  : X (지연 여부)  : $x=1$ (즉시 투여, None), $x=2$ (1.5h 지연) Z (페니실린 농"
+          },
+          {
+            "type": "file",
+            "name": "2-6.md",
+            "path": "GLMM/Homework/2-6.md",
+            "title": "1. 데이터 입력",
+            "description": "문제 분석 및 모델 설정 이 문제는 3년 무병 생존 여부(Disease Free, 이항 변수)를 세 가지 예측 변수(Lymphocytic Infiltration, Gender, Osteoblastic Pathology, 모두 범주형)로 설명하는 것입니다. 반응 변수 (Y)  : 무병 생존 여부 (Yes=1, No=0) 설명 변수  : L (Lymphocyt"
+          },
+          {
+            "type": "file",
+            "name": "2-7.md",
+            "path": "GLMM/Homework/2-7.md",
+            "title": "1. 주어진 확률 및 데이터 생성",
+            "description": "문제 분석 및 모델 설정 이 문제는 $2 \\times 2 \\times 2$ 분할표에서 조건부 독립성 검정과 관련된 두 가지 다른 우도비(LR) 검정의 일관성(consistency)에 대한 이론적인 질문입니다. 변수  : X, Y, Z (모두 이항 변수) 주어진 확률 ($\\pi {ijk}$)  : Z=1일 때  : $P(X=1, Y=1|Z=1)=0.15, P"
+          },
+          {
+            "type": "file",
+            "name": "2-7_re.md",
+            "path": "GLMM/Homework/2-7_re.md",
+            "title": "1. 주어진 확률값으로 데이터 프레임 생성",
+            "description": "문제 분석 및 모델 설정 데이터  : $2 \\times 2 \\times 2$ 분할표의 실제 셀 확률($\\pi {ijk}$)이 주어짐. $i$: X의 수준 (1, 2) $j$: Y의 수준 (1, 2) $k$: Z의 수준 (1, 2) 주어진 확률  : $Z=1$일 때 ($k=1$): | | Y=1 | Y=2 | |   |   |   | | X=1 | 0.15"
+          },
+          {
+            "type": "file",
+            "name": "2__summary.md",
+            "path": "GLMM/Homework/2__summary.md",
+            "title": "2__summary",
+            "description": "1. 기본 로지스틱 회귀 모델 (Basic Logistic Regression Model) 단일 예측 변수 $x$에 대한 성공 확률 $\\pi(x)$를 모델링합니다. 로짓 형태 (Logit Form): 로그 오즈가 $x$에 대해 선형 관계를 가집니다. 확률 형태 (Probability Form): 위 식을 $\\pi(x)$에 대해 정리한 것입니다. 2. 모델"
+          },
+          {
+            "type": "file",
+            "name": "proof.md",
+            "path": "GLMM/Homework/proof.md",
+            "title": "proof",
+            "description": "증명 1: 로짓 모델의 멱함수 형태 (과제 2, 문제 4.a) 목표: 로지스틱 회귀 모델 $\\text{logit}(\\pi) = \\alpha + \\beta \\log(d)$ 로부터 $\\frac{\\pi}{1 \\pi} = e^\\alpha d^\\beta$ 를 유도하는 것입니다. 전개 과정: 1.  로짓(logit)의 정의를 대입합니다. 로짓 함수의 정의에 따라, 모"
+          },
+          {
+            "type": "file",
+            "name": "proofs.md",
+            "path": "GLMM/Homework/proofs.md",
+            "title": "proofs",
+            "description": "증명 6: 로지스틱 곡선의 변곡점과 최대 기울기 (Textbook, Exercise 5.27) 목표: 로지스틱 회귀 곡선 $\\pi(x) = \\frac{\\exp(\\alpha+\\beta x)}{1+\\exp(\\alpha+\\beta x)}$가 $\\pi(x)=1/2$이 되는 지점에서 가장 가파른 기울기를 갖는다는 것(즉, 변곡점임)을 증명하는 것입니다. 전개 과정:"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "README.md",
+        "path": "GLMM/README.md",
+        "title": "README",
+        "description": ""
+      },
+      {
+        "type": "dir",
+        "name": "ch1",
+        "path": "GLMM/ch1",
+        "children": [
+          {
+            "type": "file",
+            "name": "1.2.1.Effect model.md",
+            "path": "GLMM/ch1/1.2.1.Effect model.md",
+            "title": "1.2.1.Effect model",
+            "description": "<img width=\"807\" height=\"269\" alt=\"image\" src=\"https://github.com/user attachments/assets/643b275c 3e14 4ee0 95c6 5fc3a82abe47\" / <img width=\"807\" height=\"120\" alt=\"image\" src=\"https://github.com/user"
+          },
+          {
+            "type": "file",
+            "name": "1.3.3. 검정 트리오.md",
+            "path": "GLMM/ch1/1.3.3. 검정 트리오.md",
+            "title": "1.3.3. 검정 트리오",
+            "description": "1.3.3 왈드 우도비 스코어 검정 (Wald–Likelihood Ratio–Score Test Triad) 대표본(large sample) 추론을 수행하기 위해 우도 함수를 사용하는 세 가지 표준적인 방법이 있습니다. 여기서는 귀무가설 $H 0: \\beta = \\beta 0$를 검정하는 방법을 소개하고, 그 후 구간 추정과의 관계를 논의하겠습니다. 이 방"
+          },
+          {
+            "type": "file",
+            "name": "1.4.Binomial Parameter inference.md",
+            "path": "GLMM/ch1/1.4.Binomial Parameter inference.md",
+            "title": "1.4.Binomial Parameter inference",
+            "description": "1.4 이항 모수에 대한 통계적 추론 (STATISTICAL INFERENCE FOR BINOMIAL PARAMETERS) 이 절에서는 이항 모수(binomial parameter) $\\pi$에 대한 검정과 신뢰구간을 제시함으로써 범주형 데이터의 추론 방법을 설명합니다. $n$번의 독립적인 시행에서 $y$번의 성공이 있었을 때, $\\pi$의 최대우도(ML)"
+          },
+          {
+            "type": "file",
+            "name": "1.5.STATISTICAL INFERENCE FOR MULTINOMIAL PARAMETERS.md",
+            "path": "GLMM/ch1/1.5.STATISTICAL INFERENCE FOR MULTINOMIAL PARAMETERS.md",
+            "title": "1.5.STATISTICAL INFERENCE FOR MULTINOMIAL PARAMETERS",
+            "description": "1.5절 '다항 모수에 대한 통계적 추론' 1.5 다항 모수에 대한 통계적 추론 (STATISTICAL INFERENCE FOR MULTINOMIAL PARAMETERS) 다음으로 다항 모수 $\\{\\pi  j\\}$에 대한 추론을 살펴보겠습니다. $c$개의 범주에 대한 $n$개의 관측치에서, 범주 $j$에는 $n  j$개의 관측치가 발생한다고 합시다 ($j="
+          },
+          {
+            "type": "file",
+            "name": "sub_1.3.1.LRT.md",
+            "path": "GLMM/ch1/sub_1.3.1.LRT.md",
+            "title": "sub_1.3.1.LRT",
+            "description": "우도비 검정의 핵심 아이디어: \"제약이 얼마나 나쁜가?\" 우도비 검정의 근본적인 질문은 다음과 같습니다. \"귀무가설($H 0$)이라는 제약을 모델에 걸었을 때, 데이터에 대한 설명력이 얼마나 나빠지는가?\" 만약 귀무가설이 사실이라면, 모델에 그 제약을 걸어도 데이터에 대한 설명력은 크게 나빠지지 않을 것입니다. 하지만 귀무가설이 사실이 아니라면, 억지로 제"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.3.1.score_test.md",
+            "path": "GLMM/ch1/sub_1.3.1.score_test.md",
+            "title": "sub_1.3.1.score_test",
+            "description": "스코어 검정(Score Test)  에 대해 설명하고 있습니다. 스코어 검정의 핵심 아이디어: \"정상에서 얼마나 멀리 밀어야 하는가?\" 스코어 검정의 근본적인 질문을 비유적으로 표현하면 다음과 같습니다. \"만약 귀무가설($H 0$)이 주장하는 지점($\\beta 0$)이 로그우도 언덕의 진짜 정상이라면, 그 지점은 평평해야 할 것이다. 그런데 실제 데이터로"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.3.1.wald.md",
+            "path": "GLMM/ch1/sub_1.3.1.wald.md",
+            "title": "sub_1.3.1.wald",
+            "description": "왈드 검정의 핵심 아이디어: \"얼마나 멀리 떨어져 있는가?\" 왈드 검정의 근본적인 질문은 매우 직관적입니다. \"우리가 데이터로부터 얻은 최선의 추정치($\\hat{\\beta}$)가, 우리가 검정하려는 가상의 값($\\beta 0$)으로부터 통계적으로 유의미하게 멀리 떨어져 있는가?\" 여기서 '멀리 떨어져 있다'는 것을 판단하기 위한   \"측정 단위\" 또는 \"잣"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.4.1.md",
+            "path": "GLMM/ch1/sub_1.4.1.md",
+            "title": "sub_1.4.1",
+            "description": "이항 비율($\\pi$)이라는 하나의 모수를 검정하는 구체적인 상황에 일반적인 세 가지 검정 이론(왈드, 스코어, 우도비)을 적용하는 방법을 보여줍니다. 배경: 목표 설정 우리의 목표는 동전 던지기나 찬성/반대 설문조사와 같은 이항 실험에서 \"모집단의 실제 성공 확률($\\pi$)이 우리가 가정한 특정 값($\\pi 0$)과 같은가?\"라는 가설을 검정하는 것입니"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.5.2-3.md",
+            "path": "GLMM/ch1/sub_1.5.2-3.md",
+            "title": "sub_1.5.2-3",
+            "description": "피어슨 카이제곱 검정과 우도비 카이제곱 검정은 범주형 데이터 분석의 초석이 되는 매우 중요한 개념입니다. 두 검정의 철학과 차이점을 깊이 있게 설명해 드리겠습니다. 공통적인 목표: \"내 가설이 데이터를 잘 설명하는가?\" 두 검정 모두   적합도 검정(Goodness of Fit Test)  의 일종입니다. 즉, 다음과 같은 질문에 답하고자 합니다. \"내가"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.5.4.md",
+            "path": "GLMM/ch1/sub_1.5.4.md",
+            "title": "sub_1.5.4",
+            "description": "1.5.4 예제: 멘델의 이론 검정 (Example: Testing Mendel’s Theories) [원문 번역] 피어슨의 검정은 그 여러 적용 사례 중에서도 유전학에서 멘델의 자연 유전 이론을 검정하는 데 사용되었습니다. 멘델은 순종의 노란색 완두콩 품종과 순종의 녹색 완두콩 품종을 교배했습니다. 그는 2세대 잡종 씨앗이 75%는 노란색이고 25%는 녹"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.5.6.md",
+            "path": "GLMM/ch1/sub_1.5.6.md",
+            "title": "sub_1.5.6",
+            "description": "1.5.6 예제: 송아지의 폐렴 감염 (Example: Pneumonia Infections in Calves) [원문 번역] 이제 우리는 추정된 기대 빈도를 사용한 적합도 검정을 보여드리겠습니다. 플로리다 주 오키초비 카운티에서 태어난 156마리의 젖소 송아지 표본을 생후 60일 이내에 폐렴에 걸렸는지 여부로 분류했습니다. 폐렴 감염(1차)을 겪은 송아지"
+          },
+          {
+            "type": "file",
+            "name": "sub_1.5.7.md",
+            "path": "GLMM/ch1/sub_1.5.7.md",
+            "title": "sub_1.5.7",
+            "description": "1.5.7 카이제곱의 이론적 정당화 (Chi Squared Theoretical Justification) [원문 번역] 이제 우리는 왜 특정 다항 분포에 대한 피어슨의 통계량이 극한에서 카이제곱 분포를 갖는지 그 개요를 설명하겠습니다. 우도비 통계량과 추정된 기대 빈도가 있는 경우에 대한 유도는 16.3절에서 제공됩니다. 크기 $n$인 다항 표본 $(n"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "ch2",
+        "path": "GLMM/ch2",
+        "children": [
+          {
+            "type": "file",
+            "name": "2.1.1-3.md",
+            "path": "GLMM/ch2/2.1.1-3.md",
+            "title": "2.1.1-3",
+            "description": "2.1 분할표의 확률 구조 (PROBABILITY STRUCTURE FOR CONTINGENCY TABLES) [원문 번역] X와 Y를 두 개의 범주형 변수라고 하자. X는 $I$개의 범주를, Y는 $J$개의 범주를 갖는다. 두 변수에 대한 대상의 분류는 $IJ$개의 가능한 조합을 갖는다. 두 변수가 모두 반응 변수(response variables)일 때"
+          },
+          {
+            "type": "file",
+            "name": "2.1.4-6.md",
+            "path": "GLMM/ch2/2.1.4-6.md",
+            "title": "2.1.4-6",
+            "description": "2.1.4 범주형 변수의 독립성 (Independence of Categorical Variables) [원문 번역] 두 범주형 반응 변수는, 모든 결합 확률이 그들의 주변 확률의 곱과 같을 때 독립(independent)이라고 정의된다. X와 Y가 독립일 때, Y의 각 조건부 분포는 Y의 주변분포와 동일하다. 따라서, 두 변수는 $\\{\\pi {j|1} ="
+          },
+          {
+            "type": "file",
+            "name": "2.1.7-8.md",
+            "path": "GLMM/ch2/2.1.7-8.md",
+            "title": "2.1.7-8",
+            "description": "2.1.7 예제: 암과 흡연에 대한 환자 대조군 연구 (Example: Case–Control Study of Cancer and Smoking) [원문 번역] 표 2.5는 폐암과 흡연 사이의 연관성에 대한 최초의 연구 중 하나에서 나온 것이다. 리처드 돌(Richard Doll)과 오스틴 브래드포드 힐(Austin Bradford Hill)은 많은 의학자"
+          },
+          {
+            "type": "file",
+            "name": "2.2.1-4.md",
+            "path": "GLMM/ch2/2.2.1-4.md",
+            "title": "2.2.1-4",
+            "description": "2.2.1 비율 차이 (Difference of Proportions) [원문 번역] 행 $i$의 대상에 대해, $\\pi {1|i}$는 반응이 범주 1(\"성공\")에 속할 확률이다. 가능한 결과가 두 개뿐일 때는 $\\pi {2|i} = 1   \\pi {1|i}$ 이므로, 우리는 $\\pi {1|i}$에 대해 더 간단한 표기법인 $\\pi i$를 사용한다. 성공"
+          },
+          {
+            "type": "file",
+            "name": "2.2.5-7.md",
+            "path": "GLMM/ch2/2.2.5-7.md",
+            "title": "2.2.5-7",
+            "description": "2.2.5 예제: 심장마비와 아스피린 사용 간의 연관성 (Example: Association Between Heart Attacks and Aspirin Use) [원문 번역] 아스피린 사용과 심장마비에 대한 표 2.1을 이용하여 세 가지 연관성 측도를 설명한다. 이 표는 치명적 심장마비와 비치명적 심장마비를 구분하지만, 여기서는 이 결과들을 일단 합친다"
+          },
+          {
+            "type": "file",
+            "name": "2.3.1-3.md",
+            "path": "GLMM/ch2/2.3.1-3.md",
+            "title": "2.3.1-3",
+            "description": "2.3.1 부분표 (Partial Tables) [원문 번역] 삼원 분할표는 X, Y, Z를 교차 분류한다. 우리는 Z의 고정된 수준에서 XY 관계를 연구함으로써 Z를 통제한다. 삼원 분할표의 이원 단면(Two way cross sectional slices)은 Z의 개별 범주들에서 X와 Y를 교차 분류한다. 이러한 단면들을 부분표(partial table"
+          },
+          {
+            "type": "file",
+            "name": "2.3.4-6.md",
+            "path": "GLMM/ch2/2.3.4-6.md",
+            "title": "2.3.4-6",
+            "description": "2.3.4 주변 독립성 대 조건부 독립성 (Marginal Independence Versus Conditional Independence) [원문 번역] 더 일반적으로, X와 Y가 여러 범주를 가질 수 있을 때, $I \\times J \\times K$ 표는 Z를 통제하면서 X와 Y 사이의 관계를 기술한다. 만약 X와 Y가 부분표 $k$에서 독립이라면, X"
+          },
+          {
+            "type": "file",
+            "name": "2.4.1-3.md",
+            "path": "GLMM/ch2/2.4.1-3.md",
+            "title": "2.4.1-3",
+            "description": "2.4.1 $I \\times J$ 표에서의 오즈비 (Odds Ratios in  I  ×  J  Tables) [원문 번역] 오즈비는 $\\binom{I}{2}$개의 행 쌍과 $\\binom{J}{2}$개의 열 쌍의 각 조합을 사용할 수 있다. 행 $a$와 $b$, 그리고 열 $c$와 $d$에 대해, 오즈비 $(\\pi  {ac}\\pi  {bd})/(\\pi  {"
+          },
+          {
+            "type": "file",
+            "name": "2.4.4-7.md",
+            "path": "GLMM/ch2/2.4.4-7.md",
+            "title": "2.4.4-7",
+            "description": "2.4.4 순서형 추세: 일치 및 불일치 쌍 (Ordinal Trends: Concordant and Discordant Pairs) [원문 번역] 표 2.8은 최근 종합사회조사(GSS)에서 얻은 연령별 직업 만족도를 교차 분류한 것이다. GSS는 2년마다 수행되는 미국인에 대한 확률 표본이다. 두 분류 모두 측정된 대로 순서형이며, 직업 만족도 범주는 1"
+          },
+          {
+            "type": "file",
+            "name": "2.4.8.md",
+            "path": "GLMM/ch2/2.4.8.md",
+            "title": "2.4.8",
+            "description": "2.4.8 잠재적 정규성의 상관관계 (Correlation for Underlying Normality) [원문 번역] 순서형 변수에 대해 연관성을 측정하는 또 다른 접근법은 상관계수를 사용한다. 가장 간단한 형태로는, 단지 행과 열에 고정된 점수나 중간 순위(midrank) 점수를 할당하고 일반적인 피어슨 상관계수 공식을 사용하면 된다. 칼 피어슨이 주창"
+          },
+          {
+            "type": "file",
+            "name": "Describing Contingency TableProbability Structure for Contingency Table.md",
+            "path": "GLMM/ch2/Describing Contingency TableProbability Structure for Contingency Table.md",
+            "title": "2.1.2 분할표의 결합/주변/조건부 분포",
+            "description": "2.1.2 분할표의 결합/주변/조건부 분포 일부 응용에서는 X와 Y가 모두 반응 변수(response variables)입니다. 예를 들어 단순 무작위 추출(simple random sampling)을 이용하는 표본 조사에서와 같이, 특정 모집단에서 대상(subjects)이 무작위로 선택된다고 가정해 봅시다. 그러면, 무작위로 선택된 한 대상의 반응 (X,"
+          },
+          {
+            "type": "file",
+            "name": "equation_2.13.md",
+            "path": "GLMM/ch2/equation_2.13.md",
+            "title": "equation_2.13",
+            "description": "목표 우리의 목표는 PRE 구조 에서 변동(Variation)의 척도로 엔트로피(Entropy)를 사용하여, 불확실성 계수 $U$의 공식 를 유도하는 것입니다. 1단계: 변동 척도 V(·)를 엔트로피로 정의하기 Theil(1970)은 명목형 변수의 변동성 또는 불확실성을 측정하는 척도로 정보 이론의 엔트로피를 제안했습니다. 어떤 확률분포 $\\{\\pi j\\}"
+          },
+          {
+            "type": "file",
+            "name": "sub_2.1.5.md",
+            "path": "GLMM/ch2/sub_2.1.5.md",
+            "title": "sub_2.1.5",
+            "description": "배경: 두 표집 방식의 근본적인 차이 두 표집 방식의 가장 큰 차이는 \"무엇이 고정되어 있는가?\" 입니다. 다항 표집 (Multinomial Sampling): 전체 표본 크기($n$)만 고정. 비유: 주머니에 여러 색깔의 구슬이 섞여 있을 때, 눈을 감고 $n$개의 구슬을 한 번에 뽑는 상황. 각 셀($n {ij}$)에 몇 개가 들어갈지는 순전히 우연에"
+          },
+          {
+            "type": "file",
+            "name": "sub_2.3.4.md",
+            "path": "GLMM/ch2/sub_2.3.4.md",
+            "title": "sub_2.3.4",
+            "description": "목표 우리의 목표는 \"X와 Y가 Z의 수준 k에서 조건부로 독립(conditionally independent)이다\"라는 진술과, \"$P(Y=j | X=i, Z=k) = P(Y=j | Z=k)$ (모든 i, j에 대해)\" 라는 수식 (2.8)이 서로 동등함을 보이는 것입니다. 증명 증명은 확률의 기본 정의와 곱셈 법칙을 사용하여 이루어집니다. 1. 조건부"
+          },
+          {
+            "type": "file",
+            "name": "whatislogit.md",
+            "path": "GLMM/ch2/whatislogit.md",
+            "title": "whatislogit",
+            "description": "1. 확률 (Probability) 가장 기본이 되는 개념입니다. 특정 사건이 일어날 가능성을 0과 1 사이의 값으로 나타냅니다. 수식:   $P(\\text{사건})$ 범위:   $0 \\le P \\le 1$ 예시:   어떤 질병에 걸릴 확률이 20%라면, $P(\\text{질병}) = 0.2$ 입니다. 2. 오즈 (Odds) 오즈는   어떤 사건이 일어날 확"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "ch3",
+        "path": "GLMM/ch3",
+        "children": [
+          {
+            "type": "file",
+            "name": "3.1.1.md",
+            "path": "GLMM/ch3/3.1.1.md",
+            "title": "3.1.1",
+            "description": "3.1.1 오즈비의 구간 추정 (Interval Estimation of the Odds Ratio) [원문 번역] $2 \\times 2$ 표에 대한 표본 오즈비는 $\\hat{\\theta} = (n {11}n {22})/(n {12}n {21})$ 입니다. 다항 표본에 대해, 추정량 $\\hat{\\theta}$는 모수 $\\theta$ 주위에서 점근적으로 정규"
+          },
+          {
+            "type": "file",
+            "name": "3.1.2.md",
+            "path": "GLMM/ch3/3.1.2.md",
+            "title": "3.1.2",
+            "description": "3.1.2 예제: 안전벨트 사용과 교통사고 사망 (Example: Seat Belt Use and Traffic Deaths) [원문 번역] 우리는 표 3.1을 이용하여 오즈비에 대한 추론을 설명합니다. 이 표는 2008년 플로리다에서 발생한 자동차 사고에 탑승했던 18세 미만 어린이들의 사망 결과를 아이가 안전벨트를 착용했는지 여부에 따라 보여줍니다. 표"
+          },
+          {
+            "type": "file",
+            "name": "3.1.3.md",
+            "path": "GLMM/ch3/3.1.3.md",
+            "title": "3.1.3",
+            "description": "3.1.3 비율 차이와 상대위험도의 구간 추정 (Interval Estimation of Difference of Proportions and Relative Risk) [원문 번역] 비율 차이(difference of proportions)와 상대위험도(relative risk)는 두 그룹에 대한 반응 변수의 조건부 분포를 비교합니다. 이러한 측도들을 다"
+          },
+          {
+            "type": "file",
+            "name": "3.1.4.md",
+            "path": "GLMM/ch3/3.1.4.md",
+            "title": "3.1.4",
+            "description": "3.1.4 예제: 아스피린과 심장마비 재검토 (Example: Aspirin and Heart Attacks Revisited) [원문 번역] 아스피린 사용과 심장마비에 관한 하버드 연구의 표 2.1을 다시 고려해 보겠습니다. 치명적인 심장마비를 겪은 비율은 위약(placebo) 복용 그룹에서 $18/11,034 = 0.00163$ 이었고, 아스피린 복용"
+          },
+          {
+            "type": "file",
+            "name": "3.1.5.md",
+            "path": "GLMM/ch3/3.1.5.md",
+            "title": "3.1.5",
+            "description": "3.1.5 델타 방법을 이용한 표준오차 유도 (Deriving Standard Errors with the Delta Method) [원문 번역] 표준오차를 유도하는 간단하고 유용한 방법이 존재합니다. 모수 $\\theta$에 대해 점근적으로 정규분포를 따르는 통계량 $T n$을 생각해 봅시다. 아래 첨자 $n$은 표본 크기에 대한 의존성을 표현합니다. 어떤"
+          },
+          {
+            "type": "file",
+            "name": "3.1.6.md",
+            "path": "GLMM/ch3/3.1.6.md",
+            "title": "3.1.6",
+            "description": "3.1.6 델타 방법의 표본 로짓 적용 (Delta Method Applied to the Sample Logit) [원문 번역] $n$번의 시행에서 $y$번의 성공이 있었을 때, 이항 모수 $\\pi$의 최대우도(ML) 추정량 $T n = \\hat{\\pi} = y/n$의 함수에 대해 델타 방법을 설명하겠습니다. $E(\\hat{\\pi}) = \\pi$이고 $\\"
+          },
+          {
+            "type": "file",
+            "name": "3.1.7.md",
+            "path": "GLMM/ch3/3.1.7.md",
+            "title": "3.1.7",
+            "description": "3.1.7 로그 오즈비에 대한 델타 방법 (Delta Method for the Log Odds Ratio) [원문 번역] 로그 오즈비와 로그 상대위험도에 대한 표준오차는 다변량 버전의 델타 방법으로부터 나옵니다. $\\{n i, i=1, \\dots, c\\}$가 다항분포 $(n, \\{\\pi i\\})$를 따른다고 가정합시다. 표본 비율 $\\hat{\\pi} i"
+          },
+          {
+            "type": "file",
+            "name": "3.1.8.md",
+            "path": "GLMM/ch3/3.1.8.md",
+            "title": "3.1.8",
+            "description": "3.1.8 다중 비교를 위한 동시 신뢰구간 (Simultaneous Confidence Intervals for Multiple Comparisons) [원문 번역] 많은 유전학 연구에서처럼, 어떤 모수에 대해 비교해야 할 그룹이 여러 개인 경우가 종종 있습니다.   다중 비교(Multiple comparison)   방법은 신뢰수준을 개별적인 비교 각각이"
+          },
+          {
+            "type": "file",
+            "name": "3.2.1.md",
+            "path": "GLMM/ch3/3.2.1.md",
+            "title": "3.2.1",
+            "description": "3.2.1 피어슨 및 우도비 카이제곱 검정 (Pearson and Likelihood Ratio Chi Squared Tests) [원문 번역] 1.5.2절에서 우리는 특정 값의 다항 확률에 대한 검정을 위해 피어슨 $X^2$ 통계량(1.16)을 소개했습니다. 독립성($H 0$) 검정은 $n i$ 대신 $n {ij}$를, $\\mu i$ 대신 $\\mu {ij"
+          },
+          {
+            "type": "file",
+            "name": "3.2.2.md",
+            "path": "GLMM/ch3/3.2.2.md",
+            "title": "3.2.2",
+            "description": "3.2.2 예제: 교육 수준과 신에 대한 믿음 (Example: Education and Belief in God) [원문 번역] 표 3.2는 2008년 종합사회조사(General Social Survey) 데이터를 사용하여, 신의 존재 여부에 대한 의견을 최종 학력(highest degree attained)에 따라 교차 분류한 것입니다. 이 표에는 독립"
+          },
+          {
+            "type": "file",
+            "name": "3.2.3.md",
+            "path": "GLMM/ch3/3.2.3.md",
+            "title": "3.2.3",
+            "description": "3.2.3 카이제곱 근사의 적절성 (Adequacy of Chi Squared Approximations) [원문 번역] $X^2$ 또는 $G^2$의 실제 표집분포가 카이제곱 분포로 수렴하는 것은, 고정된 셀 개수에 대해 $n$이 커지고 그에 따라 $\\{\\mu {ij} = n\\pi {ij}\\}$가 커질 때 적용됩니다. 셀 평균이 커짐에 따라, $\\{n {i"
+          },
+          {
+            "type": "file",
+            "name": "3.2.4.md",
+            "path": "GLMM/ch3/3.2.4.md",
+            "title": "3.2.4",
+            "description": "3.2.4 $2 \\times 2$ 표에서의 카이제곱과 비율 비교 (Chi Squared and Comparing Proportions in 2 × 2 Tables) [원문 번역] 종종 $2 \\times 2$ 표는 $n 1$과 $n 2$번의 시행을 갖는 두 독립적인 이항 확률변수 $y 1$과 $y 2$의 결과를 요약합니다. 독립성(Independence)은"
+          },
+          {
+            "type": "file",
+            "name": "3.2.5.md",
+            "path": "GLMM/ch3/3.2.5.md",
+            "title": "3.2.5",
+            "description": "3.2.5 비율 비교를 위한 스코어 신뢰구간 (Score Confidence Intervals Comparing Proportions) [원문 번역] 3.1절에서 제시된 비율 차이, 오즈비, 상대위험도에 대한 왈드 신뢰구간은 간단하지만 단점이 있습니다: 측정 척도에 따라 결과가 달라지고[예: $\\theta$에 대한 왈드 구간과, $\\log(\\theta)$에"
+          },
+          {
+            "type": "file",
+            "name": "3.2.6.md",
+            "path": "GLMM/ch3/3.2.6.md",
+            "title": "3.2.6",
+            "description": "3.2.6 프로파일 우도 신뢰구간 (Profile Likelihood Confidence Intervals) [원문 번역] 마찬가지로, 우리는 모수의 비귀무가설 값에 대한 우도비 검정을 역산하여 신뢰구간을 구성할 수 있습니다. 오즈비를 예로 들어 설명하겠습니다. 방금 정의한 $\\{\\hat{\\mu} {ij}(\\theta 0)\\}$에 대해, 다음을 만족하는 $"
+          },
+          {
+            "type": "file",
+            "name": "3.3.md",
+            "path": "GLMM/ch3/3.3.md",
+            "title": "3.3",
+            "description": "3.3 카이제곱 검정의 후속 분석 (FOLLOWING UP CHI SQUARED TESTS) [원문 번역] 다른 유의성 검정들과 마찬가지로, 독립성에 대한 카이제곱 검정은 그 유용성이 제한적입니다. 작은 P 값은 연관성에 대한 강력한 증거를 나타내지만, 연관성의   성격(nature)  이나   강도(strength)  에 대해서는 거의 정보를 제공하지 않"
+          },
+          {
+            "type": "file",
+            "name": "3.4.md",
+            "path": "GLMM/ch3/3.4.md",
+            "title": "3.4",
+            "description": "3.4 순서형 분류를 갖는 이원 분할표 (TWO WAY TABLES WITH ORDERED CLASSIFICATIONS) [원문 번역] $X^2$와 $G^2$ 카이제곱 검정은 순서형 분류(ordinal classifications) 간의 독립성을 검정하는 데 사용될 때 일부 정보를 무시합니다. 행 그리고/또는 열이 순서화되어 있을 때, 순서 정보를 고려하는"
+          },
+          {
+            "type": "file",
+            "name": "3.5.1-2.md",
+            "path": "GLMM/ch3/3.5.1-2.md",
+            "title": "3.5.1-2",
+            "description": "3.5 분할표에 대한 소표본 추론 (SMALL SAMPLE INFERENCE FOR CONTINGENCY TABLES) [원문 번역] 앞선 네 개 절의 추론 방법들은 대푯본 방법입니다. $n$이 작을 때, 대안적인 방법들은 대푯본 근사 대신   정확한(exact)   소표본 분포를 사용합니다. 이 절에서는 R. A. Fisher가 $2 \\times 2$ 표"
+          },
+          {
+            "type": "file",
+            "name": "3.5.3-5.md",
+            "path": "GLMM/ch3/3.5.3-5.md",
+            "title": "3.5.3-5",
+            "description": "3.5.3 피셔의 정확 검정에 대한 양측 P 값 (Two Sided P Values for Fisher's Exact Test) [원문 번역] 단측 대립가설에 대해서는, 표들을 더 큰 $n {11}$, 더 큰 오즈비, 또는 더 큰 비율 차이에 따라 순서를 매겨도 동일한 P 값이 나옵니다(Davis 1986a). 양측 대립가설에 대해서는, 다른 기준들이 다른"
+          },
+          {
+            "type": "file",
+            "name": "3.5.6-7.md",
+            "path": "GLMM/ch3/3.5.6-7.md",
+            "title": "3.5.6-7",
+            "description": "3.5.6 독립성에 대한 소표본 비조건부 검정 (Small Sample Unconditional Tests of Independence) [원문 번역] 이분형 반응(binary response)에 대해 두 그룹을 비교하는 분석에서 흔한 표집 가정은 행들이 독립적인 이항 표본이라는 것입니다. 그러면, 오직 $\\{n {i+}\\}$만이 자연스럽게 고정됩니다. 푸"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "ch4",
+        "path": "GLMM/ch4",
+        "children": [
+          {
+            "type": "file",
+            "name": "4.1.1-3.md",
+            "path": "GLMM/ch4/4.1.1-3.md",
+            "title": "4.1.1-3",
+            "description": "4.1.1 일반화 선형 모델의 구성 요소 (Components of Generalized Linear Models) [원문 번역] GLM의 확률 성분(random component)은 자연 지수족(natural exponential family)에 속하는 분포로부터 나온 독립적인 관측치 $(y  1, \\dots, y  N)$을 갖는 반응 변수 Y로 구성된다"
+          },
+          {
+            "type": "file",
+            "name": "4.1.4-6.md",
+            "path": "GLMM/ch4/4.1.4-6.md",
+            "title": "4.1.4-6",
+            "description": "4.1.4 연속형 반응을 위한 일반화 선형 모델 (Generalized Linear Models for Continuous Responses) [원문 번역] GLM의 종류에는 연속형 반응에 대한 모델들도 포함된다. 정규분포는 분산 모수를 포함하는 자연 지수족에 속한다. 그것의 자연 모수는 평균이다. 따라서, 일반적인 회귀 모델은 항등 연결(identity"
+          },
+          {
+            "type": "file",
+            "name": "4.2.1-3.md",
+            "path": "GLMM/ch4/4.2.1-3.md",
+            "title": "4.2.1-3",
+            "description": "4.2.1 선형 확률 모델 (Linear Probability Model) [원문 번역] 이항 반응 변수에 대해, 회귀 모델 는 선형 확률 모델(linear probability model)이라고 불린다. 독립적인 관측치들과 함께, 이것은 이항 확률 성분과 항등 연결 함수를 갖는 GLM이다. 이 모델은 중대한 구조적 결함을 가지고 있다: 확률은 0과 1 사"
+          },
+          {
+            "type": "file",
+            "name": "4.2.4-6.md",
+            "path": "GLMM/ch4/4.2.4-6.md",
+            "title": "4.2.4-6",
+            "description": "4.2.4 $2 \\times 2$ 분할표를 위한 이항 GLM (Binomial GLM for 2 × 2 Contingency Tables) [원문 번역] 이항 반응에 대한 가장 단순한 GLM들 중 하나는 단일 설명 변수 $x$ 역시 이항인 경우이다. 그 값들을 0과 1로 이름 붙이자. 주어진 연결 함수에 대해, GLM 는 $x$의 효과를 다음과 같이 기술한"
+          },
+          {
+            "type": "file",
+            "name": "4.3.1-3.md",
+            "path": "GLMM/ch4/4.3.1-3.md",
+            "title": "4.3.1-3",
+            "description": "4.3.1 푸아송 로그선형 모델 (Poisson Loglinear Models) [원문 번역] 푸아송 분포 (1.4)는 양의 평균 $\\mu$를 갖는다. 비록 GLM이 항등 연결을 사용하여 양의 평균을 모델링할 수 있지만, 평균의 로그를 모델링하는 것이 더 흔하다. 선형 예측자와 마찬가지로, 로그 평균은 어떤 실수 값이든 가질 수 있다. 로그 평균은 푸아송"
+          },
+          {
+            "type": "file",
+            "name": "4.3.4-5.md",
+            "path": "GLMM/ch4/4.3.4-5.md",
+            "title": "4.3.4-5",
+            "description": "4.3.4 음이항 GLM (Negative Binomial GLMs) [원문 번역] 음이항 분포(negative binomial distribution)는 다음과 같은 확률 질량 함수를 갖는다. 여기서 $k 0$과 $\\mu 0$는 모수이다. 이 분포는, 평균이 주어졌을 때 Y가 푸아송 분포를 따르지만, 그 평균 자체가 형태 모수 $k$를 갖는 감마 분포에"
+          },
+          {
+            "type": "file",
+            "name": "4.3.6-7.md",
+            "path": "GLMM/ch4/4.3.6-7.md",
+            "title": "4.3.6-7",
+            "description": "4.3.6 예제: 심장 판막 수술의 사망률 모델링 (Example: Modeling Death Rates for Heart Valve Operations) [원문 번역] Laird와 Olivier(1981)는 심장 판막 교체 수술 후 환자 생존을 분석했다. 109명의 환자 표본이 심장 판막의 종류(대동맥, 승모판)와 연령(<55, ≥55)에 따라 분류되었다"
+          },
+          {
+            "type": "file",
+            "name": "4.4.1-3.md",
+            "path": "GLMM/ch4/4.4.1-3.md",
+            "title": "4.4.1-3",
+            "description": "4.4.1 지수 분산족 (The Exponential Dispersion Family) [원문 번역] GLM에 대한 표기법을 두 번째 모수를 갖는 많은 분포들을 다룰 수 있도록 확장하는 것이 도움이 된다. GLM의 확률 성분은 N개의 관측치 $(y  1, \\dots, y  N)$이 독립적이며, 각 $y  i$가 다음과 같은 형태의 확률질량함수 또는 밀도함수"
+          },
+          {
+            "type": "file",
+            "name": "4.4.4-6.md",
+            "path": "GLMM/ch4/4.4.4-6.md",
+            "title": "4.4.4-6",
+            "description": "4.4.4 GLM의 시스템적 요소와 연결 함수 (Systematic Component and Link Function of a GLM) [원문 번역] 관측치 $i$에 대해, GLM의 시스템 성분은 모수 $\\{\\eta  i\\}$를 선형 예측자를 사용하여 설명 변수들과 관련시킨다. 행렬 형태로, 여기서 $\\boldsymbol{\\eta}=(\\eta  1, \\do"
+          },
+          {
+            "type": "file",
+            "name": "4.4.7-9.md",
+            "path": "GLMM/ch4/4.4.7-9.md",
+            "title": "4.4.7-9",
+            "description": "4.4.7 이항 GLM의 우도 방정식 (Likelihood Equations for Binomial GLMs) [원문 번역] $n  i Y  i$가 $\\text{bin}(n  i, \\pi  i)$ 분포를 따른다고 가정하자. 우리는 4.4.3절의 이항 모수화(parameterization)를 사용하므로, $y  i$는 $n  i$번 시행에 대한 성공의 표본"
+          },
+          {
+            "type": "file",
+            "name": "4.5.1-3.md",
+            "path": "GLMM/ch4/4.5.1-3.md",
+            "title": "4.5.1-3",
+            "description": "4.5.1 이탈도와 적합도 (Deviance and Goodness of Fit) [원문 번역] 4.1.5절로부터, 포화 GLM(saturated GLM)은 각 관측치에 대해 별도의 모수를 갖는다. 그것은 완벽한 적합을 제공한다. 이것은 좋은 소리처럼 들리지만, 유용한 모델은 아니다. 그것은 데이터를 매끄럽게 하지 않으며, 간결성(parsimony)과 같은"
+          },
+          {
+            "type": "file",
+            "name": "4.5.4-5.md",
+            "path": "GLMM/ch4/4.5.4-5.md",
+            "title": "4.5.4-5",
+            "description": "4.5.4 이탈도를 이용한 우도비 모델 비교 (Likelihood Ratio Model Comparison Using the Deviances) [원문 번역] $M$으로 표기되는 푸아송 또는 이항 모델에 대해, $\\phi=1$이므로, 이탈도 (4.33)는 다음과 같다. 적합치가 $\\hat{\\boldsymbol{\\mu}}  0$인 모델 $M  0$와 적합치가"
+          },
+          {
+            "type": "file",
+            "name": "eq_4.14.md",
+            "path": "GLMM/ch4/eq_4.14.md",
+            "title": "eq_4.14",
+            "description": "식 (4.14) 이 모델은 푸아송 회귀(Poisson Regression)를 단순한 '카운트' 모델에서 '비율(Rate)' 모델로 확장하는 핵심적인 방법을 보여줍니다. 노테이션(Notation)의 정확한 의미 모델을 이해하기 위해 각 기호의 의미를 명확히 하는 것이 중요합니다. $i$: 관측 단위를 나타내는 인덱스입니다. ($i=1, 2, \\dots, N$"
+          },
+          {
+            "type": "file",
+            "name": "eq_4.17.md",
+            "path": "GLMM/ch4/eq_4.17.md",
+            "title": "eq_4.17",
+            "description": "두 식의 형태 먼저 두 식을 다시 보겠습니다. 자연 지수족 (Natural Exponential Family, NEF) 지수 분산족 (Exponential Dispersion Family, EDF) 핵심: \"분산\"을 어떻게 다룰 것인가? 두 식이 제시된 가장 큰 이유는 모델이 다룰 수 있는 분산(Variance)의 유연성에 있습니다. 식 (4.1)   자연"
+          },
+          {
+            "type": "file",
+            "name": "eq_4.21.md",
+            "path": "GLMM/ch4/eq_4.21.md",
+            "title": "eq_4.21",
+            "description": "식 (4.21)의 배경과 목표 목표: 이항 분포가 일반화 선형 모델(GLM)의 이론적 기반인 지수 분산족(Exponential Dispersion Family, EDF)의 형태를 만족함을 보이는 것입니다. EDF의 일반 형태 (식 4.17): 이항 분포의 확률 질량 함수를 조작하여 위와 같은 형태로 만드는 것이 목표입니다. $y  i$의 정의: 성공 횟수가"
+          },
+          {
+            "type": "file",
+            "name": "sub_4.5.1.md",
+            "path": "GLMM/ch4/sub_4.5.1.md",
+            "title": "sub_4.5.1",
+            "description": "4.5.1절의 이탈도(Deviance) 공식이 어떻게 유도되고, 그것이 어떻게 척도화된 이탈도(Scaled Deviance) 공식 (4.33)으로 이어지는지 목표 우리의 목표는 이탈도의 정의로부터 시작하여, 지수 분산족(EDF)의 일반적인 로그우도 공식을 대입하여 다음 식을 유도하는 것입니다. 그리고 최종적으로 이것이 척도화된 이탈도 (4.33)와 어떻게"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "ch5",
+        "path": "GLMM/ch5",
+        "children": [
+          {
+            "type": "file",
+            "name": "5.1.1-3.md",
+            "path": "GLMM/ch5/5.1.1-3.md",
+            "title": "5.1.1-3",
+            "description": "5.1.1 β 해석하기: 오즈, 확률, 그리고 선형 근사 (Interpreting β: Odds, Probabilities, and Linear Approximations) [원문 번역] (5.2)에서 $\\beta$를 어떻게 해석할 수 있을까? 그것의 부호는 $x$가 증가함에 따라 $\\pi(x)$가 증가하는지 감소하는지를 결정한다. 곡선의 상승 또는 하강률"
+          },
+          {
+            "type": "file",
+            "name": "5.1.4-5.md",
+            "path": "GLMM/ch5/5.1.4-5.md",
+            "title": "5.1.4-5",
+            "description": "5.1.4 후향적 연구에서의 로지스틱 회귀 (Logistic Regression with Retrospective Studies) [원문 번역] 로지스틱 회귀의 또 다른 속성은 반응 변수 Y가 아닌 설명 변수 X가 무작위인 상황과 관련이 있다. 이것은 환자 대조군 생의학 연구와 같은 후향적 표집 설계에서 발생한다. $y=1$인 피험자(환자군)와 $y=0$인"
+          },
+          {
+            "type": "file",
+            "name": "5.2.1-2.md",
+            "path": "GLMM/ch5/5.2.1-2.md",
+            "title": "5.2.1-2",
+            "description": "5.2 로지스틱 회귀에 대한 추론 (INFERENCE FOR LOGISTIC REGRESSION) [원문 번역] 표준적인 결과에 의해, 로지스틱 회귀 모델 모수들의 최대우도(ML) 추정량들은 대푯본 정규분포를 갖는다. 추론은 1.3.3절에서 소개된 (왈드, 우도비, 스코어) 세 가지 방법들을 사용할 수 있다. 5.2.1 모델 모수와 확률에 대한 추론 (In"
+          },
+          {
+            "type": "file",
+            "name": "5.2.3-6.md",
+            "path": "GLMM/ch5/5.2.3-6.md",
+            "title": "5.2.3-6",
+            "description": "5.2.3 적합도 검토: 그룹화 데이터와 비그룹화 데이터 (Checking Goodness of Fit: Grouped and Ungrouped Data) [원문 번역] 실제 분석에서, 특정 로지스틱 회귀 모델이 데이터에 잘 맞는다는 보장은 없다. 어떤 유형의 이항 데이터에 대해서든, 적합성 결여를 탐지하는 한 가지 방법은 현재 모델을 더 복잡한 모델과 비"
+          },
+          {
+            "type": "file",
+            "name": "5.3.1-3.md",
+            "path": "GLMM/ch5/5.3.1-3.md",
+            "title": "5.3.1-3",
+            "description": "5.3 범주형 예측 변수를 갖는 로지스틱 모델 (LOGISTIC MODELS WITH CATEGORICAL PREDICTORS) [원문 번역] 보통의 회귀분석처럼, 로지스틱 회귀는 질적 설명 변수, 즉 흔히 요인(factors)이라고 불리는 변수들을 포함하도록 확장된다. Dyke와 Patterson(1952)이 처음 언급했듯이, 우리는 이를 위해 지시 변수"
+          },
+          {
+            "type": "file",
+            "name": "5.4.1-2.md",
+            "path": "GLMM/ch5/5.4.1-2.md",
+            "title": "5.4.1-2",
+            "description": "5.4 다중 로지스틱 회귀 (MULTIPLE LOGISTIC REGRESSION) [원문 번역] 보통의 회귀분석처럼, 로지스틱 회귀는 양적 및 질적 변수가 혼합될 수 있는 다중 설명 변수를 갖는 모델로 확장된다 (Cox 1958). $p$개 예측 변수들의 값 $\\mathbf{x}=(x  1, \\dots, x  p)$에서 $P(Y=1)=\\pi(\\mathbf{"
+          },
+          {
+            "type": "file",
+            "name": "5.4.4-5.md",
+            "path": "GLMM/ch5/5.4.4-5.md",
+            "title": "5.4.4-5",
+            "description": "5.4.4 이탈도 비교를 통한 모델 비교 (Model Comparison by Comparing Deviances) [원문 번역] $L  S$를 포화 모델에 대한 최대화된 로그우도라고 하자. 4.5.4절에서 논의된 바와 같이, 모델 $M  1$과 $M  0$를 비교하기 위한 우도비 통계량은 다음과 같다. 두 모델을 비교하는 검정 통계량은 두 모델의 $G^2"
+          },
+          {
+            "type": "file",
+            "name": "5.4.6-8.md",
+            "path": "GLMM/ch5/5.4.6-8.md",
+            "title": "5.4.6-8",
+            "description": "5.4.6 순서형 예측 변수의 양적 처리 (Quantitative Treatment of Ordinal Predictor) [원문 번역] 색깔은 가장 밝은 것부터 가장 어두운 것까지 순서화된 범주들을 갖는다. 더 단순한 모델은 이 예측 변수를 양적으로 취급한다. 색깔은, 어떤 단조로운 점수 집합에 대해, 선형 효과를 가질 수 있다. 예를 들어, 색깔 범주에"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "ch6",
+        "path": "GLMM/ch6",
+        "children": [
+          {
+            "type": "file",
+            "name": "6.1.1-2.md",
+            "path": "GLMM/ch6/6.1.1-2.md",
+            "title": "6.1.1-2",
+            "description": "6.1.1 모델에 설명 변수는 몇 개까지 있을 수 있는가? (How Many Explanatory Variables Can Be in the Model?) [원문 번역] 한쪽 유형의 반응이 상대적으로 적은 불균형 데이터는, 우리가 효과를 효과적으로 추정할 수 있는 예측 변수의 수를 제한한다. 몬테카를로 연구에 기반한 한 가이드라인(Peduzzi et al."
+          },
+          {
+            "type": "file",
+            "name": "6.1.3.md",
+            "path": "GLMM/ch6/6.1.3.md",
+            "title": "6.1.3",
+            "description": "6.1.3 단계적 절차: 전진 선택법과 후진 제거법 (Stepwise Procedures: Forward Selection and Backward Elimination) [원문 번역] 탐색적 연구에서, 결과들을 신중하게 사용한다면 모델들을 탐색하는 알고리즘적인 방법이 유익한 정보를 줄 수 있다. Goodman(1971a)은 보통의 회귀분석에서의 전진 선택법"
+          },
+          {
+            "type": "file",
+            "name": "6.1.4.md",
+            "path": "GLMM/ch6/6.1.4.md",
+            "title": "6.1.4",
+            "description": "6.1.4 예제: 투구게 데이터에 대한 후진 제거법 (Example: Backward Elimination for Horseshoe Crab Data) [원문 번역] 표 6.2는 예측 변수 너비, 색깔, 가시 상태를 사용하여 투구게 데이터에 여러 로지스틱 모델을 적합시키고 비교한 결과를 요약한다. 적합도에 대한 이탈도($G^2$) 검정은 모델을 포화 모델과"
+          },
+          {
+            "type": "file",
+            "name": "6.1.5-6.md",
+            "path": "GLMM/ch6/6.1.5-6.md",
+            "title": "6.1.5-6",
+            "description": "6.1.5 모델 선택과 \"올바른\" 모델 (Model Selection and the \"Correct\" Model) [원문 번역] 후보 집합에서 모델을 선택할 때, \"올바른(correct)\" 모델이 하나 있다고 생각한다면 우리는 잘못 생각하는 것이다. 어떤 모델이든 현실의 단순화이다. 예를 들어, 우리가 로짓 연결을 사용하든 항등 연결을 사용하든, 너비는 위"
+          },
+          {
+            "type": "file",
+            "name": "6.1.7-8.md",
+            "path": "GLMM/ch6/6.1.7-8.md",
+            "title": "6.1.7-8",
+            "description": "6.1.7 예제: 인과적 가설을 이용한 모델 구축 가이드 (Example: Using Causal Hypotheses to Guide Model Building) [원문 번역] 비록 선택 절차들이 탐색적인 도구로 도움이 되지만, 모델 구축 과정은 이론과 상식을 활용해야 한다. 종종, 변수들 간의 시간적 순서는 가능한 인과 관계를 시사한다. 특정 순서의 모델"
+          },
+          {
+            "type": "file",
+            "name": "6.2.1-3.md",
+            "path": "GLMM/ch6/6.2.1-3.md",
+            "title": "6.2.1-3",
+            "description": "6.2.1 잔차: 피어슨, 이탈도, 표준화 잔차 (Residuals: Pearson, Deviance, and Standardized) [원문 번역] 범주형 예측 변수와 함께일 때, 관측된 빈도와 적합된 빈도를 비교하기 위해 잔차를 형성하는 것이 유용하다. $y i$를 설명 변수들의 설정 $i$에서의 $n i$번 시행에 대한 이항 결과라고 하자, $i=1,"
+          },
+          {
+            "type": "file",
+            "name": "6.2.4.md",
+            "path": "GLMM/ch6/6.2.4.md",
+            "title": "6.2.4",
+            "description": "6.2.4 로지스틱 회귀의 영향력 진단 (Influence Diagnostics for Logistic Regression) [원문 번역] 다른 회귀 진단 도구들 또한 적합도를 평가하는 데 도움이 된다. 여기에는 순서화된 표준화 잔차를 정규 백분위수와 비교하는 플롯(Haberman 1973a)과, 모수 추정치 및 적합도 통계량에 대한 한 관측치의 영향을 기"
+          },
+          {
+            "type": "file",
+            "name": "6.3.1-2.md",
+            "path": "GLMM/ch6/6.3.1-2.md",
+            "title": "6.3.1-2",
+            "description": "6.3.1 예측력 요약: R과 R 제곱 측도 (Summarizing Predictive Power: R and R Squared Measures) [원문 번역] 어떤 GLM에 대해서든, 관측된 반응 $\\{y i\\}$와 모델의 적합치 $\\{\\hat{\\mu} i\\}$ 사이의 상관계수 $R(\\mathbf{y}, \\hat{\\boldsymbol{\\mu}})$는 예측"
+          },
+          {
+            "type": "file",
+            "name": "6.3.3-4.md",
+            "path": "GLMM/ch6/6.3.3-4.md",
+            "title": "6.3.3-4",
+            "description": "6.3.3 예측력 요약: 분류표 (Summarizing Predictive Power: Classification Tables) [원문 번역] 분류표(classification table)는 이항 반응을 $y=0$ 또는 1의 예측과 교차 분류한다. 관측치 $i$에 대한 예측은 어떤 컷오프(cutoff) $\\pi  0$에 대해 $\\hat{\\pi}  i   \\"
+          },
+          {
+            "type": "file",
+            "name": "6.3.5.md",
+            "path": "GLMM/ch6/6.3.5.md",
+            "title": "6.3.5",
+            "description": "6.3.5 예제: 투구게 데이터의 예측력 평가 (Example: Evaluating Predictive Power for Horseshoe Crab Data) [원문 번역] 표 6.2는 암컷 게가 적어도 하나의 위성을 가졌는지 여부를 예측하기 위해 투구게 데이터에 적합된 몇몇 모델들에 대한 상관계수 $R(\\mathbf{y}, \\hat{\\boldsymbol{"
+          },
+          {
+            "type": "file",
+            "name": "6.4.1-2.md",
+            "path": "GLMM/ch6/6.4.1-2.md",
+            "title": "6.4.1-2",
+            "description": "6.4.1 로지스틱 모델을 이용한 조건부 독립성 검정 (Using Logistic Models to Test Conditional Independence) [원문 번역] 이항 반응 Y에 대해, 우리는 질적 공변량 Z의 범주에 대해 조건화하여 이항 예측 변수 X의 효과를 분석한다. $\\pi {ik} = P(Y=1 | X=i, Z=k)$라고 하자. 다음 모델을"
+          },
+          {
+            "type": "file",
+            "name": "6.4.10-11.md",
+            "path": "GLMM/ch6/6.4.10-11.md",
+            "title": "6.4.10-11",
+            "description": "6.4.10 오즈비의 이질성 요약하기 (Summarizing Heterogeneity in Odds Ratios) [원문 번역] 실제 분석에서, 관심 효과는 종종 층마다 비슷하다. 예를 들어, 신약을 표준약과 비교하는 다기관 임상시험에서, 만약 신약이 정말로 더 유익하다면, 모집단 효과는 보통 각 층에서 양수이다. 하지만 엄밀한 의미에서, 균일한 효과를 가"
+          },
+          {
+            "type": "file",
+            "name": "6.4.3-4.md",
+            "path": "GLMM/ch6/6.4.3-4.md",
+            "title": "6.4.3-4",
+            "description": "6.4.3 예제: 다기관 임상시험 재검토 (Example: Multicenter Clinical Trial Revisited) [원문 번역] 6.4절 서두에서 소개된 다기관 임상시험에 대해, 표 6.9는 각 표에 대한 표본 오즈비와, $H 0$: 조건부 독립성 하에서 약물 치료(drug treatment)의 성공 횟수($n {11k}$)에 대한 기댓값과 분"
+          },
+          {
+            "type": "file",
+            "name": "6.4.5-7.md",
+            "path": "GLMM/ch6/6.4.5-7.md",
+            "title": "6.4.5-7",
+            "description": "6.4.5 공통 오즈비 추정 (Estimation of Common Odds Ratio) [원문 번역] 연관성의 강도를 추정하는 것이 그것에 대한 가설을 검정하는 것보다 더 유익한 정보를 제공한다. 부분표들 사이에서 연관성이 안정적으로 보일 때, 우리는 $K$개의 표본 오즈비를 조건부 연관성의 요약 측도로 결합할 수 있다. 로지스틱 모델 (6.4)는 균일"
+          },
+          {
+            "type": "file",
+            "name": "6.4.8-9.md",
+            "path": "GLMM/ch6/6.4.8-9.md",
+            "title": "6.4.8-9",
+            "description": "6.4.8 통합성과 분할표의 로지스틱 모델 (Collapsibility and Logistic Models for Contingency Tables) [원문 번역] 우리는 부분표에서의 조건부 연관성이 보통 주변 연관성과 다르다는 것을 보았다. 하지만, 2.3.6절에서 주어진 특정 통합성(collapsibility) 조건 하에서는, 그것들이 동일하다. 오즈비"
+          },
+          {
+            "type": "file",
+            "name": "6.6.1-2.md",
+            "path": "GLMM/ch6/6.6.1-2.md",
+            "title": "6.6.1-2",
+            "description": "6.6.1 두 비율 비교를 위한 표본 크기와 검정력 (Sample Size and Power for Comparing Two Proportions) [원문 번역] 대푯본 정규분포를 갖는 검정 통계량에 대해, 검정력 계산은 보통의 방법들을 사용할 수 있다. 예를 들어, 두 의료 치료법에 대한 이항 모수 $\\pi 1$과 $\\pi 2$를 비교하는 검정을 고려해보"
+          },
+          {
+            "type": "file",
+            "name": "6.6.3-4.md",
+            "path": "GLMM/ch6/6.6.3-4.md",
+            "title": "6.6.3-4",
+            "description": "6.6.3 다중 로지스틱 회귀에서의 표본 크기 (Sample Size in Multiple Logistic Regression) [원문 번역] 다중 로지스틱 회귀 모델은 효과를 탐지하기 위해 더 큰 $n$을 요구한다. $R$을 관심 있는 예측 변수 X와 모델의 다른 예측 변수들 간의 다중 상관계수(multiple correlation)라고 하자. $n$에"
+          },
+          {
+            "type": "file",
+            "name": "6.6.5-6.md",
+            "path": "GLMM/ch6/6.6.5-6.md",
+            "title": "6.6.5-6",
+            "description": "6.6.5 조건부 독립성 검정을 위한 검정력 (Power for Testing Conditional Independence) [원문 번역] O'Brien(1986)의 한 예제를 기반으로 한 예제를 사용한다. 표준 태아 심박수 모니터링 검사는 태아가 출생 후 비일상적인 치료를 필요로 할지를 예측한다. 표준 검사는 (걱정스러운, 안심되는) 범주를 갖는다. 반응"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "KoAI",
+    "path": "KoAI",
+    "children": [
+      {
+        "type": "file",
+        "name": "reviews.md",
+        "path": "KoAI/reviews.md",
+        "title": "reviews",
+        "description": "각 강의 자료 요약 1. Samsung SDS: Brity Automation과 GUI using Agent 이 강의는   기업의 업무 자동화(RPA)  에 초점을 맞춘 Agentic AI를 다룹니다. 핵심 개념: Agentic AI의 비즈니스 가치:   순수 LLM 개발을 넘어, 실제 비즈니스 문제를 해결하고 ROI(투자수익률)를 창출하는 'AI 에이전트"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "Meta-Learning",
+    "path": "Meta-Learning",
+    "children": [
+      {
+        "type": "dir",
+        "name": "Handson",
+        "path": "Meta-Learning/Handson",
+        "children": [
+          {
+            "type": "file",
+            "name": "README.md",
+            "path": "Meta-Learning/Handson/README.md",
+            "title": "README",
+            "description": ""
+          },
+          {
+            "type": "dir",
+            "name": "ch1",
+            "path": "Meta-Learning/Handson/ch1",
+            "children": [
+              {
+                "type": "file",
+                "name": "Learning to Learn Gradient Descent by Gradient Descent.md",
+                "path": "Meta-Learning/Handson/ch1/Learning to Learn Gradient Descent by Gradient Descent.md",
+                "title": "Learning to Learn Gradient Descent by Gradient Descent",
+                "description": "Gradient Descent를 통한 Gradient Descent 학습 (Learning to Learn Gradient Descent by Gradient Descent) 본 자료는 표준적인 Gradient Descent 최적화 기법을 학습 가능한 모델(RNN)로 대체하고, 이 모델 자체를 다시 Gradient Descent로 학습시키는 Meta Lea"
+              },
+              {
+                "type": "file",
+                "name": "Learning to Learn Gradient Descent by Gradient Descent_sub.md",
+                "path": "Meta-Learning/Handson/ch1/Learning to Learn Gradient Descent by Gradient Descent_sub.md",
+                "title": "Learning to Learn Gradient Descent by Gradient Descent_sub",
+                "description": "설정: 모델 정의 1. Optimizee (피최적화 모델) 최적화할 대상이 되는 간단한 2차 함수를 정의합니다. 이 함수의 목표는 손실 $L {opt ee}$를 최소화하는 파라미터 $\\theta$를 찾는 것입니다. 최적의 파라미터는 $\\theta^  = 5$입니다. 손실 함수  : $L {opt ee}(\\theta) = (\\theta   5)^2$ 그래디언"
+              },
+              {
+                "type": "file",
+                "name": "Learning to Learn Gradient Descent by Gradient Descent_ver2.md",
+                "path": "Meta-Learning/Handson/ch1/Learning to Learn Gradient Descent by Gradient Descent_ver2.md",
+                "title": "Learning to Learn Gradient Descent by Gradient Descent_ver2",
+                "description": "1. 기본 개념: 경사 하강법 (Gradient Descent) 모델을 최적화하는 가장 기본적인 방법은 경사 하강법입니다. 이 방법은 손실 함수(Loss Function)의 값을 최소화하는 모델 파라미터를 찾는 과정입니다. 1.1. 경사 하강법의 수식 경사 하강법의 파라미터 업데이트 규칙은 다음과 같은 수식으로 표현됩니다. 1.2. 표기법(Notation)"
+              },
+              {
+                "type": "file",
+                "name": "Optimization as a model for few-shot learning.md",
+                "path": "Meta-Learning/Handson/ch1/Optimization as a model for few-shot learning.md",
+                "title": "Optimization as a model for few-shot learning",
+                "description": "학습 목표 경사 하강법(Gradient Descent)과 LSTM(Long Short Term Memory)의 셀 상태(Cell State) 업데이트 수식 간의 구조적 유사성을 이해합니다. LSTM을 최적화기(Optimizer)로 사용하여 모델 파라미터를 업데이트하는 원리를 설명할 수 있습니다. 소량의 데이터로 학습하는 Few shot Learning 상황"
+              },
+              {
+                "type": "file",
+                "name": "RNNtoGradientDescent.md",
+                "path": "Meta-Learning/Handson/ch1/RNNtoGradientDescent.md",
+                "title": "🧠 Learning to Learn by Gradient Descent by Gradient Descent",
+                "description": "🧠 Learning to Learn by Gradient Descent by Gradient Descent 이 문서는 Andrychowicz et al. (2016)의 논문  “Learning to Learn by Gradient Descent by Gradient Descent”  내용을 기반으로 RNN 기반 메타 옵티마이저(meta optimizer)의"
+              }
+            ]
+          },
+          {
+            "type": "dir",
+            "name": "ch2",
+            "path": "Meta-Learning/Handson/ch2",
+            "children": [
+              {
+                "type": "file",
+                "name": "README.md",
+                "path": "Meta-Learning/Handson/ch2/README.md",
+                "title": "README",
+                "description": ""
+              },
+              {
+                "type": "file",
+                "name": "Siamese Network를 이용한 얼굴 및 음성 인식.md",
+                "path": "Meta-Learning/Handson/ch2/Siamese Network를 이용한 얼굴 및 음성 인식.md",
+                "title": "Siamese Network를 이용한 얼굴 및 음성 인식",
+                "description": "2장. Siamese Network를 이용한 얼굴 및 음성 인식 지난 장에서는   메타 러닝  이 무엇인지, 그리고 다양한 유형의   메타 러닝   기법에 대해 배웠습니다. 또한   경사 하강법  을 통해   경사 하강법  을 배우는 방법과   few shot learning  을 위한 모델로서의 최적화에 대해서도 살펴보았습니다. 이번 장에서는   siam"
+              },
+              {
+                "type": "file",
+                "name": "siamese network의 아키텍처.md",
+                "path": "Meta-Learning/Handson/ch2/siamese network의 아키텍처.md",
+                "title": "siamese network의 아키텍처",
+                "description": "siamese network의 아키텍처 이제   siamese network  에 대한 기본적인 이해를 갖추었으니, 이를 자세히 살펴보겠습니다.   siamese network  의 아키텍처는 다음 다이어그램과 같습니다: <img width=\"548\" height=\"505\" alt=\"image\" src=\"https://github.com/user attac"
+              },
+              {
+                "type": "file",
+                "name": "추천된 논문 2편.md",
+                "path": "Meta-Learning/Handson/ch2/추천된 논문 2편.md",
+                "title": "추천된 논문 2편",
+                "description": "논문 1: Signature Verification using a “Siamese” Time Delay Neural Network (1994) (1) 이 연구의 새로운 점은 무엇인가? 이 연구는 \"Siamese\" 신경망이라고 불리는 새로운 인공 신경망 구조를 제안하고, 이를 서명 검증(Signature Verification) 문제에 적용한 것입니다. 이"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "Paper",
+        "path": "Meta-Learning/Paper",
+        "children": [
+          {
+            "type": "file",
+            "name": "Learning to learn by gradient descent by gradient descent.md",
+            "path": "Meta-Learning/Paper/Learning to learn by gradient descent by gradient descent.md",
+            "title": "Learning to learn by gradient descent by gradient descent",
+            "description": "(1) What is new in the work? (이 연구의 새로운 점은 무엇인가?) 이 연구는 최적화 알고리즘의 설계를 수작업이 아닌 학습 문제로 전환하는 새로운 접근법을 제시합니다. 핵심적인 새로운 점들은 다음과 같습니다: 1.    최적화기의 학습(Learning the Optimizer)  : 기존의 Adam, RMSprop 등 수작업으로 설계된"
+          },
+          {
+            "type": "file",
+            "name": "README.md",
+            "path": "Meta-Learning/Paper/README.md",
+            "title": "README",
+            "description": ""
+          },
+          {
+            "type": "file",
+            "name": "amortized bayesian meta learning.md",
+            "path": "Meta-Learning/Paper/amortized bayesian meta learning.md",
+            "title": "amortized bayesian meta learning",
+            "description": "배경: 목표 설정 메타 러닝의 목표는 여러 태스크(에피소드)로부터 학습하여 새로운 태스크에 빠르게 적응하는 것입니다. 이 논문은 이를   계층적 베이지안 모델(Hierarchical Bayesian Model)  로 접근합니다. 전역 잠재 변수 (Global Latent Variable) $\\theta$  : 모든 태스크에 공유되는 사전 지식(prior k"
+          },
+          {
+            "type": "file",
+            "name": "amortized bayesian meta learning_section2.md",
+            "path": "Meta-Learning/Paper/amortized bayesian meta learning_section2.md",
+            "title": "amortized bayesian meta learning_section2",
+            "description": "논문의 2장 \"META LEARNING VIA HIERARCHICAL VARIATIONAL INFERENCE\"의 수식 전개 2장 : 계층적 변분 추론을 통한 메타 러닝 이 장의 목표는 베이지안 메타 러닝을 위한 수학적 프레임워크를 정립하는 것입니다. 핵심 아이디어는 여러 개의 태스크(에피소드)에서 얻은 데이터를 사용하여, 태스크 전반에 걸친 공유 지식(gl"
+          },
+          {
+            "type": "file",
+            "name": "일지.md",
+            "path": "Meta-Learning/Paper/일지.md",
+            "title": "일지",
+            "description": "251103 Wang, F., Jiang, Y., Zhang, R., Wei, A., Xie, J., & Pang, X. (2025). A survey of deep anomaly detection in multivariate time series: taxonomy, applications, and directions. Sensors (Basel, Swit"
+          }
+        ]
+      },
+      {
+        "type": "file",
+        "name": "added idea 2.md",
+        "path": "Meta-Learning/added idea 2.md",
+        "title": "added idea 2",
+        "description": "최종 실험 계획 요약 테이블 (Comprehensive Experiment Plan Summary) | 단계 | 실험 ID | 실험명 (Experiment Name) | 목적 | 방법론 | 주요 스크립트 | 핵심 결과물/지표 | 가설 (기대 결과) | | :    | :    | :    | :    | :    | :    | :    | :    | |"
+      },
+      {
+        "type": "file",
+        "name": "added idea.md",
+        "path": "Meta-Learning/added idea.md",
+        "title": "✅ Intraday Extension 종합 계획",
+        "description": "완벽합니다! 최종 요약을 드리겠습니다. ✅ Intraday Extension 종합 계획 📊 제안 요약 현재  : Daily data (일봉) 추가  : Intraday data (분봉) →   Appendix F 🎯 목적 및 효과 목적: 1.   Scalability 입증  : Daily → Intraday 모두 작동 2.   Real time 검증  :"
+      },
+      {
+        "type": "dir",
+        "name": "solar_ideas",
+        "path": "Meta-Learning/solar_ideas",
+        "children": [
+          {
+            "type": "file",
+            "name": "patchwise.md",
+            "path": "Meta-Learning/solar_ideas/patchwise.md",
+            "title": "meta_dataset.py의 __getitem__ 일부",
+            "description": "현재 코드는   전체 이미지(full image)를 하나의 샘플로 사용  하여 태스크를 구성하고 있습니다. 현재 코드의 동작 방식 (Full Image wise) MetaSolarPredictionDataset 의    getitem    메서드를 살펴보면 명확히 알 수 있습니다. 이 방식은 다음과 같이 동작합니다. 1.    태스크 정의  : 하나의 태스"
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "survey",
+        "path": "Meta-Learning/survey",
+        "children": [
+          {
+            "type": "file",
+            "name": "parameter innitialization.md",
+            "path": "Meta-Learning/survey/parameter innitialization.md",
+            "title": "parameter innitialization",
+            "description": "1. 기존 딥러닝 vs. MAML: 수식을 통한 비교 가. 기존 딥러닝 (전이 학습/미세 조정) 기존 딥러닝에서 새로운 과제(Task B)를 학습할 때, 사전 훈련된 모델을 사용하는 방식은 다음과 같습니다. 1.    사전 훈련 (Pre training)  : 대규모 데이터셋(예: ImageNet)으로 소스 과제(Task A)를 학습하여 좋은 초기 가중치"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "README.md",
+    "path": "README.md",
+    "title": "funfunpaperreview",
+    "description": "funfunpaperreview 곧 리뉴얼 ㅇㅖ정"
+  },
+  {
+    "type": "dir",
+    "name": "RL_introduction",
+    "path": "RL_introduction",
+    "children": [
+      {
+        "type": "dir",
+        "name": "3",
+        "path": "RL_introduction/3",
+        "children": [
+          {
+            "type": "dir",
+            "name": "6",
+            "path": "RL_introduction/3/6",
+            "children": [
+              {
+                "type": "file",
+                "name": "001_equation3.6.md",
+                "path": "RL_introduction/3/6/001_equation3.6.md",
+                "title": "001_equation3.6",
+                "description": "식 (3.6) 뜯어보기 1. 식 (3.6) 2. 노테이션(Notation) $S t, S {t+1}$ (대문자 S)  : 시간 $t$와 $t+1$ 시점의   상태(State)를 나타내는 확률 변수  입니다. $A t$ (대문자 A)  : 시간 $t$ 시점에 에이전트가 선택한   행동(Action)을 나타내는 확률 변수  입니다. $R {t+1}$ (대문자"
+              },
+              {
+                "type": "file",
+                "name": "002_FiniteMDP.md",
+                "path": "RL_introduction/3/6/002_FiniteMDP.md",
+                "title": "002_FiniteMDP",
+                "description": "3.6 마르코프 결정 과정 (Markov Decision Processes) 마르코프 성질(Markov property)   을 만족하는 강화 학습 태스크를   마르코프 결정 과정  , 줄여서   MDP  라고 부릅니다. 만약 상태(state)와 행동(action) 공간이 유한하다면, 이를   유한 마르코프 결정 과정(finite MDP)   이라고 부릅니"
+              },
+              {
+                "type": "file",
+                "name": "FourPoints.md",
+                "path": "RL_introduction/3/6/FourPoints.md",
+                "title": "FourPoints",
+                "description": "1. 환경의 동역학 함수 $p$의 완벽한 이해 (The Dynamics Function) 이 섹션에서 가장 중요한 식은   (3.6)  입니다. 공부 포인트: 이 함수가   '결합 확률 분포(Joint Probability Distribution)'  라는 점을 이해해야 합니다. 즉, 다음 상태($s'$)와 보상($r$)이   동시에   결정됩니다. 이 함"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "dir",
+        "name": "Tabular_solution_methods",
+        "path": "RL_introduction/Tabular_solution_methods",
+        "children": [
+          {
+            "type": "dir",
+            "name": "Multi_arm_bandits",
+            "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits",
+            "children": [
+              {
+                "type": "file",
+                "name": "2.1 An n-Armed Bandit Problem.md",
+                "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits/2.1 An n-Armed Bandit Problem.md",
+                "title": "2.1 An n-Armed Bandit Problem",
+                "description": "단락 1 단락 2 문제의 핵심 요소 반복적인 선택:   에이전트는 계속해서 선택의 기로에 놓임 $n$개의 행동:   매 순간 $n$개의 명확한 선택지가 주어짐 보상:   행동을 선택하면 그 결과로 숫자 형태의 보상을 받음. 이 보상은 좋음(높은 숫자) 또는 나쁨(낮은 숫자)을 나타낼 듯 불확실성 (확률 분포):   각 행동의 보상은 고정되어 있지 않음. 특"
+              },
+              {
+                "type": "file",
+                "name": "2.2 Action-Value Methods.md",
+                "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits/2.2 Action-Value Methods.md",
+                "title": "2.2 Action-Value Methods",
+                "description": "단락 1 1. 실제 가치 vs. 추정 가치 $q(a)$ (실제 가치, True Value): 행동 $a$가 가진   객관적인, 진짜 평균 보상 이것은 환경에 의해 결정되는 값으로, 에이전트는 이 값을 모름 $Q t(a)$ (추정 가치, Estimated Value): 시점 $t$에서 에이전트가 경험을 바탕으로   추정한   행동 $a$의 가치 이것은 에이전"
+              },
+              {
+                "type": "file",
+                "name": "2.3 Incremental Implementation.md",
+                "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits/2.3 Incremental Implementation.md",
+                "title": "2.3 Incremental Implementation",
+                "description": "단락 1 지금까지 논의한 행동 가치 방법들은 모두 관찰된 보상들의   샘플 평균(sample averages)  으로 행동 가치를 추정했음 이를 구현하는 가장 명백한 방법은 각 행동 $a$에 대해, 그 행동이 선택된 이후에 뒤따랐던 모든 보상들의 기록을 유지하는 거임 그리고 시간 $t$에 행동 $a$의 가치 추정치가 필요할 때, 아래 식에 따라 계산하는데,"
+              },
+              {
+                "type": "file",
+                "name": "2.4 Tracking a Nonstationary Problem.md",
+                "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits/2.4 Tracking a Nonstationary Problem.md",
+                "title": "2.4 Tracking a Nonstationary Problem",
+                "description": "단락 1 이제 시간에 따라 밴딧 문제가 변함    이전 절 까지 다뤄온 평균을 취하는 방법은 적절하지 않을 수 있음 실질적으로 비정상적인(effectively nonstationary) 강화학습 문제들이 대부분일 것임 오래된 보상들보다 최근의 보상들에 더 큰 가중치를 두는 것이 합리적임 가장 대중적인 방법 중 하나는   고정된 단계 크기 파라미터(const"
+              },
+              {
+                "type": "file",
+                "name": "intro.md",
+                "path": "RL_introduction/Tabular_solution_methods/Multi_arm_bandits/intro.md",
+                "title": "intro",
+                "description": "Multi armed bandit? 여러 선택지 중 하나를 반복적으로 골라 장기적인 보상을 최대화해야 하는 상황을 다루는 문제임. 강화학습의 딜레마를 보여주는 문제. 강화학습이 다른 학습 유형과 구별되는 가장 중요한 특징? + 행동을 직접적으로 제시 X + 취한 행동을 평가하는 훈련 정보를 사용함(Evaluative Feedback) + 더 좋은 행동을 찾"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "intro.md",
+            "path": "RL_introduction/Tabular_solution_methods/intro.md",
+            "title": "intro",
+            "description": "part1 에서는 강화학습 알고리즘의 대부분의 핵심 아이디어들을 가장 단순한 형태로 소개할거임. state, action space가 근사 action value함수를 배열,표로 표현할 수 있을만큼 충분히 작은 형태로 소개할 것 approximate action value function? 복잡한 문제에서 action value함수를 추정 및 근사하기 위해"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "UNET",
+    "path": "UNET",
+    "children": [
+      {
+        "type": "file",
+        "name": "AA-TransUNet: Attention Augmented TransUNet For Nowcasting Tasks.md",
+        "path": "UNET/AA-TransUNet: Attention Augmented TransUNet For Nowcasting Tasks.md",
+        "title": "AA-TransUNet: Attention Augmented TransUNet For Nowcasting Tasks",
+        "description": "(1) What is new in the work? (이 연구의 새로운 점은 무엇인가?) 이 연구는 기상 예보의 한 분야인 초단기 예측(Nowcasting)을 위해 AA TransUNet(Attention Augmented TransUNet)이라는 새로운 예측 모델을 제안합니다. 이 모델의 새로운 점은 다음과 같습니다. TransUNet의 기능 확장:"
+      },
+      {
+        "type": "file",
+        "name": "DA-TRANSUNET: INTEGRATING SPATIAL AND CHANNEL DUAL ATTENTION WITH TRANSFORMER U-NET FOR MEDICAL IMAGE SEGMENTATION.md",
+        "path": "UNET/DA-TRANSUNET: INTEGRATING SPATIAL AND CHANNEL DUAL ATTENTION WITH TRANSFORMER U-NET FOR MEDICAL IMAGE SEGMENTATION.md",
+        "title": "DA-TRANSUNET: INTEGRATING SPATIAL AND CHANNEL DUAL ATTENTION WITH TRANSFORMER U-NET FOR MEDICAL IMAGE SEGMENTATION",
+        "description": "(1) What is new in the work? (이 연구의 새로운 점은 무엇인가?) 이 연구는 DA TransUNet이라는 새로운 의료 영상 분할 프레임워크를 제안합니다. 이 모델의 핵심적인 새로운 점은 다음과 같습니다. Dual Attention (DA Block)의 통합:   기존의 Transformer 기반 U Net 구조에 공간적(Positio"
+      },
+      {
+        "type": "file",
+        "name": "DS-TransUNet: Dual Swin Transformer U-Net for Medical Image Segmentation.md",
+        "path": "UNET/DS-TransUNet: Dual Swin Transformer U-Net for Medical Image Segmentation.md",
+        "title": "DS-TransUNet: Dual Swin Transformer U-Net for Medical Image Segmentation",
+        "description": "(1) What is new in the work? (이 연구의 새로운 점은 무엇인가?) 이 연구는 DS TransUNet(Dual Swin Transformer U Net)이라는 새로운 의료 영상 분할 프레임워크를 제안합니다. 이 모델의 핵심적인 새로운 점은 다음과 같습니다. Swin Transformer의 전면적 사용:   U Net 구조의   인코더와"
+      },
+      {
+        "type": "file",
+        "name": "Involution Transformer Based U-Net for Landmark Detection in Ultrasound Images for Diagnosis of Infantile DDH.md",
+        "path": "UNET/Involution Transformer Based U-Net for Landmark Detection in Ultrasound Images for Diagnosis of Infantile DDH.md",
+        "title": "Involution Transformer Based U-Net for Landmark Detection in Ultrasound Images for Diagnosis of Infantile DDH",
+        "description": "(1) What is new in the work? (이 연구의 새로운 점은 무엇인가?) 이 연구는 IT UNet(Involution Transformer based U Net)이라는 새로운 랜드마크 탐지 네트워크를 제안합니다. 이 모델의 핵심적인 새로운 점은 다음과 같습니다. 랜드마크 탐지: [https://github.com/hanwo ol/funfun"
+      },
+      {
+        "type": "dir",
+        "name": "Secondary_references",
+        "path": "UNET/Secondary_references",
+        "children": [
+          {
+            "type": "file",
+            "name": "Landmark_detection(IT-UNet).md",
+            "path": "UNET/Secondary_references/Landmark_detection(IT-UNet).md",
+            "title": "Landmark_detection(IT-UNet)",
+            "description": "랜드마크 탐지(Landmark Detection)는 이미지나 영상 속에서   객체의 형태나 자세를 정의하는 핵심적인 지점(key points)들  을 찾아내는 기술 분야입니다. 주요 분야별로 탐지하는 대상은 다음과 같습니다. 1. 얼굴 (Facial Landmark Detection) 가장 대표적이고 직관적인 예시입니다. 탐지 대상:   눈의 양 끝, 눈썹"
+          },
+          {
+            "type": "file",
+            "name": "TIF_module(DS-U-Net).md",
+            "path": "UNET/Secondary_references/TIF_module(DS-U-Net).md",
+            "title": "TIF_module(DS-U-Net)",
+            "description": "1. TIF 모듈의 목적 TIF 모듈의 핵심 목적은   서로 다른 스케일(scale)에서 추출된 특징 표현(feature representation)을 효과적으로 융합(fuse)  하는 것입니다. DS TransUNet의 인코더는 두 개의 브랜치(branch)로 구성됩니다. Primary Branch (Small scale):   작은 크기의 패치(e.g."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "WSJ",
+    "path": "WSJ",
+    "children": [
+      {
+        "type": "file",
+        "name": "조란 맘다니, 뉴욕을 장악하다.md",
+        "path": "WSJ/조란 맘다니, 뉴욕을 장악하다.md",
+        "title": "조란 맘다니, 뉴욕을 장악하다",
+        "description": "번역문 조란 맘다니, 뉴욕을 장악하다 그가 좌파적으로 시정을 운영한다면, 자본과 사람이 떠날 수 있다는 것을 깨닫게 될 것이다. 조란 맘다니가 화요일 시장 선거에서 승리했으며, 압도적인 승리였다. 좋든 나쁘든, 시민들은 뜻을 밝혔고, 그의 유권자들은 변화라는 명분 아래 그의 급진주의에 기꺼이 위험을 감수했다. 우리는 곧 34세의 이 하원의원이 실용적인 면모"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "blog",
+    "path": "blog",
+    "children": [
+      {
+        "type": "file",
+        "name": "index.md",
+        "path": "blog/index.md",
+        "title": "index",
+        "description": "layout: home title: \"Fun Fun Paper Review\" 읽은 논문을 정리하는 블로그입니다. 강의/논문/실험 노트를 간단 요약해서 올립니다."
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "levichat",
+    "path": "levichat",
+    "children": [
+      {
+        "type": "file",
+        "name": "IS및OHEM.md",
+        "path": "levichat/IS및OHEM.md",
+        "title": "IS및OHEM",
+        "description": "1) “분포를 맞춘다”는 표현의 의미 내가 말한 “분포를 맞춘다”는 건, (특히 IS/OHEM 류가) 샘플링을   ‘목표로 하는 어떤 샘플링 분포 (q(i))’를 설계하고 그 분포에서 i.i.d.로 뽑는 문제  로 보는 관점을 뜻해. 엄밀하게 풀어쓰면 원래 ERM은   uniform 분포  에서 샘플을 뽑는 것과 동치(데이터셋 인덱스가 균등). 그런데 IS"
+      }
+    ]
+  },
+  {
+    "type": "file",
+    "name": "p.md",
+    "path": "p.md",
+    "title": "p",
+    "description": "[Step 0] 사전 준비: Context 및 Reference 설정 이 프롬프트는 AI에게 페르소나를 부여하고, 거짓 정보를 생성하지 않도록 제약 조건을 거는 단계입니다. 프롬프트: [Step 1] Introduction 작성 Introduction은 독자를 설득하는 단계입니다. \"왜 기존 SGD(Uniform Sampling)는 문제인가?\"를 물리적 관"
+  },
+  {
+    "type": "file",
+    "name": "p1.md",
+    "path": "p1.md",
+    "title": "p1",
+    "description": "박사 학위 논문, 특히 수리적 배경(Langevin Dynamics, Statistical Physics, SVGD 등)이 깊은 딥러닝 논문을 검수받기 위해서는 LLM에게 단순히 \"교정해줘\"라고 하기보다,   구체적인 페르소나(Persona)와 검수 기준(Criteria)  을 부여해야 합니다. LLM은 기본적으로 문장을 매끄럽게 만드는 데 집중하는 경향이"
+  },
+  {
+    "type": "dir",
+    "name": "quant",
+    "path": "quant",
+    "children": [
+      {
+        "type": "file",
+        "name": "Portfolio Selection.md",
+        "path": "quant/Portfolio Selection.md",
+        "title": "Markowitz 포트폴리오 수식의 약점과 개선 포인트",
+        "description": "해당 교재(Portfolio Selection by Harry Markowitz)는   포트폴리오 선택 이론  을 다루는 논문입니다. 이 논문은 투자자가 여러 증권(자산) 중에서 어떻게 포트폴리오를 선택해야 하는지를 체계적으로 분석하며, 다음의 주요 내용을 담고 있습니다: 포트폴리오 구성 과정  : 투자자는 먼저 각 증권의 미래 수익에 대한 믿음을 형성하고"
+      }
+    ]
+  },
+  {
+    "type": "dir",
+    "name": "수리통계학",
+    "path": "수리통계학",
+    "children": [
+      {
+        "type": "file",
+        "name": "2.41.md",
+        "path": "수리통계학/2.41.md",
+        "title": "2.41",
+        "description": "문제에서 주어진 확률변수 $X$의 분포를 이용해 기댓값과 분산을 먼저 계산해야 합니다. 1. 기댓값 $E(X)$ 계산주어진 확률질량함수는 다음과 같습니다. $P(X=1) = 1/18$ $P(X=2) = 16/18$ $P(X=3) = 1/18$ 기댓값 $E(X)$는 다음과 같이 계산됩니다. 2. 분산 $Var(X)$ 계산분산을 구하기 위해 $E(X^2)$를"
+      }
+    ]
+  }
+]

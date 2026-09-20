@@ -2,129 +2,328 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>문서 보기 - FunFun Paper Review</title>
+  <title id="page-title">문서 보기 - FunFun Paper Review</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta id="meta-description" name="description" content="FunFun Paper Review 논문 리뷰 및 연구 노트 문서" />
+
+  <!-- Open Graph Meta Tags for Social & GEO Crawlers -->
+  <meta id="og-title" property="og:title" content="문서 보기 - FunFun Paper Review" />
+  <meta id="og-description" property="og:description" content="FunFun Paper Review 논문 리뷰 및 연구 노트" />
+  <meta property="og:type" content="article" />
+  <meta id="og-url" property="og:url" content="" />
+
+  <!-- Schema.org Dynamic JSON-LD (GEO Optimization - Hidden from visual UI, read by AI engines) -->
+  <script id="json-ld" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "문서 보기",
+    "description": "FunFun Paper Review 논문 리뷰 및 연구 노트",
+    "author": {
+      "@type": "Person",
+      "name": "hanwo-ol"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "FunFun Paper Review"
+    }
+  }
+  </script>
+
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1f2937;
+      --text-muted: #6b7280;
+      --primary-color: #2563eb;
+      --border-color: #e5e7eb;
+      --code-bg: #f3f4f6;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem 3rem;
-      line-height: 1.7;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+      line-height: 1.8;
+      color: var(--text-color);
+      background-color: var(--bg-color);
     }
+
     header {
-      margin-bottom: 1.5rem;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
     }
-    h1 {
-      font-size: 1.7rem;
-      margin: 0 0 0.25rem;
-    }
-    .path {
-      font-size: 0.9rem;
-      color: #777;
-    }
-    a {
+
+    .back-link {
+      font-size: 0.95rem;
+      color: var(--primary-color);
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
     }
-    a:hover {
+
+    .back-link:hover {
       text-decoration: underline;
     }
-    .back-link {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-      display: inline-block;
+
+    h1.doc-title {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+      color: #111827;
+      line-height: 1.3;
     }
+
+    .doc-path {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .content {
+      font-size: 1.05rem;
+      margin-top: 1.5rem;
+    }
+
     .content img {
       max-width: 100%;
-    }
-    pre {
-      padding: 0.75rem 1rem;
+      height: auto;
       border-radius: 6px;
-      border: 1px solid #eee;
+      margin: 1rem 0;
+    }
+
+    .content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
       overflow-x: auto;
-      font-size: 0.9rem;
-      background: #fafafa;
+      display: block;
     }
-    code {
-      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.9rem;
+
+    .content th, .content td {
+      border: 1px solid var(--border-color);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
     }
-    .loading {
-      color: #777;
-    }
-    .error {
-      color: #b00;
+
+    .content th {
+      background-color: #f8fafc;
       font-weight: 600;
     }
+
+    pre {
+      padding: 1rem;
+      border-radius: 8px;
+      background: var(--code-bg);
+      overflow-x: auto;
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+    }
+
+    code {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      background: var(--code-bg);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+
+    pre code {
+      padding: 0;
+      background: transparent;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--border-color);
+      margin: 1rem 0;
+      padding-left: 1rem;
+      color: var(--text-muted);
+    }
+
+    .loading {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .error {
+      color: #dc2626;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
   </style>
-  <!-- 마크다운 렌더링 라이브러리 -->
+
+  <!-- Marked.js Markdown Parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- MathJax Config & Script -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <header>
-    <a href="/funfunpaperreview/" class="back-link">← 레포 구조로 돌아가기</a>
-    <h1 id="doc-title">문서 로딩 중...</h1>
-    <div class="path" id="doc-path"></div>
+    <a href="index.html" class="back-link">← 목차 및 아카이브 홈으로 돌아가기</a>
+    <h1 id="doc-title" class="doc-title">문서 로딩 중...</h1>
+    <div class="doc-path" id="doc-path"></div>
   </header>
 
-  <main id="content" class="content loading">
-    문서를 불러오는 중입니다...
+  <main>
+    <article>
+      <!-- Main Article Content -->
+      <section id="content" class="content loading">
+        문서를 불러오는 중입니다...
+      </section>
+    </article>
   </main>
 
-  <script>
-    const owner = "hanwo-ol";
-    const repo = "funfunpaperreview";
-    const branch = "main";
+  <footer>
+    <p>&copy; FunFun Paper Review.</p>
+  </footer>
 
+  <script>
     function getPathFromQuery() {
       const params = new URLSearchParams(window.location.search);
       return params.get("path");
     }
 
+    function sanitizeExcerpt(text) {
+      if (!text) return "";
+      let plain = text
+        .replace(/```[\s\S]*?```/g, "")
+        .replace(/\$\$[\s\S]*?\$\$/g, "")
+        .replace(/[\#\*\_`\-\>]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+      return plain.slice(0, 250) + (plain.length > 250 ? "..." : "");
+    }
+
+    function updateGeoMetaData(title, excerpt, path) {
+      document.title = `${title} - FunFun Paper Review`;
+      document.getElementById("doc-title").textContent = title;
+      document.getElementById("doc-path").textContent = path;
+
+      const metaDesc = document.getElementById("meta-description");
+      const ogTitle = document.getElementById("og-title");
+      const ogDesc = document.getElementById("og-description");
+      const ogUrl = document.getElementById("og-url");
+      const jsonLdScript = document.getElementById("json-ld");
+
+      const cleanExcerpt = excerpt || `${title} 논문 및 연구 노트 문서입니다.`;
+
+      if (metaDesc) metaDesc.setAttribute("content", cleanExcerpt);
+      if (ogTitle) ogTitle.setAttribute("content", `${title} - FunFun Paper Review`);
+      if (ogDesc) ogDesc.setAttribute("content", cleanExcerpt);
+      if (ogUrl) ogUrl.setAttribute("content", window.location.href);
+
+      // JSON-LD Structured Data (Invisible in visual UI, fully accessible to AI / Search engine crawlers)
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": title,
+        "description": cleanExcerpt,
+        "mainEntityOfPage": window.location.href,
+        "author": {
+          "@type": "Person",
+          "name": "hanwo-ol"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FunFun Paper Review"
+        }
+      };
+      if (jsonLdScript) {
+        jsonLdScript.textContent = JSON.stringify(jsonLd, null, 2);
+      }
+    }
+
     async function loadDocument() {
       const path = getPathFromQuery();
       const contentEl = document.getElementById("content");
-      const titleEl = document.getElementById("doc-title");
-      const pathEl = document.getElementById("doc-path");
 
       if (!path) {
-        titleEl.textContent = "경로가 없습니다";
+        document.getElementById("doc-title").textContent = "문서 경로 없음";
         contentEl.classList.remove("loading");
         contentEl.classList.add("error");
-        contentEl.textContent = "URL에 ?path=... 쿼리가 없습니다.";
+        contentEl.textContent = "URL에 ?path=... 쿼리가 입력되지 않았습니다.";
         return;
       }
 
-      pathEl.textContent = path;
-
       const filename = path.split("/").pop() || path;
-      const prettyTitle = filename.replace(/\.md$/i, "");
-      titleEl.textContent = prettyTitle;
-
-      const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`;
+      const defaultTitle = filename.replace(/\.md$/i, "");
 
       try {
-        const res = await fetch(rawUrl);
-        if (!res.ok) {
-          throw new Error("HTTP " + res.status);
+        const response = await fetch(path);
+        if (!response.ok) {
+          throw new Error("Local fetch failed: HTTP " + response.status);
         }
-        const markdown = await res.text();
+        const markdown = await response.text();
+
+        // Custom Renderer to fix image relative paths
+        const renderer = new marked.Renderer();
+        const pathDir = path.substring(0, path.lastIndexOf("/"));
+
+        renderer.image = function(href, title, text) {
+          let src = href;
+          if (typeof href === 'object' && href !== null) {
+            src = href.href;
+            title = href.title;
+            text = href.text;
+          }
+          if (src && !src.startsWith("http://") && !src.startsWith("https://") && !src.startsWith("/")) {
+            src = pathDir ? `${pathDir}/${src}` : src;
+          }
+          return `<img src="${src}" alt="${text || ''}" ${title ? `title="${title}"` : ''} />`;
+        };
+
+        marked.setOptions({ renderer: renderer });
+
+        // Parse title from markdown if available
+        const headerMatch = markdown.match(/^#\s+(.+)$/m);
+        const title = headerMatch ? headerMatch[1].trim() : defaultTitle;
+        const excerpt = sanitizeExcerpt(markdown);
+
+        updateGeoMetaData(title, excerpt, path);
 
         const html = marked.parse(markdown);
         contentEl.classList.remove("loading");
         contentEl.innerHTML = html;
+
+        // Trigger MathJax rendering
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([contentEl]).catch((err) => console.error("MathJax error:", err));
+        }
+
       } catch (err) {
+        console.error("Failed to load document:", err);
         contentEl.classList.remove("loading");
         contentEl.classList.add("error");
-        contentEl.textContent =
-          "문서를 불러오지 못했습니다. 경로나 브랜치를 확인해 주세요.";
-        console.error(err);
+        contentEl.textContent = "문서를 불러오지 못했습니다. 경로를 확인해주세요.";
       }
     }
 
-    loadDocument();
+    window.addEventListener("DOMContentLoaded", loadDocument);
   </script>
 </body>
 </html>
