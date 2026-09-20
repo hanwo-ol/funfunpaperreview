@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta id="meta-description" name="description" content="FunFun Paper Review 논문 리뷰 및 연구 노트 문서" />
 
-  <!-- Open Graph Meta Tags for Social & GEO Crawlers -->
+  <!-- Open Graph Meta Tags for Social & GEO -->
   <meta id="og-title" property="og:title" content="문서 보기 - FunFun Paper Review" />
   <meta id="og-description" property="og:description" content="FunFun Paper Review 논문 리뷰 및 연구 노트" />
   <meta property="og:type" content="article" />
   <meta id="og-url" property="og:url" content="" />
 
-  <!-- Schema.org Dynamic JSON-LD (GEO Optimization - Hidden from visual UI, read by AI engines) -->
+  <!-- Schema.org Dynamic JSON-LD (GEO Optimization) -->
   <script id="json-ld" type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -84,9 +84,29 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
 
+    /* GEO Summary Box */
+    .geo-summary-box {
+      background-color: #eff6ff;
+      border-left: 4px solid var(--primary-color);
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .geo-summary-box h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.05rem;
+      color: #1e40af;
+    }
+
+    .geo-summary-box p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #1e3a8a;
+    }
+
     .content {
       font-size: 1.05rem;
-      margin-top: 1.5rem;
     }
 
     .content img {
@@ -191,6 +211,12 @@
 
   <main>
     <article>
+      <!-- GEO Optimization: Dynamic Summary / Key Takeaways Box -->
+      <section id="geo-box" class="geo-summary-box hidden">
+        <h3>📌 Key Summary (AI Overview / GEO)</h3>
+        <p id="geo-excerpt"></p>
+      </section>
+
       <!-- Main Article Content -->
       <section id="content" class="content loading">
         문서를 불러오는 중입니다...
@@ -199,7 +225,7 @@
   </main>
 
   <footer>
-    <p>&copy; FunFun Paper Review.</p>
+    <p>&copy; FunFun Paper Review. GEO-Optimized Article Viewer.</p>
   </footer>
 
   <script>
@@ -237,7 +263,7 @@
       if (ogDesc) ogDesc.setAttribute("content", cleanExcerpt);
       if (ogUrl) ogUrl.setAttribute("content", window.location.href);
 
-      // JSON-LD Structured Data (Invisible in visual UI, fully accessible to AI / Search engine crawlers)
+      // JSON-LD Structured Data
       const jsonLd = {
         "@context": "https://schema.org",
         "@type": "TechArticle",
@@ -256,6 +282,12 @@
       if (jsonLdScript) {
         jsonLdScript.textContent = JSON.stringify(jsonLd, null, 2);
       }
+
+      // Render GEO Excerpt Box
+      if (cleanExcerpt) {
+        document.getElementById("geo-excerpt").textContent = cleanExcerpt;
+        document.getElementById("geo-box").classList.remove("hidden");
+      }
     }
 
     async function loadDocument() {
@@ -273,6 +305,7 @@
       const filename = path.split("/").pop() || path;
       const defaultTitle = filename.replace(/\.md$/i, "");
 
+      // Try fetching local relative file directly
       try {
         const response = await fetch(path);
         if (!response.ok) {
